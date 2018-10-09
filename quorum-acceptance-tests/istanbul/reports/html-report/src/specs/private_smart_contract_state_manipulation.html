@@ -30,21 +30,21 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,6,0" data-total="7">
+        <svg id="pie-chart" data-results="1,7,0" data-total="8">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/7</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 1/8</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 6/7</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 7/8</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/7</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/8</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">7</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">8</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
         <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">6</span><span class="txt">Passed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">7</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -57,15 +57,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>85%</span>
+          <span>87%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:01:19</span>
+          <span>00:01:24</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Oct 8, 2018 at 3:41pm</span>
+          <span>Oct 9, 2018 at 3:33pm</span>
         </li>
       </ul>
       
@@ -104,6 +104,24 @@
             </li>
           </a>
           
+          <a href="private_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:13</span>
+            </li>
+          </a>
+          
+          <a href="public_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="time" class="time">00:00:30</span>
+            </li>
+          </a>
+          
           <a href="value_transfer_private_transactions.html">
              
               <li class='passed spec-name'>
@@ -131,30 +149,21 @@
             </li>
           </a>
           
+          <a href="private_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:05</span>
+            </li>
+          </a>
+          
           <a href="private_smart_contract_multiple.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
               <span id="time" class="time">00:00:19</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:13</span>
-            </li>
-          </a>
-          
-          <a href="public_smart_contract_event.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
-              <span id="time" class="time">00:00:30</span>
             </li>
           </a>
           
@@ -544,7 +553,7 @@ contract SimpleStorage {
           <h4 class="error-message">
             <pre>org.junit.ComparisonFailure: expected:&lt;[10]0&gt; but was:&lt;[]0&gt;</pre>
           </h4>
-          <pre class="stacktrace">sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br/>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>com.quorum.gauge.PrivateSmartContract.verifyPrivacyWithParticipatedNodes(PrivateSmartContract.java:116)<br/></pre>
+          <pre class="stacktrace">sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br/>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>com.quorum.gauge.PrivateSmartContract.verifyPrivacyWithParticipatedNodes(PrivateSmartContract.java:120)<br/></pre>
         </div>
     </div>
   </div>
