@@ -1,0 +1,68 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Transactions for different block heights</h1>
+<p>tags: advanced</p>
+<p>This is to verify the basic functionalities when certain block height is reached.
+The purpose is to increase the possibility for the network to accept transactions during edge scenarios like:
+proposer rotation.</p>
+<p>Using the following smart contracts:</p>
+<pre><code>pragma solidity ^0.4.15;
+
+contract SimpleStorage {
+    uint private storedData;
+
+    constructor(uint initVal) public {
+        storedData = initVal;
+    }
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public constant returns (uint retVal) {
+        return storedData;
+    }
+}
+
+pragma solidity ^0.4.0;
+
+contract ClientReceipt {
+    event Deposit(
+        address indexed _from,
+        bytes32 indexed _id,
+        uint _value
+    );
+
+    function deposit(bytes32 _id) public payable {
+        emit Deposit(msg.sender, _id, msg.value);
+    }
+}
+</code></pre>
+<h2>Private smart contracts for Istanbul consensus</h2>
+<p>tags: istanbul, private, smart-contract</p>
+<ul>
+<li>Capture the current block height, named it as &quot;snapshot&quot;</li>
+<li>Wait for block height is atleast &quot;10&quot; higher than &quot;snapshot&quot; then deploy a private simple smart contract</li>
+<li>Wait for block height is atleast &quot;20&quot; higher than &quot;snapshot&quot; then deploy a private simple smart contract</li>
+<li>Wait for block height is atleast &quot;50&quot; higher than &quot;snapshot&quot; then deploy a private simple smart contract</li>
+<li>Wait for block height is atleast &quot;100&quot; higher than &quot;snapshot&quot; then deploy a private simple smart contract</li>
+<li>Wait for block height is atleast &quot;200&quot; higher than &quot;snapshot&quot; then deploy a private simple smart contract</li>
+<li>Wait for block height is atleast &quot;500&quot; higher than &quot;snapshot&quot; then deploy a private simple smart contract</li>
+</ul>
+<h2>Public smart contracts for Istanbul consensus</h2>
+<p>tags: istanbul, public, smart-contract</p>
+<ul>
+<li>Capture the current block height, named it as &quot;snapshot&quot;</li>
+<li>Wait for block height is atleast &quot;10&quot; higher than &quot;snapshot&quot; then deploy a public <code>ClientReceipt</code> smart contract</li>
+<li>Wait for block height is atleast &quot;20&quot; higher than &quot;snapshot&quot; then deploy a public <code>ClientReceipt</code> smart contract</li>
+<li>Wait for block height is atleast &quot;50&quot; higher than &quot;snapshot&quot; then deploy a public <code>ClientReceipt</code> smart contract</li>
+<li>Wait for block height is atleast &quot;100&quot; higher than &quot;snapshot&quot; then deploy a public <code>ClientReceipt</code> smart contract</li>
+<li>Wait for block height is atleast &quot;200&quot; higher than &quot;snapshot&quot; then deploy a public <code>ClientReceipt</code> smart contract</li>
+<li>Wait for block height is atleast &quot;500&quot; higher than &quot;snapshot&quot; then deploy a public <code>ClientReceipt</code> smart contract</li>
+</ul>
+<h2>Private smart contracts for Raft consensus</h2>
+<p>tags: raft</p>
+<ul>
+<li>Deploy &quot;100&quot; private smart contracts between a default account in &quot;Node1&quot; and a default account in &quot;Node7&quot;</li>
+<li>&quot;Node1&quot; has received &quot;200&quot; transactions</li>
+<li>&quot;Node7&quot; has received &quot;200&quot; transactions</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="../01_basic/value_transfer_public_transactions.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="../concepts/wait_and_deploy_private_smart_contract.html">></a></li></center></article>

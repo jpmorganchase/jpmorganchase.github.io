@@ -1,0 +1,33 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Private smart contract with event</h1>
+<p>tags: basic</p>
+<p>Log events in total are only available in participated parties.
+A private smart contract, <code>ClientReceipt</code>, logs all the deposits that have been performed.</p>
+<pre><code>pragma solidity ^0.4.0;
+
+contract ClientReceipt {
+    event Deposit(
+        address indexed _from,
+        bytes32 indexed _id,
+        uint _value
+    );
+
+    function deposit(bytes32 _id) public payable {
+        emit Deposit(msg.sender, _id, msg.value);
+    }
+}
+</code></pre>
+<h2>Log events in total are <strong>only</strong> captured in participated parties when executing the contract</h2>
+<p>tags: event, log</p>
+<ul>
+<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node1&quot; and it's private for &quot;Node7&quot;, named this contract as &quot;contract17&quot;</li>
+<li>&quot;contract17&quot; is mined</li>
+<li>Execute &quot;contract17&quot;'s <code>deposit()</code> function &quot;10&quot; times with arbitrary id and value from &quot;Node1&quot;. And it's private for &quot;Node7&quot;</li>
+<li>&quot;Node1&quot; has received &quot;10&quot; transactions which contain &quot;10&quot; log events in total</li>
+<li>&quot;Node7&quot; has received &quot;10&quot; transactions which contain &quot;10&quot; log events in total</li>
+<li>&quot;Node2&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
+<li>&quot;Node3&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
+<li>&quot;Node4&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
+<li>&quot;Node5&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
+<li>&quot;Node6&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./private_smart_contract_async.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./private_smart_contract_multiple.html">></a></li></center></article>

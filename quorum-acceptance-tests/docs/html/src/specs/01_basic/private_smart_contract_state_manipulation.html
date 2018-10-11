@@ -1,0 +1,32 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>State manipulation in private smart contract</h1>
+<p>tags: basic</p>
+<p>A simple smart contract is to store a int value and to provide <code>get()</code> and <code>set()</code> functions.</p>
+<pre><code>pragma solidity ^0.4.15;
+
+contract SimpleStorage {
+    uint private storedData;
+
+    constructor(uint initVal) public {
+        storedData = initVal;
+    }
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public constant returns (uint retVal) {
+        return storedData;
+    }
+}
+</code></pre>
+<p>Non-participated party from original transaction is trying to modify the private state of the participated party.</p>
+<ul>
+<li>Deploy a simple smart contract with initial value &quot;100&quot; in &quot;Node1&quot;'s default account and it's private for &quot;Node7&quot;, named this contract as &quot;contract17&quot;</li>
+</ul>
+<h2>Private state is maintained</h2>
+<p>tags: private, state</p>
+<ul>
+<li>Execute &quot;contract17&quot;'s <code>set()</code> function with new value &quot;0&quot; in &quot;Node3&quot; and it's private for &quot;Node1&quot;</li>
+<li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node1&quot; returns &quot;100&quot;</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./private_smart_contract_single.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./public_smart_contract_event.html">></a></li></center></article>
