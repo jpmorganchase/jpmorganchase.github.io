@@ -1,12 +1,14 @@
 <testsuites>
-	<testsuite id="1" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.585" timestamp="2018-10-13T15:31:38" name="Value transfer in private transactions" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="1" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="504.686" timestamp="2018-10-14T15:44:41" name="Transactions for different block heights" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.342"></testcase>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.243"></testcase>
+		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="504.686"></testcase>
+		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="0.000">
+			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;"></skipped>
+		</testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="2" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="0.000" timestamp="2018-10-13T15:31:38" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="2" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="0.000" timestamp="2018-10-14T15:44:41" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
 		<testcase classname="Istanbul fault tolerance and recoverability" name="Modify number of validators from less than 2F + 1 to more than 2F + 1" time="0.000">
 			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec:11 Step implementation not found =&gt; &#39;The consensus should work at the beginning&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec:12 Step implementation not found =&gt; &#39;Stop &#34;3&#34; validators so there are less than 2F + 1 validators in the network&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec:13 Step implementation not found =&gt; &#39;The consensus should not work&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec:14 Step implementation not found =&gt; &#39;Resume the stopped validators&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec:15 Step implementation not found =&gt; &#39;The consensus should work after resuming&#39;"></skipped>
@@ -14,62 +16,60 @@
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="3" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="6.520" timestamp="2018-10-13T15:31:38" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="3" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="14.173" timestamp="2018-10-14T15:44:41" name="Single private smart contract" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="5.356"></testcase>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.164"></testcase>
+		<testcase classname="Single private smart contract" name="Contract is mined" time="2.407"></testcase>
+		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.221"></testcase>
+		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.499"></testcase>
+		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.425"></testcase>
+		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.621"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="4" tests="1" failures="1" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="4.478" timestamp="2018-10-13T15:31:38" name="State manipulation in private smart contract" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="4" tests="1" failures="1" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="3.437" timestamp="2018-10-14T15:44:41" name="State manipulation in private smart contract" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="State manipulation in private smart contract" name="Private state is maintained" time="4.478">
+		<testcase classname="State manipulation in private smart contract" name="Private state is maintained" time="3.437">
 			<failure message="&#34;contract17&#34;&#39;s `get()` function execution in &#34;Node1&#34; returns &#34;100&#34;&#xA;Step Execution Failure: &#39;org.junit.ComparisonFailure: expected:&lt;[10]0&gt; but was:&lt;[]0&gt;&#39;" type="&#34;contract17&#34;&#39;s `get()` function execution in &#34;Node1&#34; returns &#34;100&#34;&#xA;Step Execution Failure: &#39;org.junit.ComparisonFailure: expected:&lt;[10]0&gt; but was:&lt;[]0&gt;&#39;">sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#xA;sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#xA;sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#xA;com.quorum.gauge.PrivateSmartContract.verifyPrivacyWithParticipatedNodes(PrivateSmartContract.java:121)&#xA;</failure>
 		</testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="5" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="31.335" timestamp="2018-10-13T15:31:38" name="Public smart contract with event" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="5" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="5.082" timestamp="2018-10-14T15:44:41" name="Value transfer in public transactions" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="31.335"></testcase>
+		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.524"></testcase>
+		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.558"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="6" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="5.147" timestamp="2018-10-13T15:31:38" name="Value transfer in public transactions" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="6" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.481" timestamp="2018-10-14T15:44:41" name="Value transfer in private transactions" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.584"></testcase>
-		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.563"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.232"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.249"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="7" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="501.991" timestamp="2018-10-13T15:31:38" name="Transactions for different block heights" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="7" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="6.401" timestamp="2018-10-14T15:44:41" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="501.991"></testcase>
-		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="0.000">
-			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;&#xA;/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/concepts/wait_and_deploy_public_smart_contract.cpt:7 Step implementation not found =&gt; &#39;&#34;Node1&#34; has received &#34;10&#34; transactions which totally contain &#34;10&#34; log events&#39;"></skipped>
-		</testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="5.224"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.177"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="8" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="5.659" timestamp="2018-10-13T15:31:38" name="Private smart contract with event" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="8" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="5.597" timestamp="2018-10-14T15:44:41" name="Private smart contract with event" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="5.659"></testcase>
+		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="5.597"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="9" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="19.086" timestamp="2018-10-13T15:31:38" name="Multiple private smart contracts" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="9" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="19.074" timestamp="2018-10-14T15:44:41" name="Multiple private smart contracts" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="19.086"></testcase>
+		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="19.074"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="10" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="14.217" timestamp="2018-10-13T15:31:38" name="Single private smart contract" errors="0" hostname="travis-job-228465e5-9d05-40e5-8394-00714979e311">
+	<testsuite id="10" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="31.298" timestamp="2018-10-14T15:44:41" name="Public smart contract with event" errors="0" hostname="travis-job-35be65aa-7083-422a-92d4-654eab39ea5a">
 		<properties></properties>
-		<testcase classname="Single private smart contract" name="Contract is mined" time="2.423"></testcase>
-		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.220"></testcase>
-		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.477"></testcase>
-		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.462"></testcase>
-		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.635"></testcase>
+		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="31.298"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
