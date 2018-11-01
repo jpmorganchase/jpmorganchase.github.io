@@ -1,0 +1,19 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Verify privacy between &lt;nodeSource&gt; and &lt;nodeTarget&gt; excluding &lt;arbitraryNode&gt; when using a simple smart contract</h1>
+<ul>
+<li>Deploy a simple smart contract with initial value &quot;123&quot; in &lt;nodeSource&gt;'s default account and it's private for &lt;nodeTarget&gt;, named this contract as &quot;arbitraryContract1&quot;</li>
+<li>Transaction Hash is returned for &quot;arbitraryContract1&quot;</li>
+<li>Transaction Receipt is present in &lt;nodeSource&gt; for &quot;arbitraryContract1&quot;</li>
+<li>Transaction Receipt is present in &lt;nodeTarget&gt; for &quot;arbitraryContract1&quot;</li>
+<li>&quot;arbitraryContract1&quot; stored in &lt;nodeSource&gt; and &lt;nodeTarget&gt; must have the same storage root</li>
+<li>&quot;arbitraryContract1&quot; stored in &lt;nodeSource&gt; and &quot;Node3&quot; must not have the same storage root</li>
+<li>&quot;arbitraryContract1&quot;'s <code>get()</code> function execution in &lt;nodeSource&gt; returns &quot;123&quot;</li>
+<li>&quot;arbitraryContract1&quot;'s <code>get()</code> function execution in &lt;nodeTarget&gt; returns &quot;123&quot;</li>
+<li>&quot;arbitraryContract1&quot;'s <code>get()</code> function execution in &lt;arbitraryNode&gt; returns &quot;0&quot;</li>
+<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &lt;nodeSource&gt; and it's private for &lt;nodeTarget&gt;, named this contract as &quot;arbitraryContract2&quot;</li>
+<li>&quot;arbitraryContract2&quot; is mined</li>
+<li>Execute &quot;arbitraryContract2&quot;'s <code>deposit()</code> function &quot;10&quot; times with arbitrary id and value from &lt;nodeSource&gt;. And it's private for &lt;nodeTarget&gt;</li>
+<li>&lt;nodeSource&gt; has received &quot;10&quot; transactions which contain &quot;10&quot; log events in total</li>
+<li>&lt;nodeTarget&gt; has received &quot;10&quot; transactions which contain &quot;10&quot; log events in total</li>
+<li>&lt;arbitraryNode&gt; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./new_network_node.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./wait_and_deploy_private_smart_contract.html">></a></li></center></article>
