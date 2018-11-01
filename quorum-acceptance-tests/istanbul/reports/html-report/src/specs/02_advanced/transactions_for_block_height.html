@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,9,1" data-total="10">
+        <svg id="pie-chart" data-results="7,2,1" data-total="10">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/10</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 7/10</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 9/10</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 2/10</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/10</title></path>
         </svg>
@@ -43,8 +43,8 @@
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">9</span><span class="txt">Passed</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">7</span><span class="txt">Failed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">2</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">1</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -52,7 +52,7 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>default,travis-build-32.2</span>
+          <span>default,travis-build-33.2</span>
         </li>
         
         <li>
@@ -62,15 +62,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>90%</span>
+          <span>20%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:19:00</span>
+          <span>00:01:02</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Oct 31, 2018 at 3:39pm</span>
+          <span>Nov 1, 2018 at 3:39pm</span>
         </li>
       </ul>
       
@@ -100,30 +100,75 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="../01_basic/public_smart_contract_event.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="time" class="time">00:00:15</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/value_transfer_public_transactions.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/istanbul_fault_tolerance.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Istanbul fault tolerance and recoverability</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/private_smart_contract_async.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/private_smart_contract_event.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/private_smart_contract_single.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:12</span>
+            </li>
+          </a>
+          
+          <a href="transactions_for_block_height.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
           <a href="../01_basic/private_smart_contract_state_manipulation.html">
              
               <li class='skipped spec-name'>
             
               <span id="scenarioName" class="scenarioname">State manipulation in private smart contract</span>
               <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/private_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:14</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/public_smart_contract_event.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
-              <span id="time" class="time">00:00:31</span>
             </li>
           </a>
           
@@ -136,57 +181,12 @@
             </li>
           </a>
           
-          <a href="../01_basic/value_transfer_public_transactions.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/istanbul_fault_tolerance.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Istanbul fault tolerance and recoverability</span>
-              <span id="time" class="time">00:00:14</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/private_smart_contract_async.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
-              <span id="time" class="time">00:00:14</span>
-            </li>
-          </a>
-          
           <a href="../01_basic/private_smart_contract_multiple.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
               <span id="time" class="time">00:00:19</span>
-            </li>
-          </a>
-          
-          <a href="transactions_for_block_height.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:17:14</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/private_smart_contract_event.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -204,8 +204,8 @@
         <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec">Transactions for different block heights</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">2</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -218,7 +218,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:17:14</span>
+        <span class="time">00:00:00</span>
       </div>
 
 	
@@ -297,13 +297,13 @@ contract ClientReceipt {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Private smart contracts for Istanbul consensus</h3>
-    <span class="time">00:08:21</span>
+    <span class="time">00:00:00</span>
 
 	
   
@@ -353,7 +353,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -383,6 +383,19 @@ contract ClientReceipt {
 
   
     
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+        <div class="exception">
+          <h4 class="error-message">
+            <pre>java.lang.AssertionError: [Value class for key [blocknumber] in Gauge DataStore] <br/>Expecting actual not to be null</pre>
+          </h4>
+          <pre class="stacktrace">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:65)<br/>com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:60)<br/>com.quorum.gauge.Chain.captureCurrentBlockHeight(Chain.java:34)<br/></pre>
+        </div>
+    </div>
+  </div>
+
+    
     
   
 
@@ -410,10 +423,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:11</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -462,10 +475,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:09</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -532,10 +545,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -625,7 +638,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -687,10 +700,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:11</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -739,10 +752,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:09</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -809,10 +822,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -902,7 +915,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -964,10 +977,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:29</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1016,10 +1029,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:27</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1086,10 +1099,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1179,7 +1192,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1241,10 +1254,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:50</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1293,10 +1306,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:48</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1363,10 +1376,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1456,7 +1469,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1518,10 +1531,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:39</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1570,10 +1583,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:37</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1640,10 +1653,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1733,7 +1746,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1795,10 +1808,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:04:59</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1847,10 +1860,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:04:57</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1917,10 +1930,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2010,7 +2023,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2078,13 +2091,13 @@ contract ClientReceipt {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Public smart contracts for Istanbul consensus</h3>
-    <span class="time">00:08:52</span>
+    <span class="time">00:00:00</span>
 
 	
   
@@ -2134,7 +2147,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -2164,6 +2177,19 @@ contract ClientReceipt {
 
   
     
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+        <div class="exception">
+          <h4 class="error-message">
+            <pre>java.lang.AssertionError: [Value class for key [blocknumber] in Gauge DataStore] <br/>Expecting actual not to be null</pre>
+          </h4>
+          <pre class="stacktrace">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:65)<br/>com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:60)<br/>com.quorum.gauge.Chain.captureCurrentBlockHeight(Chain.java:34)<br/></pre>
+        </div>
+    </div>
+  </div>
+
+    
     
   
 
@@ -2191,10 +2217,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:42</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2243,10 +2269,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:12</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2313,10 +2339,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2386,7 +2412,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2443,10 +2469,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2526,7 +2552,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2608,10 +2634,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:30</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2663,7 +2689,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2730,10 +2756,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2803,7 +2829,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2860,10 +2886,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2943,7 +2969,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3025,10 +3051,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:30</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3080,7 +3106,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3147,10 +3173,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3220,7 +3246,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3277,10 +3303,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3360,7 +3386,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3442,10 +3468,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:30</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3497,7 +3523,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3564,10 +3590,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3637,7 +3663,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3694,10 +3720,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3777,7 +3803,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3859,10 +3885,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:37</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3911,10 +3937,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:06</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3981,10 +4007,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4054,7 +4080,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4111,10 +4137,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4194,7 +4220,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4276,10 +4302,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:05:00</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4328,10 +4354,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:04:30</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4398,10 +4424,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4471,7 +4497,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4528,10 +4554,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:15</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4611,7 +4637,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
