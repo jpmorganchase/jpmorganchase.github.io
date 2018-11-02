@@ -39,20 +39,26 @@
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/10</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">10</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
-      <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">9</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">1</span><span class="txt">Skipped</span></li>
-      </ul>
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">10</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">9</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">18</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">17</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
+      </div>
     </div>
     <div class="report_details">
       <ul>
         <li>
           <label>Environment </label>
-          <span>default,travis-build-35.2</span>
+          <span>default,travis-build-36.2</span>
         </li>
         
         <li>
@@ -66,11 +72,11 @@
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:19:10</span>
+          <span>00:19:09</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Nov 1, 2018 at 6:27pm</span>
+          <span>Nov 2, 2018 at 3:40pm</span>
         </li>
       </ul>
       
@@ -97,6 +103,10 @@
         <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
         <i class="fa fa-search"></i>
       </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
@@ -109,12 +119,21 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_multiple.html">
+          <a href="../01_basic/private_smart_contract_async.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
-              <span id="time" class="time">00:00:19</span>
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:24</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/private_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -136,15 +155,6 @@
             </li>
           </a>
           
-          <a href="transactions_for_block_height.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:17:14</span>
-            </li>
-          </a>
-          
           <a href="../01_basic/istanbul_fault_tolerance.html">
              
               <li class='passed spec-name'>
@@ -154,12 +164,21 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_async.html">
+          <a href="../01_basic/private_smart_contract_multiple.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
-              <span id="time" class="time">00:00:24</span>
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
+              <span id="time" class="time">00:00:19</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/private_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:14</span>
             </li>
           </a>
           
@@ -172,21 +191,12 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_event.html">
+          <a href="transactions_for_block_height.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/private_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:14</span>
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:17:14</span>
             </li>
           </a>
           
@@ -303,7 +313,7 @@ contract ClientReceipt {
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Private smart contracts for Istanbul consensus</h3>
-    <span class="time">00:08:22</span>
+    <span class="time">00:08:21</span>
 
 	
   
@@ -383,6 +393,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -508,6 +521,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -598,6 +614,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -655,6 +674,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -785,6 +807,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -875,6 +900,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -932,6 +960,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -1062,6 +1093,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -1152,6 +1186,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -1209,6 +1246,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -1339,6 +1379,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -1429,6 +1472,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -1486,6 +1532,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -1616,6 +1665,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -1706,6 +1758,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -1763,6 +1818,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -1893,6 +1951,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -1983,6 +2044,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2040,6 +2104,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -2167,6 +2234,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2289,6 +2359,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2359,6 +2432,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2416,6 +2492,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -2499,6 +2578,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2576,6 +2658,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -2706,6 +2791,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2776,6 +2864,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2833,6 +2924,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -2916,6 +3010,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -2993,6 +3090,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -3123,6 +3223,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -3193,6 +3296,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -3250,6 +3356,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -3333,6 +3442,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -3410,6 +3522,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -3540,6 +3655,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -3610,6 +3728,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -3667,6 +3788,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -3750,6 +3874,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -3827,6 +3954,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -3957,6 +4087,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -4027,6 +4160,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -4084,6 +4220,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -4167,6 +4306,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -4244,6 +4386,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -4374,6 +4519,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -4444,6 +4592,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -4501,6 +4652,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
@@ -4584,6 +4738,9 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
   
@@ -4661,6 +4818,9 @@ contract ClientReceipt {
 
   
     
+    
+  
+
     
   
 
