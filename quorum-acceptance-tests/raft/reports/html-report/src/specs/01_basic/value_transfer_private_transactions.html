@@ -30,27 +30,27 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="8,0,1" data-total="9">
+        <svg id="pie-chart" data-results="0,9,1" data-total="10">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 8/9</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/10</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 0/9</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 9/10</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/9</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/10</title></path>
         </svg>
       </div>
     </div>
     <div class="report_test-results">
       <div class="report_test-result specs">
-          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">9</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">8</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">0</span></div>
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">10</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">9</span></div>
           <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
       </div>
       <div class="report_test-result scenarios">
-          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">16</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">15</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">0</span></div>
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">17</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">16</span></div>
           <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>default,travis-build-43.1</span>
+          <span>default,travis-build-44.1</span>
         </li>
         
         <li>
@@ -68,15 +68,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>0%</span>
+          <span>90%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:00</span>
+          <span>00:00:43</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Nov 8, 2018 at 3:29pm</span>
+          <span>Nov 9, 2018 at 3:29pm</span>
         </li>
       </ul>
       
@@ -110,83 +110,92 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="private_smart_contract_event.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="public_smart_contract_event.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="value_transfer_private_transactions.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="../02_advanced/transactions_for_block_height.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_async.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_multiple.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="value_transfer_public_transactions.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
           <a href="private_smart_contract_state_manipulation.html">
              
               <li class='skipped spec-name'>
             
               <span id="scenarioName" class="scenarioname">State manipulation in private smart contract</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="public_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_public_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:03</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_multiple.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
+              <span id="time" class="time">00:00:19</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_spam.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="../02_advanced/transactions_for_block_height.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_async.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:03</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_private_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
               <span id="time" class="time">00:00:00</span>
             </li>
           </a>
@@ -205,8 +214,8 @@
         <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec">Value transfer in private transactions</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">2</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -254,7 +263,7 @@
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
@@ -280,21 +289,6 @@
 
   
   
-
-	
-		
-  <div class="error-container failed">
-    <div class="error-heading">Before Scenario Failed:<span class="error-message"> java.lang.RuntimeException: java.net.SocketException: Connection refused (Connection refused)</span></div>
-    <div class="toggle-show">
-      [Show details]
-    </div>
-    <div class="exception-container hidden">
-      <div class="exception">
-        <pre class="stacktrace">rx.exceptions.Exceptions.propagate(Exceptions.java:57)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.core.ExecutionHooks.saveCurrentBlockNumber(ExecutionHooks.java:53)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
 
 	
 
@@ -323,7 +317,7 @@
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -402,7 +396,7 @@
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -474,7 +468,7 @@
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
@@ -504,21 +498,6 @@
   
 
 	
-		
-  <div class="error-container failed">
-    <div class="error-heading">Before Scenario Failed:<span class="error-message"> java.lang.RuntimeException: java.net.SocketException: Connection refused (Connection refused)</span></div>
-    <div class="toggle-show">
-      [Show details]
-    </div>
-    <div class="exception-container hidden">
-      <div class="exception">
-        <pre class="stacktrace">rx.exceptions.Exceptions.propagate(Exceptions.java:57)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.core.ExecutionHooks.saveCurrentBlockNumber(ExecutionHooks.java:53)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-	
 
   
   
@@ -546,7 +525,7 @@
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -625,7 +604,7 @@
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
