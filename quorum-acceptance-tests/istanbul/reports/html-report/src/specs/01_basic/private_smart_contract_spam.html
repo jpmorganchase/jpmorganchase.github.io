@@ -220,7 +220,7 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec">Public smart contract with event</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec">Multiple private smart contracts between nodes</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
@@ -232,12 +232,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:05</span>
+        <span class="time">00:00:07</span>
       </div>
 
 	
@@ -262,25 +262,7 @@
     <div class="content">
     
   
-  <span><p>A smart contract, <code>ClientReceipt</code>, logs all the deposits that have been performed.</p>
-
-<pre><code>pragma solidity ^0.4.0;
-
-
-contract ClientReceipt {
-    event Deposit(
-        address indexed _from,
-        bytes32 indexed _id,
-        uint _value
-    );
-
-
-    function deposit(bytes32 _id) public payable {
-        emit Deposit(msg.sender, _id, msg.value);
-    }
-}
-</code></pre>
-</span>
+  <span></span>
   
   
 
@@ -294,8 +276,8 @@ contract ClientReceipt {
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Log events in total are captured when executing the contract</h3>
-    <span class="time">00:00:05</span>
+    <h3 class="head borderBottom">Send transactions from one node to others</h3>
+    <span class="time">00:00:07</span>
 
 	
   
@@ -346,7 +328,17 @@ contract ClientReceipt {
   
     
       <span>
-        Deploy `ClientReceipt` smart contract from a default account in 
+        Send 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         simple private smart contracts between a default account in 
       </span>
     
   
@@ -356,75 +348,12 @@ contract ClientReceipt {
   
     
       <span>
-        , named this contract as 
+         and it&#39;s private for 
       </span>
     
   
     
-      <span class='parameter'>"contract12"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract12"</span>
-    
-  
-    
-      <span>
-         is mined
-      </span>
+      <span class='parameter'>"Node2,Node3"</span>
     
   
   </div>
@@ -482,17 +411,7 @@ contract ClientReceipt {
   
     
       <span>
-        Execute 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract12"</span>
-    
-  
-    
-      <span>
-        &#39;s `deposit()` function 
+        Send 
       </span>
     
   
@@ -502,149 +421,9 @@ contract ClientReceipt {
   
     
       <span>
-         times with arbitrary id and value from 
+         simple private smart contracts between a default account in 
       </span>
     
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-    
-      <span>
-         has received 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
   
     
       <span class='parameter'>"Node2"</span>
@@ -652,28 +431,12 @@ contract ClientReceipt {
   
     
       <span>
-         has received 
+         and it&#39;s private for 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
+      <span class='parameter'>"Node1,Node3"</span>
     
   
   </div>
@@ -710,7 +473,7 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -728,6 +491,22 @@ contract ClientReceipt {
 
   
   
+  
+    
+      <span>
+        Send 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         simple private smart contracts between a default account in 
+      </span>
+    
   
     
       <span class='parameter'>"Node3"</span>
@@ -735,360 +514,12 @@ contract ClientReceipt {
   
     
       <span>
-         has received 
+         and it&#39;s private for 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node4"</span>
-    
-  
-    
-      <span>
-         has received 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node5"</span>
-    
-  
-    
-      <span>
-         has received 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node6"</span>
-    
-  
-    
-      <span>
-         has received 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node7"</span>
-    
-  
-    
-      <span>
-         has received 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
+      <span class='parameter'>"Node1,Node2"</span>
     
   
   </div>
