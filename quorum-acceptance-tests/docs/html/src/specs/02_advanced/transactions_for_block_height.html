@@ -4,7 +4,7 @@
 The purpose is to increase the possibility for the network to accept transactions during edge scenarios like:
 proposer rotation.</p>
 <p>Using the following smart contracts:</p>
-<pre><code>pragma solidity ^0.4.15;
+<pre><code>pragma solidity ^0.5.0;
 
 contract SimpleStorage {
     uint private storedData;
@@ -17,12 +17,12 @@ contract SimpleStorage {
         storedData = x;
     }
 
-    function get() public constant returns (uint retVal) {
+    function get() public view returns (uint retVal) {
         return storedData;
     }
 }
 
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.0;
 
 contract ClientReceipt {
     event Deposit(
