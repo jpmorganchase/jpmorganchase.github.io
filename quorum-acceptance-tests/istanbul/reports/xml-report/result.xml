@@ -1,72 +1,18 @@
 <testsuites>
-	<testsuite id="1" tests="1" failures="1" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="0.299" timestamp="2018-11-16T15:41:08" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
+	<testsuite id="1" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="14.228" timestamp="2018-11-16T16:30:47" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
 		<properties></properties>
-		<testcase classname="Istanbul fault tolerance and recoverability" name="Modify number of validators from less than 2F + 1 to more than 2F + 1" time="0.299">
-			<failure message="The consensus should work at the beginning&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="The consensus should work at the beginning&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.Istanbul.verifyConsensus(Istanbul.java:49)&#xA;</failure>
-		</testcase>
+		<testcase classname="Istanbul fault tolerance and recoverability" name="Modify number of validators from less than 2F + 1 to more than 2F + 1" time="14.228"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="2" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="19.105" timestamp="2018-11-16T15:41:08" name="Multiple private smart contracts" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
+	<testsuite id="2" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="23.919" timestamp="2018-11-16T16:30:47" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
 		<properties></properties>
-		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="19.105"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="22.731"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.188"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="3" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="14.250" timestamp="2018-11-16T15:41:08" name="Single private smart contract" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
-		<properties></properties>
-		<testcase classname="Single private smart contract" name="Contract is mined" time="2.392"></testcase>
-		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.233"></testcase>
-		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.527"></testcase>
-		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.484"></testcase>
-		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.614"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="4" tests="1" failures="1" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="2.519" timestamp="2018-11-16T15:41:08" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
-		<properties></properties>
-		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="2.519">
-			<failure message="Send &#34;10&#34; simple private smart contracts between a default account in &#34;Node1&#34; and it&#39;s private for &#34;Node2,Node3&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="Send &#34;10&#34; simple private smart contracts between a default account in &#34;Node1&#34; and it&#39;s private for &#34;Node2,Node3&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.PrivateSmartContract.sendPrivateSmartContracts(PrivateSmartContract.java:316)&#xA;</failure>
-		</testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="5" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.510" timestamp="2018-11-16T15:41:08" name="Value transfer in private transactions" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
-		<properties></properties>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.240"></testcase>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.270"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="6" tests="2" failures="2" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="0.073" timestamp="2018-11-16T15:41:08" name="Transactions for different block heights" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
-		<properties></properties>
-		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="0.036">
-			<failure message="Capture the current block height, named it as &#34;snapshot&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="Capture the current block height, named it as &#34;snapshot&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.Chain.captureCurrentBlockHeight(Chain.java:34)&#xA;</failure>
-		</testcase>
-		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="0.037">
-			<failure message="Capture the current block height, named it as &#34;snapshot&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="Capture the current block height, named it as &#34;snapshot&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.Chain.captureCurrentBlockHeight(Chain.java:34)&#xA;</failure>
-		</testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="7" tests="2" failures="1" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="5.756" timestamp="2018-11-16T15:41:08" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
-		<properties></properties>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="4.566">
-			<failure message="Transaction Receipt is present in &#34;Node1&#34; for &#34;contract17&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="Transaction Receipt is present in &#34;Node1&#34; for &#34;contract17&#34;&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.PrivateSmartContract.verifyTransactionReceipt(PrivateSmartContract.java:93)&#xA;</failure>
-		</testcase>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.190"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="8" tests="1" failures="1" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="2.238" timestamp="2018-11-16T15:41:08" name="Private smart contract with event" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
-		<properties></properties>
-		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="2.238">
-			<failure message="&#34;contract17&#34; is mined&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="&#34;contract17&#34; is mined&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.PublicSmartContract.verifyContractIsMined(PublicSmartContract.java:57)&#xA;</failure>
-		</testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="9" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2018-11-16T15:41:08" name="State manipulation in private smart contract" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
+	<testsuite id="3" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2018-11-16T16:30:47" name="State manipulation in private smart contract" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
 		<properties></properties>
 		<testcase classname="State manipulation in private smart contract" name="Private state is maintained" time="0.000">
 			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec:27 Step implementation not found =&gt; &#39;Note: this step is not implemented indicating that the spec execution is temporarily skipped&#39;"></skipped>
@@ -74,22 +20,58 @@
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="10" tests="1" failures="1" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="2.184" timestamp="2018-11-16T15:41:08" name="Public smart contract with event" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
+	<testsuite id="4" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="5.405" timestamp="2018-11-16T16:30:47" name="Public smart contract with event" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
 		<properties></properties>
-		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="2.184">
-			<failure message="&#34;contract12&#34; is mined&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="&#34;contract12&#34; is mined&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.PublicSmartContract.verifyContractIsMined(PublicSmartContract.java:57)&#xA;</failure>
-		</testcase>
+		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="5.405"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="11" tests="2" failures="2" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="4.952" timestamp="2018-11-16T15:41:08" name="Value transfer in public transactions" errors="0" hostname="travis-job-a930b7fc-fc10-4e18-81c8-9ad4317f03b2">
+	<testsuite id="5" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="5.706" timestamp="2018-11-16T16:30:47" name="Private smart contract with event" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
 		<properties></properties>
-		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.484">
-			<failure message="Transaction is accepted in the blockchain&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="Transaction is accepted in the blockchain&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.ValueTransferPublicTransaction.verifyTransactionHash(ValueTransferPublicTransaction.java:69)&#xA;</failure>
-		</testcase>
-		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.468">
-			<failure message="Transaction is accepted in the blockchain&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;" type="Transaction is accepted in the blockchain&#xA;Step Execution Failure: &#39;java.lang.AssertionError: [Value class for key [blockNumber] in Gauge DataStore] &#xA;Expecting actual not to be null&#39;">com.quorum.gauge.core.AbstractSpecImplementation.mustHaveValue(AbstractSpecImplementation.java:76)&#xA;com.quorum.gauge.core.AbstractSpecImplementation.currentBlockNumber(AbstractSpecImplementation.java:66)&#xA;com.quorum.gauge.ValueTransferPublicTransaction.verifyTransactionHash(ValueTransferPublicTransaction.java:69)&#xA;</failure>
-		</testcase>
+		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="5.706"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="6" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="19.071" timestamp="2018-11-16T16:30:47" name="Multiple private smart contracts" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
+		<properties></properties>
+		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="19.071"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="7" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="14.573" timestamp="2018-11-16T16:30:47" name="Single private smart contract" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
+		<properties></properties>
+		<testcase classname="Single private smart contract" name="Contract is mined" time="2.419"></testcase>
+		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.233"></testcase>
+		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.747"></testcase>
+		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.457"></testcase>
+		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.717"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="8" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="7.691" timestamp="2018-11-16T16:30:47" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
+		<properties></properties>
+		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="7.691"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="9" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.545" timestamp="2018-11-16T16:30:47" name="Value transfer in private transactions" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
+		<properties></properties>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.277"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.268"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="10" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="5.248" timestamp="2018-11-16T16:30:47" name="Value transfer in public transactions" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
+		<properties></properties>
+		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.606"></testcase>
+		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.642"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="11" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="1007.145" timestamp="2018-11-16T16:30:47" name="Transactions for different block heights" errors="0" hostname="travis-job-1bb99e1b-8e5e-4fa2-8bd6-0403ad84a762">
+		<properties></properties>
+		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="502.456"></testcase>
+		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="504.689"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
