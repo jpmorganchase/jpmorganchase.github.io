@@ -42,386 +42,549 @@
       // Build a system
       const ui = SwaggerUIBundle({
           spec: /*intellij-swagger-spec-start*/{
-  "swagger" : "2.0",
-  "info" : {
-    "version" : "1.0-SNAPSHOT",
-    "title" : "Tessera rest"
-  },
-  "host" : "localhost:8080",
-  "basePath" : "/",
-  "tags" : [ {
-    "name" : "Provided access to openapi schema documentation."
-  } ],
-  "schemes" : [ "http", "https" ],
-  "paths" : {
-    "/api" : {
-      "get" : {
-        "tags" : [ "Provided access to openapi schema documentation." ],
-        "operationId" : "api",
-        "produces" : [ "application/json", "text/html" ],
-        "responses" : {
-          "200" : {
-            "description" : "Returns json or html openapi document"
-          }
-        }
-      }
-    },
-    "/delete" : {
-      "post" : {
-        "summary" : "Deprecated: Replaced by /transaction/{key} DELETE HTTP method",
-        "description" : "",
-        "operationId" : "delete",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "text/plain" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "deleteRequest",
-          "description" : "Key data to be deleted",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/DeleteRequest"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Status message"
-          },
-          "404" : {
-            "description" : "If the entity doesn't exist"
-          }
-        },
-        "deprecated" : true
-      }
-    },
-    "/partyinfo" : {
-      "post" : {
-        "summary" : "Request public key/url of other nodes",
-        "description" : "",
-        "operationId" : "partyInfo",
-        "consumes" : [ "application/octet-stream" ],
-        "produces" : [ "application/octet-stream" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "body",
-          "required" : true,
-          "schema" : {
-            "type" : "array",
-            "items" : {
-              "type" : "string",
-              "format" : "byte"
-            }
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Encoded PartyInfo Data"
-          }
-        }
-      }
-    },
-    "/push" : {
-      "post" : {
-        "summary" : "Transmit encrypted payload between Tessera Nodes",
-        "description" : "",
-        "operationId" : "push",
-        "consumes" : [ "application/octet-stream" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "payload",
-          "description" : "Key data to be stored.",
-          "required" : true,
-          "schema" : {
-            "type" : "array",
-            "items" : {
-              "type" : "string",
-              "format" : "byte"
-            }
-          }
-        } ],
-        "responses" : {
-          "201" : {
-            "description" : "Key created status"
-          },
-          "500" : {
-            "description" : "General error"
-          }
-        }
-      }
-    },
-    "/receive" : {
-      "get" : {
-        "operationId" : "receive",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "default" : {
-            "description" : "successful operation"
-          }
-        },
-        "deprecated" : true
-      }
-    },
-    "/receiveraw" : {
-      "get" : {
-        "summary" : "Submit keys to retrieve payload and decrypt it",
-        "description" : "",
-        "operationId" : "receiveRaw",
-        "consumes" : [ "application/octet-stream" ],
-        "produces" : [ "application/octet-stream" ],
-        "parameters" : [ {
-          "name" : "c11n-key",
-          "in" : "header",
-          "description" : "Encoded Sender Public Key",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "c11n-to",
-          "in" : "header",
-          "description" : "Encoded Recipient Public Key",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Raw payload"
-          }
-        }
-      }
-    },
-    "/resend" : {
-      "post" : {
-        "summary" : "Resend transactions for given key or message hash/recipient",
-        "description" : "",
-        "operationId" : "resend",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "text/plain" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "resendRequest",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/ResendRequest"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Encoded payload when TYPE is INDIVIDUAL"
-          },
-          "500" : {
-            "description" : "General error"
-          }
-        }
-      }
-    },
-    "/send" : {
-      "post" : {
-        "summary" : "Send private transaction payload",
-        "description" : "",
-        "operationId" : "send",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "sendRequest",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/SendRequest"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Send response",
-            "schema" : {
-              "$ref" : "#/definitions/SendResponse"
-            }
-          },
-          "400" : {
-            "description" : "For unknown and unknown keys"
-          }
-        }
-      }
-    },
-    "/sendraw" : {
-      "post" : {
-        "summary" : "Send private transaction payload",
-        "description" : "",
-        "operationId" : "sendRaw",
-        "consumes" : [ "application/octet-stream" ],
-        "produces" : [ "text/plain" ],
-        "parameters" : [ {
-          "name" : "c11n-from",
-          "in" : "header",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "c11n-to",
-          "in" : "header",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Encoded Key"
-          },
-          "500" : {
-            "description" : "Unknown server error"
-          }
-        }
-      }
-    },
-    "/transaction/{hash}" : {
-      "get" : {
-        "summary" : "Returns decrypted payload back to Quorum",
-        "description" : "",
-        "operationId" : "receive",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "hash",
-          "in" : "path",
-          "description" : "Encoded hash used to decrypt the payload",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "to",
-          "in" : "query",
-          "description" : "Encoded recipient key",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "Receive Response object",
-            "schema" : {
-              "$ref" : "#/definitions/ReceiveResponse"
-            }
-          }
-        }
-      }
-    },
-    "/transaction/{key}" : {
-      "delete" : {
-        "summary" : "Delete single transaction from Tessera node",
-        "description" : "",
-        "operationId" : "deleteKey",
-        "parameters" : [ {
-          "name" : "key",
-          "in" : "path",
-          "description" : "Encoded hash",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "204" : {
-            "description" : "Successful deletion"
-          },
-          "404" : {
-            "description" : "If the entity doesn't exist"
-          }
-        }
-      }
-    },
-    "/upcheck" : {
-      "get" : {
-        "summary" : "Check if local Tessera Node is up",
-        "description" : "",
-        "operationId" : "upCheck",
-        "produces" : [ "text/plain" ],
-        "responses" : {
-          "200" : {
-            "description" : "I'm up!",
-            "schema" : {
-              "type" : "string"
-            }
-          }
-        }
-      }
-    },
-    "/version" : {
-      "get" : {
-        "summary" : "Request current version of Tessera",
-        "description" : "",
-        "operationId" : "getVersion",
-        "produces" : [ "text/plain" ],
-        "responses" : {
-          "200" : {
-            "description" : "Current application version ",
-            "schema" : {
-              "type" : "string"
-            }
-          }
-        }
-      }
-    }
-  },
-  "definitions" : {
-    "DeleteRequest" : {
-      "type" : "object",
-      "required" : [ "Encoded public key" ],
-      "properties" : {
-        "Encoded public key" : {
-          "type" : "string"
-        }
-      }
-    },
-    "ReceiveResponse" : {
-      "type" : "object",
-      "properties" : {
-        "payload" : {
-          "type" : "string",
-          "description" : "Encode response servicing recieve requests"
-        }
-      }
-    },
-    "ResendRequest" : {
-      "type" : "object",
-      "properties" : {
-        "type" : {
-          "type" : "string",
-          "description" : "Resend type INDIVIDUAL or ALL",
-          "enum" : [ "ALL", "INDIVIDUAL" ]
-        },
-        "publicKey" : {
-          "type" : "string",
-          "description" : "TODO: Define this publicKey, what is it?"
-        },
-        "key" : {
-          "type" : "string",
-          "description" : "TODO: Define this key, what is it?"
-        }
-      }
-    },
-    "SendRequest" : {
-      "type" : "object",
-      "required" : [ "payload" ],
-      "properties" : {
-        "payload" : {
-          "type" : "string",
-          "description" : "Encyrpted payload to send to other parties."
-        },
-        "from" : {
-          "type" : "string",
-          "description" : "Sender public key"
-        },
-        "to" : {
-          "type" : "array",
-          "description" : "Recipient public keys",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      }
-    },
-    "SendResponse" : {
-      "type" : "object",
-      "properties" : {
-        "key" : {
-          "type" : "string",
-          "description" : "TODO: Define this key as something"
-        }
-      }
-    }
-  }
-}/*intellij-swagger-spec-end*/,
+              "swagger" : "2.0",
+              "info" : {
+                  "version" : "0.8-SNAPSHOT",
+                  "title" : "Tessera rest"
+              },
+              "host" : "localhost:8080",
+              "basePath" : "/",
+              "tags" : [ {
+                  "name" : "Provides access to OpenAPI schema documentation."
+              } ],
+              "schemes" : [ "http", "https" ],
+              "paths" : {
+                  "/api" : {
+                      "get" : {
+                          "tags" : [ "Provides access to OpenAPI schema documentation." ],
+                          "operationId" : "api",
+                          "produces" : [ "application/json", "text/html" ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Returns JSON or HTML OpenAPI document"
+                              }
+                          }
+                      }
+                  },
+                  "/config/peers" : {
+                      "get" : {
+                          "operationId" : "getPeers",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "application/json" ],
+                          "responses" : {
+                              "default" : {
+                                  "description" : "successful operation"
+                              }
+                          }
+                      },
+                      "put" : {
+                          "summary" : "Add a peer to the list of parties of the current node",
+                          "description" : "",
+                          "operationId" : "addPeer",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "application/json" ],
+                          "parameters" : [ {
+                              "in" : "body",
+                              "name" : "peer",
+                              "required" : true,
+                              "schema" : {
+                                  "$ref" : "#/definitions/Peer"
+                              }
+                          } ],
+                          "responses" : {
+                              "201" : {
+                                  "description" : "Peer added"
+                              },
+                              "500" : {
+                                  "description" : "General error"
+                              }
+                          }
+                      }
+                  },
+                  "/config/peers/{index}" : {
+                      "get" : {
+                          "operationId" : "getPeer",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "application/json" ],
+                          "parameters" : [ {
+                              "name" : "index",
+                              "in" : "path",
+                              "required" : true,
+                              "type" : "integer",
+                              "format" : "int32"
+                          } ],
+                          "responses" : {
+                              "default" : {
+                                  "description" : "successful operation"
+                              }
+                          }
+                      }
+                  },
+                  "/delete" : {
+                      "post" : {
+                          "summary" : "Deprecated: Replaced by /transaction/{key} DELETE HTTP method",
+                          "description" : "",
+                          "operationId" : "delete",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "text/plain" ],
+                          "parameters" : [ {
+                              "in" : "body",
+                              "name" : "deleteRequest",
+                              "description" : "Key data to be deleted",
+                              "required" : true,
+                              "schema" : {
+                                  "$ref" : "#/definitions/DeleteRequest"
+                              }
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Status message"
+                              },
+                              "404" : {
+                                  "description" : "If the entity doesn't exist"
+                              }
+                          },
+                          "deprecated" : true
+                      }
+                  },
+                  "/partyinfo" : {
+                      "post" : {
+                          "summary" : "Request public key/url of other nodes",
+                          "description" : "",
+                          "operationId" : "partyInfo",
+                          "consumes" : [ "application/octet-stream" ],
+                          "produces" : [ "application/octet-stream" ],
+                          "parameters" : [ {
+                              "in" : "body",
+                              "name" : "body",
+                              "required" : true,
+                              "schema" : {
+                                  "type" : "array",
+                                  "items" : {
+                                      "type" : "string",
+                                      "format" : "byte"
+                                  }
+                              }
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Encoded PartyInfo Data"
+                              }
+                          }
+                      }
+                  },
+                  "/push" : {
+                      "post" : {
+                          "summary" : "Transmit encrypted payload between P2PRestApp Nodes",
+                          "description" : "",
+                          "operationId" : "push",
+                          "consumes" : [ "application/octet-stream" ],
+                          "parameters" : [ {
+                              "in" : "body",
+                              "name" : "payload",
+                              "description" : "Key data to be stored.",
+                              "required" : true,
+                              "schema" : {
+                                  "type" : "array",
+                                  "items" : {
+                                      "type" : "string",
+                                      "format" : "byte"
+                                  }
+                              }
+                          } ],
+                          "responses" : {
+                              "201" : {
+                                  "description" : "Key created status"
+                              },
+                              "500" : {
+                                  "description" : "General error"
+                              }
+                          }
+                      }
+                  },
+                  "/receive" : {
+                      "get" : {
+                          "operationId" : "receive",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "application/json" ],
+                          "responses" : {
+                              "default" : {
+                                  "description" : "successful operation"
+                              }
+                          }
+                      }
+                  },
+                  "/receiveraw" : {
+                      "get" : {
+                          "summary" : "Submit keys to retrieve payload and decrypt it",
+                          "description" : "",
+                          "operationId" : "receiveRaw",
+                          "consumes" : [ "application/octet-stream" ],
+                          "produces" : [ "application/octet-stream" ],
+                          "parameters" : [ {
+                              "name" : "c11n-key",
+                              "in" : "header",
+                              "description" : "Encoded transaction hash",
+                              "required" : true,
+                              "type" : "string"
+                          }, {
+                              "name" : "c11n-to",
+                              "in" : "header",
+                              "description" : "Encoded Recipient Public Key",
+                              "required" : false,
+                              "type" : "string"
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Raw payload"
+                              }
+                          }
+                      }
+                  },
+                  "/resend" : {
+                      "post" : {
+                          "summary" : "Resend transactions for given key or message hash/recipient",
+                          "description" : "",
+                          "operationId" : "resend",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "text/plain" ],
+                          "parameters" : [ {
+                              "in" : "body",
+                              "name" : "resendRequest",
+                              "required" : true,
+                              "schema" : {
+                                  "$ref" : "#/definitions/ResendRequest"
+                              }
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Encoded payload when TYPE is INDIVIDUAL"
+                              },
+                              "500" : {
+                                  "description" : "General error"
+                              }
+                          }
+                      }
+                  },
+                  "/send" : {
+                      "post" : {
+                          "summary" : "Send private transaction payload",
+                          "description" : "",
+                          "operationId" : "send",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "application/json" ],
+                          "parameters" : [ {
+                              "in" : "body",
+                              "name" : "sendRequest",
+                              "required" : true,
+                              "schema" : {
+                                  "$ref" : "#/definitions/SendRequest"
+                              }
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Send response",
+                                  "schema" : {
+                                      "$ref" : "#/definitions/SendResponse"
+                                  }
+                              },
+                              "400" : {
+                                  "description" : "For unknown and unknown keys"
+                              }
+                          }
+                      }
+                  },
+                  "/sendraw" : {
+                      "post" : {
+                          "summary" : "Send private transaction payload",
+                          "description" : "",
+                          "operationId" : "sendRaw",
+                          "consumes" : [ "application/octet-stream" ],
+                          "produces" : [ "text/plain" ],
+                          "parameters" : [ {
+                              "name" : "c11n-from",
+                              "in" : "header",
+                              "required" : false,
+                              "type" : "string"
+                          }, {
+                              "name" : "c11n-to",
+                              "in" : "header",
+                              "required" : false,
+                              "type" : "string"
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Encoded Key"
+                              },
+                              "500" : {
+                                  "description" : "Unknown server error"
+                              }
+                          }
+                      }
+                  },
+                  "/sendsignedtx" : {
+                      "post" : {
+                          "summary" : "Send private raw transaction payload",
+                          "description" : "",
+                          "operationId" : "sendSignedTransaction",
+                          "consumes" : [ "application/octet-stream" ],
+                          "produces" : [ "text/plain" ],
+                          "parameters" : [ {
+                              "name" : "c11n-to",
+                              "in" : "header",
+                              "required" : false,
+                              "type" : "string"
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Send response",
+                                  "schema" : {
+                                      "$ref" : "#/definitions/SendResponse"
+                                  }
+                              },
+                              "400" : {
+                                  "description" : "For unknown and unknown keys"
+                              }
+                          }
+                      }
+                  },
+                  "/storeraw" : {
+                      "post" : {
+                          "summary" : "Store raw private transaction payload",
+                          "description" : "",
+                          "operationId" : "store",
+                          "consumes" : [ "application/json" ],
+                          "produces" : [ "application/json" ],
+                          "parameters" : [ {
+                              "in" : "body",
+                              "name" : "storeRawRequest",
+                              "required" : true,
+                              "schema" : {
+                                  "$ref" : "#/definitions/StoreRawRequest"
+                              }
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Store response",
+                                  "schema" : {
+                                      "$ref" : "#/definitions/StoreRawResponse"
+                                  }
+                              },
+                              "400" : {
+                                  "description" : "For unknown sender"
+                              }
+                          }
+                      }
+                  },
+                  "/transaction/{hash}" : {
+                      "get" : {
+                          "summary" : "Returns decrypted payload back to Quorum",
+                          "description" : "",
+                          "operationId" : "receive",
+                          "produces" : [ "application/json" ],
+                          "parameters" : [ {
+                              "name" : "hash",
+                              "in" : "path",
+                              "description" : "Encoded hash used to decrypt the payload",
+                              "required" : true,
+                              "type" : "string"
+                          }, {
+                              "name" : "to",
+                              "in" : "query",
+                              "description" : "Encoded recipient key",
+                              "required" : false,
+                              "type" : "string"
+                          } ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Receive Response object",
+                                  "schema" : {
+                                      "$ref" : "#/definitions/ReceiveResponse"
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "/transaction/{key}" : {
+                      "delete" : {
+                          "summary" : "Delete single transaction from P2PRestApp node",
+                          "description" : "",
+                          "operationId" : "deleteKey",
+                          "parameters" : [ {
+                              "name" : "key",
+                              "in" : "path",
+                              "description" : "Encoded hash",
+                              "required" : true,
+                              "type" : "string"
+                          } ],
+                          "responses" : {
+                              "204" : {
+                                  "description" : "Successful deletion"
+                              },
+                              "404" : {
+                                  "description" : "If the entity doesn't exist"
+                              }
+                          }
+                      }
+                  },
+                  "/upcheck" : {
+                      "get" : {
+                          "summary" : "Check if local P2PRestApp Node is up",
+                          "description" : "",
+                          "operationId" : "upCheck",
+                          "produces" : [ "text/plain" ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "I'm up!",
+                                  "schema" : {
+                                      "type" : "string"
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "/version" : {
+                      "get" : {
+                          "summary" : "Request current version of P2PRestApp",
+                          "description" : "",
+                          "operationId" : "getVersion",
+                          "produces" : [ "text/plain" ],
+                          "responses" : {
+                              "200" : {
+                                  "description" : "Current application version ",
+                                  "schema" : {
+                                      "type" : "string"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              },
+              "definitions" : {
+                  "DeleteRequest" : {
+                      "type" : "object",
+                      "required" : [ "Encoded transaction hash" ],
+                      "properties" : {
+                          "Encoded transaction hash" : {
+                              "type" : "string",
+                              "minLength" : 1,
+                              "maxLength" : 2147483647
+                          }
+                      }
+                  },
+                  "Peer" : {
+                      "type" : "object",
+                      "required" : [ "url" ],
+                      "properties" : {
+                          "url" : {
+                              "type" : "string"
+                          }
+                      }
+                  },
+                  "ReceiveResponse" : {
+                      "type" : "object",
+                      "properties" : {
+                          "payload" : {
+                              "type" : "array",
+                              "description" : "Encode response servicing receive requests",
+                              "items" : {
+                                  "type" : "string",
+                                  "format" : "byte"
+                              }
+                          }
+                      }
+                  },
+                  "ResendRequest" : {
+                      "type" : "object",
+                      "properties" : {
+                          "type" : {
+                              "type" : "string",
+                              "description" : "Resend type INDIVIDUAL or ALL, to resend a single or all transactions",
+                              "enum" : [ "ALL", "INDIVIDUAL" ]
+                          },
+                          "publicKey" : {
+                              "type" : "string",
+                              "description" : "The recipient public key to resend transactions for"
+                          },
+                          "key" : {
+                              "type" : "string",
+                              "description" : "Base64 encoded transaction hash"
+                          }
+                      }
+                  },
+                  "SendRequest" : {
+                      "type" : "object",
+                      "required" : [ "payload" ],
+                      "properties" : {
+                          "payload" : {
+                              "type" : "array",
+                              "description" : "Encrypted payload to send to other parties.",
+                              "items" : {
+                                  "type" : "string",
+                                  "format" : "byte"
+                              },
+                              "maxItems" : 2147483647,
+                              "minItems" : 1
+                          },
+                          "from" : {
+                              "type" : "string",
+                              "description" : "Sender public key"
+                          },
+                          "to" : {
+                              "type" : "array",
+                              "description" : "Recipient public keys",
+                              "items" : {
+                                  "type" : "string"
+                              }
+                          }
+                      }
+                  },
+                  "SendResponse" : {
+                      "type" : "object",
+                      "properties" : {
+                          "key" : {
+                              "type" : "string",
+                              "description" : "Base64 encoded transaction hash"
+                          }
+                      }
+                  },
+                  "StoreRawRequest" : {
+                      "type" : "object",
+                      "required" : [ "payload" ],
+                      "properties" : {
+                          "payload" : {
+                              "type" : "array",
+                              "items" : {
+                                  "type" : "string",
+                                  "format" : "byte"
+                              },
+                              "maxItems" : 2147483647,
+                              "minItems" : 1
+                          },
+                          "from" : {
+                              "type" : "array",
+                              "description" : "Sender public key",
+                              "items" : {
+                                  "type" : "string",
+                                  "format" : "byte"
+                              }
+                          }
+                      }
+                  },
+                  "StoreRawResponse" : {
+                      "type" : "object",
+                      "properties" : {
+                          "key" : {
+                              "type" : "array",
+                              "items" : {
+                                  "type" : "string",
+                                  "format" : "byte"
+                              }
+                          }
+                      }
+                  }
+              }
+          }/*intellij-swagger-spec-end*/,
           validatorUrl: null,
           dom_id: '#swagger-ui',
           deepLinking: true,
