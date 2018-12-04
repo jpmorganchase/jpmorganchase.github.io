@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,10,1" data-total="11">
+        <svg id="pie-chart" data-results="6,4,1" data-total="11">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/11</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 6/11</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 10/11</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 4/11</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/11</title></path>
         </svg>
@@ -43,14 +43,14 @@
     <div class="report_test-results">
       <div class="report_test-result specs">
           <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">11</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">10</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">6</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">4</span></div>
           <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
       </div>
       <div class="report_test-result scenarios">
           <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">20</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">19</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">11</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">8</span></div>
           <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
       </div>
     </div>
@@ -68,15 +68,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>90%</span>
+          <span>36%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:19:03</span>
+          <span>00:09:39</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Dec 3, 2018 at 4:44pm</span>
+          <span>Dec 4, 2018 at 3:43pm</span>
         </li>
       </ul>
       
@@ -110,75 +110,66 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="private_smart_contract_async.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_single.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_spam.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../02_advanced/transactions_for_block_height.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:08:39</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_event.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_multiple.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
           <a href="private_smart_contract_state_manipulation.html">
              
               <li class='skipped spec-name'>
             
               <span id="scenarioName" class="scenarioname">State manipulation in private smart contract</span>
               <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_event.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:25</span>
-            </li>
-          </a>
-          
-          <a href="value_transfer_public_transactions.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="istanbul_fault_tolerance.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Istanbul fault tolerance and recoverability</span>
-              <span id="time" class="time">00:00:14</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_multiple.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
-              <span id="time" class="time">00:00:18</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:14</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_spam.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="public_smart_contract_event.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
-              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -191,21 +182,30 @@
             </li>
           </a>
           
-          <a href="../02_advanced/transactions_for_block_height.html">
+          <a href="istanbul_fault_tolerance.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:16:52</span>
+              <span id="scenarioName" class="scenarioname">Istanbul fault tolerance and recoverability</span>
+              <span id="time" class="time">00:00:14</span>
             </li>
           </a>
           
-          <a href="private_smart_contract_async.html">
+          <a href="public_smart_contract_event.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
-              <span id="time" class="time">00:00:39</span>
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="time" class="time">00:00:36</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_public_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -223,8 +223,8 @@
         <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec">Multiple private smart contracts between nodes</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -237,7 +237,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:08</span>
+        <span class="time">00:00:00</span>
       </div>
 
 	
@@ -271,13 +271,13 @@
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send transactions from one node to others</h3>
-    <span class="time">00:00:08</span>
+    <span class="time">00:00:00</span>
 
 	
   
@@ -307,10 +307,10 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -360,6 +360,20 @@
 
   
     
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.RuntimeException: java.lang.RuntimeException: Error processing transaction request: Non-200 status code: &amp;{Status:500 Internal Server Error StatusCode:500 Proto:HTTP/1.1 ProtoMajor:1 ProtoMinor:1 Header:map[Content-Length:[667] Connection:[keep-alive] Content-Type:[text/plain]] Body:0xc42418f040 ContentLength:667 TransferEncoding:[] Close:false Uncompressed:false Trailer:map[] Request:0xc424372900 TLS:&lt;nil&gt;}</pre>
+        </h4>
+        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.Observable.unsafeSubscribe(Observable.java:10327)<br/>rx.internal.operators.OperatorMerge$MergeSubscriber.onNext(OperatorMerge.java:248)<br/>rx.internal.operators.OperatorMerge$MergeSubscriber.onNext(OperatorMerge.java:148)<br/>rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:77)<br/>rx.internal.producers.SingleProducer.request(SingleProducer.java:65)<br/>rx.Subscriber.setProducer(Subscriber.java:211)<br/>rx.internal.operators.OnSubscribeMap$MapSubscriber.setProducer(OnSubscribeMap.java:102)<br/>rx.internal.operators.OperatorSingle$ParentSubscriber.onCompleted(OperatorSingle.java:110)<br/>rx.internal.operators.OperatorTake$1.onNext(OperatorTake.java:83)<br/>rx.internal.operators.OperatorMerge$MergeSubscriber.emitScalar(OperatorMerge.java:395)<br/>rx.internal.operators.OperatorMerge$MergeSubscriber.tryEmit(OperatorMerge.java:355)<br/>rx.internal.operators.OperatorMerge$InnerSubscriber.onNext(OperatorMerge.java:846)<br/>rx.internal.operators.OnSubscribeFromIterable$IterableProducer.slowPath(OnSubscribeFromIterable.java:117)<br/>rx.internal.operators.OnSubscribeFromIterable$IterableProducer.request(OnSubscribeFromIterable.java:89)<br/>rx.Subscriber.setProducer(Subscriber.java:211)<br/>rx.internal.operators.OnSubscribeFromIterable.call(OnSubscribeFromIterable.java:63)<br/>rx.internal.operators.OnSubscribeFromIterable.call(OnSubscribeFromIterable.java:34)<br/>rx.Observable.unsafeSubscribe(Observable.java:10327)<br/>rx.internal.operators.OperatorMerge$MergeSubscriber.onNext(OperatorMerge.java:248)<br/>rx.internal.operators.OperatorMerge$MergeSubscriber.onNext(OperatorMerge.java:148)<br/>rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:77)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.Observable.unsafeSubscribe(Observable.java:10327)<br/>rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48)<br/>rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.unsafeSubscribe(Observable.java:10327)<br/>rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48)<br/>rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.unsafeSubscribe(Observable.java:10327)<br/>rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.call(OperatorSubscribeOn.java:100)<br/>rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker$1.call(CachedThreadScheduler.java:230)<br/>rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)<br/>java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)<br/>java.util.concurrent.FutureTask.run(FutureTask.java:266)<br/>java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)<br/>java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)<br/>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br/>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br/>java.lang.Thread.run(Thread.java:748)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
+    
     
   
 
@@ -390,10 +404,10 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -473,10 +487,10 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
