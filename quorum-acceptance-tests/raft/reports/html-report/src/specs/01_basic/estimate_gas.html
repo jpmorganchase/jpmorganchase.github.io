@@ -220,11 +220,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec">Multiple private smart contracts between nodes</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec">Estimate gas required for transactions and contracts</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="pass"><span class="value">7</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -232,12 +232,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:08</span>
+        <span class="time">00:00:04</span>
       </div>
 
 	
@@ -246,6 +246,8 @@
       <strong>Tags:</strong>
       
         <span> basic</span>
+      
+        <span> estimategas</span>
       
     </div>
   
@@ -262,7 +264,8 @@
     <div class="content">
     
   
-  <span></span>
+  <span><p>EstimateGas api call should return valid ‘close’ estimate of required gas.</p>
+</span>
   
   
 
@@ -276,10 +279,17 @@
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Send transactions from one node to others</h3>
-    <span class="time">00:00:08</span>
+    <h3 class="head borderBottom">Estimate gas required for public transaction</h3>
+    <span class="time">00:00:00</span>
 
 	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> public</span>
+      
+    </div>
   
 
 	</div>
@@ -292,6 +302,731 @@
 	
 
   
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for public transaction transferring some Wei from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         to a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"21000"</span>
+    
+  
+    
+      <span>
+         is returned within 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Deploy public smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> public</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy `SimpleContract` public smart contract from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Estimate gas required to create public smart contract</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> public</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for deploying `SimpleContract` public smart contract from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"83586"</span>
+    
+  
+    
+      <span>
+         is returned within 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Estimate gas required to call a public smart contract</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> public</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for calling the `SimpleContract` public smart contract from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"41639"</span>
+    
+  
+    
+      <span>
+         is returned within 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Deploy private smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)</h3>
+    <span class="time">00:00:02</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> private</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
   
     
   
@@ -328,17 +1063,7 @@
   
     
       <span>
-        Send 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         simple private smart contracts from a default account in 
+        Deploy `SimpleContract` private smart contract from a default account in 
       </span>
     
   
@@ -348,12 +1073,140 @@
   
     
       <span>
-         and it&#39;s separately private for 
+         and private for 
       </span>
     
   
     
-      <span class='parameter'>"Node2,Node3"</span>
+      <span class='parameter'>"Node7"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Estimate gas required to create private smart contract</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> private</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for deploying `SimpleContract` private smart contract from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node7"</span>
     
   
   </div>
@@ -390,7 +1243,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -411,7 +1264,17 @@
   
     
       <span>
-        Send 
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"83586"</span>
+    
+  
+    
+      <span>
+         is returned within 
       </span>
     
   
@@ -421,22 +1284,136 @@
   
     
       <span>
-         simple private smart contracts from a default account in 
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Estimate gas required to call a private smart contract</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> private</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for calling the `SimpleContract` private smart contract from a default account in 
       </span>
     
   
     
-      <span class='parameter'>"Node2"</span>
+      <span class='parameter'>"Node1"</span>
     
   
     
       <span>
-         and it&#39;s separately private for 
+         and private for 
       </span>
     
   
     
-      <span class='parameter'>"Node1,Node3"</span>
+      <span class='parameter'>"Node7"</span>
     
   
   </div>
@@ -473,7 +1450,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -494,7 +1471,17 @@
   
     
       <span>
-        Send 
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"41639"</span>
+    
+  
+    
+      <span>
+         is returned within 
       </span>
     
   
@@ -504,22 +1491,8 @@
   
     
       <span>
-         simple private smart contracts from a default account in 
+         percent
       </span>
-    
-  
-    
-      <span class='parameter'>"Node3"</span>
-    
-  
-    
-      <span>
-         and it&#39;s separately private for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1,Node2"</span>
     
   
   </div>
