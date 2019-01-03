@@ -1,7 +1,7 @@
 <article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Multiple private smart contracts</h1>
 <p>Tags: basic</p>
 <p>Sending multiple private smart contracts between nodes and verify if all nodes have received.</p>
-<pre><code>pragma solidity ^0.4.15;
+<pre><code>pragma solidity ^0.5.0;
 
 contract SimpleStorage {
     uint private storedData;
@@ -14,7 +14,7 @@ contract SimpleStorage {
         storedData = x;
     }
 
-    function get() public constant returns (uint retVal) {
+    function get() public view returns (uint retVal) {
         return storedData;
     }
 }

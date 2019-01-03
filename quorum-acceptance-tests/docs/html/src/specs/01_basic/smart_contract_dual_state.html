@@ -1,0 +1,179 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Dual state implementation when peforming function calls from one smart contract to another</h1>
+<p>Tags: basic, dual-state, contract-interaction</p>
+<p>References:</p>
+<ol>
+<li>The dual public and private state <a href="https://github.com/jpmorganchase/quorum/blob/eab8d793f946f292954ff8e150645661ba599164/NOTES.md" rel="nofollow">explained in details</a></li>
+<li><code>STATICCALL</code> opcode update in <a href="https://solidity.readthedocs.io/en/latest/050-breaking-changes.html" rel="nofollow">Solc 0.5.0 breaking changes</a></li>
+<li><a href="https://github.com/jpmorganchase/quorum/pull/592" rel="nofollow">Pull Request</a> to handle <code>StaticCall</code> with dual state implementation</li>
+</ol>
+<p>The following smart contracts are used:</p>
+<p><strong>storec.sol</strong></p>
+<pre><code>contract storec {
+    uint private storedValue;
+
+    constructor (uint pval) public {
+        storedValue = pval;
+    }
+
+    function setc(uint x) public {
+        storedValue = x;
+    }
+
+    function getc() public view returns (uint) {
+        return storedValue;
+    }
+}
+</code></pre>
+<p><strong>storeb.sol</strong></p>
+<pre><code>interface storec {
+    function setc(uint x) external;
+
+    function getc() external view returns (uint);
+}
+
+contract storeb {
+    uint private storedValue;
+    storec anotherStorage;
+
+    constructor (uint initVal, address _addrc) public {
+        storedValue = initVal;
+        anotherStorage = storec(_addrc);
+    }
+
+    function getc() public view returns (uint) {
+        return anotherStorage.getc();
+    }
+
+    function getb() public view returns (uint) {
+        return storedValue;
+    }
+
+    function setc(uint x) public {
+        return anotherStorage.setc(x);
+    }
+
+    function setb(uint x) public {
+        uint mc = anotherStorage.getc();
+        storedValue = x * mc;
+    }
+}
+</code></pre>
+<p><strong>storea.sol</strong></p>
+<pre><code>interface storeb {
+    function setb(uint x) external;
+
+    function setc(uint x) external;
+
+    function getb() external view returns (uint);
+
+    function getc() external view returns (uint);
+}
+
+contract storea {
+    uint private storedValue;
+    storeb anotherStorage;
+
+    constructor (uint initVal, address _addrb) public {
+        storedValue = initVal;
+        anotherStorage = storeb(_addrb);
+    }
+
+    function geta() public view returns (uint) {
+        return storedValue;
+    }
+
+    function getb() public view returns (uint) {
+        return anotherStorage.getb();
+    }
+
+    function getc() public view returns (uint) {
+        return anotherStorage.getc();
+    }
+
+    function seta(uint x) public {
+        uint mc = anotherStorage.getb();
+        storedValue = x * mc;
+    }
+
+    function setb(uint x) public {
+        anotherStorage.setb(x);
+    }
+
+    function setc(uint x) public {
+        anotherStorage.setc(x);
+    }
+}
+</code></pre>
+<h2>Function calls between all public smart contracts: public -&gt; public -&gt; public</h2>
+<p>Tags: all-public</p>
+<ul>
+<li>Deploy &quot;storec&quot; smart contract with initial value &quot;1&quot; from a default account in &quot;Node1&quot;, named this contract as &quot;c1&quot;</li>
+<li>&quot;c1&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storeb&quot; smart contract with contract &quot;c1&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot;, named this contract as &quot;b1&quot;</li>
+<li>&quot;b1&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storea&quot; smart contract with contract &quot;b1&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot;, named this contract as &quot;a1&quot;</li>
+<li>&quot;a1&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a1&quot;'s &quot;setc&quot; function execution in &quot;Node1&quot; with value &quot;10&quot;</li>
+<li>&quot;a1&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;10&quot;</li>
+<li>&quot;a1&quot;'s &quot;setb&quot; function execution in &quot;Node1&quot; with value &quot;10&quot;</li>
+<li>&quot;a1&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;100&quot;</li>
+<li>&quot;a1&quot;'s &quot;seta&quot; function execution in &quot;Node1&quot; with value &quot;10&quot;</li>
+<li>&quot;a1&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;1000&quot;</li>
+<li>&quot;b1&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;100&quot;</li>
+<li>&quot;c1&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;10&quot;</li>
+</ul>
+<h2>Function calls between all private smart contracts: private -&gt; private -&gt; private</h2>
+<p>Tags: all-private</p>
+<ul>
+<li>Deploy &quot;storec&quot; smart contract with initial value &quot;1&quot; from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;c2&quot;</li>
+<li>&quot;c2&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storeb&quot; smart contract with contract &quot;c2&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;b2&quot;</li>
+<li>&quot;b2&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storea&quot; smart contract with contract &quot;b2&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;a2&quot;</li>
+<li>&quot;a2&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a2&quot;'s &quot;setc&quot; function execution in &quot;Node1&quot; with value &quot;10&quot; and its private for &quot;Node2&quot;</li>
+<li>&quot;a2&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;10&quot;</li>
+<li>&quot;a2&quot;'s &quot;setb&quot; function execution in &quot;Node1&quot; with value &quot;10&quot; and its private for &quot;Node2&quot;</li>
+<li>&quot;a2&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;100&quot;</li>
+<li>&quot;a2&quot;'s &quot;seta&quot; function execution in &quot;Node1&quot; with value &quot;10&quot; and its private for &quot;Node2&quot;</li>
+<li>&quot;a2&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;1000&quot;</li>
+<li>&quot;b2&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;100&quot;</li>
+<li>&quot;c2&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;10&quot;</li>
+</ul>
+<h2>Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public</h2>
+<p>Tags: private-to-public</p>
+<ul>
+<li>Deploy &quot;storec&quot; smart contract with initial value &quot;1&quot; from a default account in &quot;Node1&quot;, named this contract as &quot;c3&quot;</li>
+<li>&quot;c3&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storeb&quot; smart contract with contract &quot;c3&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot;, named this contract as &quot;b3&quot;</li>
+<li>&quot;b3&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storea&quot; smart contract with contract &quot;b3&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;a3&quot;</li>
+<li>&quot;a3&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a3&quot;'s &quot;setc&quot; function execution in &quot;Node1&quot; with value &quot;10&quot; and its private for &quot;Node2&quot;, should fail</li>
+<li>&quot;a3&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a3&quot;'s &quot;setb&quot; function execution in &quot;Node1&quot; with value &quot;10&quot; and its private for &quot;Node2&quot;, should fail</li>
+<li>&quot;a3&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a3&quot;'s &quot;seta&quot; function execution in &quot;Node1&quot; with value &quot;10&quot; and its private for &quot;Node2&quot;</li>
+<li>&quot;a3&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;10&quot;</li>
+<li>&quot;b3&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;c3&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+</ul>
+<h2>Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private</h2>
+<p>Tags: public-to-private</p>
+<ul>
+<li>Deploy &quot;storec&quot; smart contract with initial value &quot;1&quot; from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;c4&quot;</li>
+<li>&quot;c4&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storeb&quot; smart contract with contract &quot;c4&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;b4&quot;</li>
+<li>&quot;b4&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>Deploy &quot;storea&quot; smart contract with contract &quot;b4&quot; initial value &quot;1&quot; from a default account in &quot;Node1&quot;, named this contract as &quot;a4&quot;</li>
+<li>&quot;a4&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a4&quot;'s &quot;setc&quot; function execution in &quot;Node1&quot; with value &quot;10&quot;, should fail</li>
+<li>&quot;a4&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a4&quot;'s &quot;setb&quot; function execution in &quot;Node1&quot; with value &quot;10&quot;, should fail</li>
+<li>&quot;a4&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;a4&quot;'s &quot;seta&quot; function execution in &quot;Node1&quot; with value &quot;10&quot;, should fail</li>
+<li>&quot;a4&quot;'s &quot;geta&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;b4&quot;'s &quot;getb&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+<li>&quot;c4&quot;'s &quot;getc&quot; function execution in &quot;Node1&quot; returns &quot;1&quot;</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./public_smart_contract_event.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./value_transfer_private_transactions.html">></a></li></center></article>
