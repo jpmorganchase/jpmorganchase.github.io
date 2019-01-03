@@ -110,7 +110,7 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="../01_basic/smart_contract_dual_state.html">
+          <a href="smart_contract_dual_state.html">
             
               <li class='failed spec-name'>
             
@@ -119,7 +119,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_state_manipulation.html">
+          <a href="private_smart_contract_state_manipulation.html">
              
               <li class='skipped spec-name'>
             
@@ -128,7 +128,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_async.html">
+          <a href="private_smart_contract_async.html">
              
               <li class='passed spec-name'>
             
@@ -137,7 +137,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/public_smart_contract_event.html">
+          <a href="public_smart_contract_event.html">
              
               <li class='passed spec-name'>
             
@@ -146,7 +146,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_event.html">
+          <a href="private_smart_contract_event.html">
              
               <li class='passed spec-name'>
             
@@ -155,7 +155,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/value_transfer_private_transactions.html">
+          <a href="value_transfer_private_transactions.html">
              
               <li class='passed spec-name'>
             
@@ -164,7 +164,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/estimate_gas.html">
+          <a href="estimate_gas.html">
              
               <li class='passed spec-name'>
             
@@ -173,7 +173,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/istanbul_fault_tolerance.html">
+          <a href="istanbul_fault_tolerance.html">
              
               <li class='passed spec-name'>
             
@@ -182,7 +182,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_multiple.html">
+          <a href="private_smart_contract_multiple.html">
              
               <li class='passed spec-name'>
             
@@ -191,7 +191,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_single.html">
+          <a href="private_smart_contract_single.html">
              
               <li class='passed spec-name'>
             
@@ -200,7 +200,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_spam.html">
+          <a href="private_smart_contract_spam.html">
              
               <li class='passed spec-name'>
             
@@ -209,7 +209,7 @@
             </li>
           </a>
           
-          <a href="../01_basic/value_transfer_public_transactions.html">
+          <a href="value_transfer_public_transactions.html">
              
               <li class='passed spec-name'>
             
@@ -218,7 +218,7 @@
             </li>
           </a>
           
-          <a href="transactions_for_block_height.html">
+          <a href="../02_advanced/transactions_for_block_height.html">
              
               <li class='passed spec-name'>
             
@@ -238,11 +238,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec">Transactions for different block heights</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec">Dual state implementation when peforming function calls from one smart contract to another</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">3</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -250,12 +250,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:16:48</span>
+        <span class="time">00:00:51</span>
       </div>
 
 	
@@ -263,7 +263,11 @@
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> advanced</span>
+        <span> basic</span>
+      
+        <span> dual-state</span>
+      
+        <span> contract-interaction</span>
       
     </div>
   
@@ -280,48 +284,133 @@
     <div class="content">
     
   
-  <span><p>This is to verify the basic functionalities when certain block height is reached.
-The purpose is to increase the possibility for the network to accept transactions during edge scenarios like:
-proposer rotation.</p>
+  <span><p>References:
+1. The dual public and private state <a href="https://github.com/jpmorganchase/quorum/blob/eab8d793f946f292954ff8e150645661ba599164/NOTES.md" rel="nofollow">explained in details</a>
+2. <code>STATICCALL</code> opcode update in <a href="https://solidity.readthedocs.io/en/latest/050-breaking-changes.html" rel="nofollow">Solc 0.5.0 breaking changes</a>
+3. <a href="https://github.com/jpmorganchase/quorum/pull/592" rel="nofollow">Pull Request</a> to handle <code>StaticCall</code> with dual state implementation</p>
 
-<p>Using the following smart contracts:</p>
+<p>The following smart contracts are used:</p>
 
-<pre><code>pragma solidity ^0.4.21;
+<p><strong>storec.sol</strong></p>
+
+<pre><code>contract storec {
+    uint private storedValue;
 
 
-contract SimpleStorage {
-    uint private storedData;
-
-
-    constructor(uint initVal) public {
-        storedData = initVal;
+    constructor (uint pval) public {
+        storedValue = pval;
     }
 
 
-    function set(uint x) public {
-        storedData = x;
+    function setc(uint x) public {
+        storedValue = x;
     }
 
 
-    function get() public view returns (uint retVal) {
-        return storedData;
+    function getc() public view returns (uint) {
+        return storedValue;
     }
+}
+</code></pre>
+
+<p><strong>storeb.sol</strong></p>
+
+<pre><code>interface storec {
+    function setc(uint x) external;
+
+
+    function getc() external view returns (uint);
 }
 
 
-pragma solidity ^0.4.21;
+contract storeb {
+    uint private storedValue;
+    storec anotherStorage;
 
 
-contract ClientReceipt {
-    event Deposit(
-        address indexed _from,
-        bytes32 indexed _id,
-        uint _value
-    );
+    constructor (uint initVal, address _addrc) public {
+        storedValue = initVal;
+        anotherStorage = storec(_addrc);
+    }
 
 
-    function deposit(bytes32 _id) public payable {
-        emit Deposit(msg.sender, _id, msg.value);
+    function getc() public view returns (uint) {
+        return anotherStorage.getc();
+    }
+
+
+    function getb() public view returns (uint) {
+        return storedValue;
+    }
+
+
+    function setc(uint x) public {
+        return anotherStorage.setc(x);
+    }
+
+
+    function setb(uint x) public {
+        uint mc = anotherStorage.getc();
+        storedValue = x * mc;
+    }
+}
+</code></pre>
+
+<p><strong>storea.sol</strong></p>
+
+<pre><code>interface storeb {
+    function setb(uint x) external;
+
+
+    function setc(uint x) external;
+
+
+    function getb() external view returns (uint);
+
+
+    function getc() external view returns (uint);
+}
+
+
+contract storea {
+    uint private storedValue;
+    storeb anotherStorage;
+
+
+    constructor (uint initVal, address _addrb) public {
+        storedValue = initVal;
+        anotherStorage = storeb(_addrb);
+    }
+
+
+    function geta() public view returns (uint) {
+        return storedValue;
+    }
+
+
+    function getb() public view returns (uint) {
+        return anotherStorage.getb();
+    }
+
+
+    function getc() public view returns (uint) {
+        return anotherStorage.getc();
+    }
+
+
+    function seta(uint x) public {
+        uint mc = anotherStorage.getb();
+        storedValue = x * mc;
+    }
+
+
+    function setb(uint x) public {
+        anotherStorage.setb(x);
+    }
+
+
+    function setc(uint x) public {
+        anotherStorage.setc(x);
     }
 }
 </code></pre>
@@ -334,24 +423,20 @@ contract ClientReceipt {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Private smart contracts for Istanbul consensus</h3>
-    <span class="time">00:08:21</span>
+    <h3 class="head borderBottom">Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private</h3>
+    <span class="time">00:00:08</span>
 
 	
   
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> istanbul</span>
-      
-        <span> private</span>
-      
-        <span> smart-contract</span>
+        <span> public-to-private</span>
       
     </div>
   
@@ -387,7 +472,7 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -408,12 +493,52 @@ contract ClientReceipt {
   
     
       <span>
-        Capture the current block height, named it as 
+        Deploy 
       </span>
     
   
     
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"storec"</span>
+    
+  
+    
+      <span>
+         smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+        , named this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"c4"</span>
     
   
   </div>
@@ -446,63 +571,11 @@ contract ClientReceipt {
   
     
   
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:14</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a private simple smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
   <div class='step'>
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:12</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -522,23 +595,37 @@ contract ClientReceipt {
   
   
     
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"c4"</span>
     
   
     
       <span>
-         higher than 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -596,17 +683,37 @@ contract ClientReceipt {
   
     
       <span>
-        Deploy a simple smart contract with initial value 
+        Deploy 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"storeb"</span>
     
   
     
       <span>
-         in 
+         smart contract with contract 
+      </span>
+    
+  
+    
+      <span class='parameter'>"c4"</span>
+    
+  
+    
+      <span>
+         initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
       </span>
     
   
@@ -616,12 +723,12 @@ contract ClientReceipt {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         and it&#39;s private for 
       </span>
     
   
     
-      <span class='parameter'>"Node7"</span>
+      <span class='parameter'>"Node2"</span>
     
   
     
@@ -631,7 +738,7 @@ contract ClientReceipt {
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"b4"</span>
     
   
   </div>
@@ -688,143 +795,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"b4"</span>
     
   
     
       <span>
-         is mined
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:08</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"20"</span>
+      <span class='parameter'>"getb"</span>
     
   
     
       <span>
-         higher than 
+         function execution in 
       </span>
     
   
     
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"Node1"</span>
     
   
     
       <span>
-         then deploy a private simple smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:06</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
+         returns 
       </span>
     
   
     
-      <span class='parameter'>"20"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -882,17 +883,37 @@ contract ClientReceipt {
   
     
       <span>
-        Deploy a simple smart contract with initial value 
+        Deploy 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"storea"</span>
     
   
     
       <span>
-         in 
+         smart contract with contract 
+      </span>
+    
+  
+    
+      <span class='parameter'>"b4"</span>
+    
+  
+    
+      <span>
+         initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
       </span>
     
   
@@ -902,22 +923,12 @@ contract ClientReceipt {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node7"</span>
-    
-  
-    
-      <span>
         , named this contract as 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"a4"</span>
     
   
   </div>
@@ -974,143 +985,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"a4"</span>
     
   
     
       <span>
-         is mined
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:29</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"50"</span>
+      <span class='parameter'>"geta"</span>
     
   
     
       <span>
-         higher than 
+         function execution in 
       </span>
     
   
     
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"Node1"</span>
     
   
     
       <span>
-         then deploy a private simple smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:27</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
+         returns 
       </span>
     
   
     
-      <span class='parameter'>"50"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -1167,18 +1072,22 @@ contract ClientReceipt {
   
   
     
+      <span class='parameter'>"a4"</span>
+    
+  
+    
       <span>
-        Deploy a simple smart contract with initial value 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"setc"</span>
     
   
     
       <span>
-         in 
+         function execution in 
       </span>
     
   
@@ -1188,22 +1097,18 @@ contract ClientReceipt {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         with value 
       </span>
     
   
     
-      <span class='parameter'>"Node7"</span>
+      <span class='parameter'>"10"</span>
     
   
     
       <span>
-        , named this contract as 
+        , should fail
       </span>
-    
-  
-    
-      <span class='parameter'>"contract17"</span>
     
   
   </div>
@@ -1243,7 +1148,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -1260,211 +1165,22 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"a4"</span>
     
   
     
       <span>
-         is mined
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:50</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"100"</span>
+      <span class='parameter'>"getc"</span>
     
   
     
       <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a private simple smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:48</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"100"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Deploy a simple smart contract with initial value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         in 
+         function execution in 
       </span>
     
   
@@ -1474,22 +1190,119 @@ contract ClientReceipt {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         returns 
       </span>
     
   
     
-      <span class='parameter'>"Node7"</span>
+      <span class='parameter'>"1"</span>
+    
+  
+  </div>
+
+  
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.RuntimeException: org.web3j.tx.exceptions.ContractCallException: Empty value (0x) returned from contract</pre>
+        </h4>
+        <pre class="stacktrace">com.quorum.gauge.services.ContractService.readGenericStoreContractGetValue(ContractService.java:205)<br/>com.quorum.gauge.SmartContractDualState.verifyStoreContractGetValue(SmartContractDualState.java:103)<br/>sun.reflect.GeneratedMethodAccessor84.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:45)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:92)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:96)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:79)<br/>java.lang.Thread.run(Thread.java:748)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a4"</span>
     
   
     
       <span>
-        , named this contract as 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"setb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+        , should fail
+      </span>
     
   
   </div>
@@ -1529,7 +1342,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1546,211 +1359,22 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"a4"</span>
     
   
     
       <span>
-         is mined
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:39</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"200"</span>
+      <span class='parameter'>"getb"</span>
     
   
     
       <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a private simple smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:37</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"200"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Deploy a simple smart contract with initial value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         in 
+         function execution in 
       </span>
     
   
@@ -1760,22 +1384,12 @@ contract ClientReceipt {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         returns 
       </span>
     
   
     
-      <span class='parameter'>"Node7"</span>
-    
-  
-    
-      <span>
-        , named this contract as 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -1815,7 +1429,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1832,211 +1446,22 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"a4"</span>
     
   
     
       <span>
-         is mined
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:04:59</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"500"</span>
+      <span class='parameter'>"seta"</span>
     
   
     
       <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a private simple smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:04:57</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"500"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Deploy a simple smart contract with initial value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         in 
+         function execution in 
       </span>
     
   
@@ -2046,22 +1471,18 @@ contract ClientReceipt {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         with value 
       </span>
     
   
     
-      <span class='parameter'>"Node7"</span>
+      <span class='parameter'>"10"</span>
     
   
     
       <span>
-        , named this contract as 
+        , should fail
       </span>
-    
-  
-    
-      <span class='parameter'>"contract17"</span>
     
   
   </div>
@@ -2101,7 +1522,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2118,13 +1539,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"a4"</span>
     
   
     
       <span>
-         is mined
+        &#39;s 
       </span>
+    
+  
+    
+      <span class='parameter'>"geta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -2153,7 +1598,176 @@ contract ClientReceipt {
   
 
   
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"b4"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
   </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"c4"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
 
   
 
@@ -2177,19 +1791,15 @@ contract ClientReceipt {
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Public smart contracts for Istanbul consensus</h3>
-    <span class="time">00:08:26</span>
+    <h3 class="head borderBottom">Function calls between all public smart contracts: public -&gt; public -&gt; public</h3>
+    <span class="time">00:00:15</span>
 
 	
   
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> istanbul</span>
-      
-        <span> public</span>
-      
-        <span> smart-contract</span>
+        <span> all-public</span>
       
     </div>
   
@@ -2225,194 +1835,6 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Capture the current block height, named it as 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:16</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a public `ClientReceipt` smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:12</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
@@ -2434,7 +1856,27 @@ contract ClientReceipt {
   
     
       <span>
-        Deploy `ClientReceipt` smart contract from a default account in 
+        Deploy 
+      </span>
+    
+  
+    
+      <span class='parameter'>"storec"</span>
+    
+  
+    
+      <span>
+         smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
       </span>
     
   
@@ -2449,7 +1891,7 @@ contract ClientReceipt {
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"c1"</span>
     
   
   </div>
@@ -2506,91 +1948,22 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"c1"</span>
     
   
     
       <span>
-         is mined
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Execute 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"getc"</span>
     
   
     
       <span>
-        &#39;s `deposit()` function 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         times with arbitrary id and value from 
+         function execution in 
       </span>
     
   
@@ -2598,217 +1971,14 @@ contract ClientReceipt {
       <span class='parameter'>"Node1"</span>
     
   
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
     
       <span>
-         has received 
+         returns 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:07</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"20"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a public `ClientReceipt` smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:03</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"20"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -2845,7 +2015,7 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:04</span>
     </h5>
   
   <div class='step-info passed'>
@@ -2866,7 +2036,37 @@ contract ClientReceipt {
   
     
       <span>
-        Deploy `ClientReceipt` smart contract from a default account in 
+        Deploy 
+      </span>
+    
+  
+    
+      <span class='parameter'>"storeb"</span>
+    
+  
+    
+      <span>
+         smart contract with contract 
+      </span>
+    
+  
+    
+      <span class='parameter'>"c1"</span>
+    
+  
+    
+      <span>
+         initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
       </span>
     
   
@@ -2881,7 +2081,7 @@ contract ClientReceipt {
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"b1"</span>
     
   
   </div>
@@ -2938,13 +2138,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"b1"</span>
     
   
     
       <span>
-         is mined
+        &#39;s 
       </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -3002,303 +2226,37 @@ contract ClientReceipt {
   
     
       <span>
-        Execute 
+        Deploy 
       </span>
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"storea"</span>
     
   
     
       <span>
-        &#39;s `deposit()` function 
+         smart contract with contract 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"b1"</span>
     
   
     
       <span>
-         times with arbitrary id and value from 
+         initial value 
       </span>
     
   
     
-      <span class='parameter'>"Node1"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node1"</span>
+      <span class='parameter'>"1"</span>
     
   
     
       <span>
-         has received 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:31</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"50"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a public `ClientReceipt` smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:27</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"50"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Deploy `ClientReceipt` smart contract from a default account in 
+         from a default account in 
       </span>
     
   
@@ -3313,7 +2271,7 @@ contract ClientReceipt {
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"a1"</span>
     
   
   </div>
@@ -3370,13 +2328,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"a1"</span>
     
   
     
       <span>
-         is mined
+        &#39;s 
       </span>
+    
+  
+    
+      <span class='parameter'>"geta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -3433,33 +2415,37 @@ contract ClientReceipt {
   
   
     
+      <span class='parameter'>"a1"</span>
+    
+  
+    
       <span>
-        Execute 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"setc"</span>
     
   
     
       <span>
-        &#39;s `deposit()` function 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         times with arbitrary id and value from 
+         function execution in 
       </span>
     
   
     
       <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
     
   
   </div>
@@ -3516,33 +2502,37 @@ contract ClientReceipt {
   
   
     
+      <span class='parameter'>"a1"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
       <span class='parameter'>"Node1"</span>
     
   
     
       <span>
-         has received 
+         returns 
       </span>
     
   
     
       <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
     
   
   </div>
@@ -3571,20 +2561,15 @@ contract ClientReceipt {
   
 
   
-  </div>
-
-  
-
-  
     
   
     
   
-  <div class='step concept'>
+  <div class='step'>
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:50</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -3594,12 +2579,129 @@ contract ClientReceipt {
       <div class='step-txt'>
 
 
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+
+  
+  
+
+  
   
   
     
+      <span class='parameter'>"a1"</span>
+    
+  
+    
       <span>
-        Wait for block height is atleast 
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"setb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a1"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
       </span>
     
   
@@ -3607,26 +2709,31 @@ contract ClientReceipt {
       <span class='parameter'>"100"</span>
     
   
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a public `ClientReceipt` smart contract
-      </span>
-    
-  
   </div>
 
-  </li></ul></div></div>
-  <div class='concept-steps'>
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
   
     
   
@@ -3636,7 +2743,7 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:45</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -3656,8 +2763,206 @@ contract ClientReceipt {
   
   
     
+      <span class='parameter'>"a1"</span>
+    
+  
+    
       <span>
-        Wait until block height is atleast 
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"seta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a1"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"geta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1000"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"b1"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
       </span>
     
   
@@ -3665,14 +2970,336 @@ contract ClientReceipt {
       <span class='parameter'>"100"</span>
     
   
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"c1"</span>
+    
+  
     
       <span>
-         higher than 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"snapshot"</span>
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Function calls between all private smart contracts: private -&gt; private -&gt; private</h3>
+    <span class="time">00:00:13</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> all-private</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy 
+      </span>
+    
+  
+    
+      <span class='parameter'>"storec"</span>
+    
+  
+    
+      <span>
+         smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+        , named this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"c2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"c2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -3730,7 +3357,1208 @@ contract ClientReceipt {
   
     
       <span>
-        Deploy `ClientReceipt` smart contract from a default account in 
+        Deploy 
+      </span>
+    
+  
+    
+      <span class='parameter'>"storeb"</span>
+    
+  
+    
+      <span>
+         smart contract with contract 
+      </span>
+    
+  
+    
+      <span class='parameter'>"c2"</span>
+    
+  
+    
+      <span>
+         initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+        , named this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"b2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"b2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy 
+      </span>
+    
+  
+    
+      <span class='parameter'>"storea"</span>
+    
+  
+    
+      <span>
+         smart contract with contract 
+      </span>
+    
+  
+    
+      <span class='parameter'>"b2"</span>
+    
+  
+    
+      <span>
+         initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+        , named this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"geta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"setc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         and its private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"setb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         and its private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"100"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"seta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         and its private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"geta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1000"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"b2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"100"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"c2"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public</h3>
+    <span class="time">00:00:13</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> private-to-public</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy 
+      </span>
+    
+  
+    
+      <span class='parameter'>"storec"</span>
+    
+  
+    
+      <span>
+         smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
       </span>
     
   
@@ -3745,7 +4573,7 @@ contract ClientReceipt {
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"c3"</span>
     
   
   </div>
@@ -3802,13 +4630,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"c3"</span>
     
   
     
       <span>
-         is mined
+        &#39;s 
       </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -3866,303 +4718,37 @@ contract ClientReceipt {
   
     
       <span>
-        Execute 
+        Deploy 
       </span>
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"storeb"</span>
     
   
     
       <span>
-        &#39;s `deposit()` function 
+         smart contract with contract 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"c3"</span>
     
   
     
       <span>
-         times with arbitrary id and value from 
+         initial value 
       </span>
     
   
     
-      <span class='parameter'>"Node1"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node1"</span>
+      <span class='parameter'>"1"</span>
     
   
     
       <span>
-         has received 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:38</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"200"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a public `ClientReceipt` smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:01:34</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"200"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Deploy `ClientReceipt` smart contract from a default account in 
+         from a default account in 
       </span>
     
   
@@ -4177,7 +4763,7 @@ contract ClientReceipt {
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"b3"</span>
     
   
   </div>
@@ -4234,13 +4820,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"b3"</span>
     
   
     
       <span>
-         is mined
+        &#39;s 
       </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -4298,27 +4908,37 @@ contract ClientReceipt {
   
     
       <span>
-        Execute 
+        Deploy 
       </span>
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"storea"</span>
     
   
     
       <span>
-        &#39;s `deposit()` function 
+         smart contract with contract 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"b3"</span>
     
   
     
       <span>
-         times with arbitrary id and value from 
+         initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+    
+      <span>
+         from a default account in 
       </span>
     
   
@@ -4326,280 +4946,14 @@ contract ClientReceipt {
       <span class='parameter'>"Node1"</span>
     
   
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
     
       <span>
-         has received 
+         and it&#39;s private for 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         transactions which contain 
-      </span>
-    
-  
-    
-      <span class='parameter'>"10"</span>
-    
-  
-    
-      <span>
-         log events in total
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:05:01</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Wait for block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"500"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-    
-      <span>
-         then deploy a public `ClientReceipt` smart contract
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:04:57</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Wait until block height is atleast 
-      </span>
-    
-  
-    
-      <span class='parameter'>"500"</span>
-    
-  
-    
-      <span>
-         higher than 
-      </span>
-    
-  
-    
-      <span class='parameter'>"snapshot"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Deploy `ClientReceipt` smart contract from a default account in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
+      <span class='parameter'>"Node2"</span>
     
   
     
@@ -4609,7 +4963,7 @@ contract ClientReceipt {
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"a3"</span>
     
   
   </div>
@@ -4666,13 +5020,37 @@ contract ClientReceipt {
   
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"a3"</span>
     
   
     
       <span>
-         is mined
+        &#39;s 
       </span>
+    
+  
+    
+      <span class='parameter'>"geta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
     
   
   </div>
@@ -4729,18 +5107,32 @@ contract ClientReceipt {
   
   
     
+      <span class='parameter'>"a3"</span>
+    
+  
+    
       <span>
-        Execute 
+        &#39;s 
       </span>
     
   
     
-      <span class='parameter'>"contract12"</span>
+      <span class='parameter'>"setc"</span>
     
   
     
       <span>
-        &#39;s `deposit()` function 
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
       </span>
     
   
@@ -4750,12 +5142,18 @@ contract ClientReceipt {
   
     
       <span>
-         times with arbitrary id and value from 
+         and its private for 
       </span>
     
   
     
-      <span class='parameter'>"Node1"</span>
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+        , should fail
+      </span>
     
   
   </div>
@@ -4812,12 +5210,119 @@ contract ClientReceipt {
   
   
     
+      <span class='parameter'>"a3"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
       <span class='parameter'>"Node1"</span>
     
   
     
       <span>
-         has received 
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a3"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"setb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
       </span>
     
   
@@ -4827,17 +5332,17 @@ contract ClientReceipt {
   
     
       <span>
-         transactions which contain 
+         and its private for 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"Node2"</span>
     
   
     
       <span>
-         log events in total
+        , should fail
       </span>
     
   
@@ -4867,7 +5372,447 @@ contract ClientReceipt {
   
 
   
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a3"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
   </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a3"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"seta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         and its private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"a3"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"geta"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"b3"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getb"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"c3"</span>
+    
+  
+    
+      <span>
+        &#39;s 
+      </span>
+    
+  
+    
+      <span class='parameter'>"getc"</span>
+    
+  
+    
+      <span>
+         function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
 
   
 
