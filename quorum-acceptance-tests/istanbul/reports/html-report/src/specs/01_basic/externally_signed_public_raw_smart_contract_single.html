@@ -256,11 +256,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec">Sending private smart contract asynchronously</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec">Public raw smart contract when signed externally</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
+            <li class="pass"><span class="value">3</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -268,12 +268,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:23</span>
+        <span class="time">00:00:07</span>
       </div>
 
 	
@@ -282,6 +282,12 @@
       <strong>Tags:</strong>
       
         <span> basic</span>
+      
+        <span> raw</span>
+      
+        <span> externally-signed</span>
+      
+        <span> public</span>
       
     </div>
   
@@ -298,9 +304,9 @@
     <div class="content">
     
   
-  <span><p>Ability to submit a simple private smart contract asynchrously with callback</p>
+  <span><p>A smart contract, <code>ClientReceipt</code>, logs all the deposits that have been performed.</p>
 
-<pre><code>pragma solidity ^0.4.15;
+<pre><code>pragma solidity ^0.5.0;
 
 
 contract SimpleStorage {
@@ -317,7 +323,7 @@ contract SimpleStorage {
     }
 
 
-    function get() public constant returns (uint retVal) {
+    function get() public view returns (uint retVal) {
         return storedData;
     }
 }
@@ -336,8 +342,8 @@ contract SimpleStorage {
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Contract is successfully mined with valid account</h3>
-    <span class="time">00:00:22</span>
+    <h3 class="head borderBottom">Contract is deployed and mined</h3>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -367,7 +373,7 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
   <div class='step-info passed'>
@@ -388,115 +394,42 @@ contract SimpleStorage {
   
     
       <span>
-        Asynchronously deploy a simple smart contract with initial value 
+        Deploy `SimpleStorage` public smart contract with initial value 
       </span>
     
   
     
-      <span class='parameter'>"10"</span>
+      <span class='parameter'>"32"</span>
     
   
     
       <span>
-         in 
+         signed by external wallet 
       </span>
     
   
     
-      <span class='parameter'>"Node1"</span>
+      <span class='parameter'>"Wallet1"</span>
     
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         on node 
       </span>
     
   
     
-      <span class='parameter'>"Node7"</span>
+      <span class='parameter'>"Node2"</span>
     
   
     
       <span>
-        , named this contract as 
+        , name this contract as 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:21</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Transaction Receipt is present in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-    
-      <span>
-         for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract32"</span>
     
   
   </div>
@@ -553,23 +486,13 @@ contract SimpleStorage {
   
   
     
-      <span>
-        Transaction Receipt is present in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node7"</span>
+      <span class='parameter'>"contract32"</span>
     
   
     
       <span>
-         for 
+         is mined
       </span>
-    
-  
-    
-      <span class='parameter'>"contract17"</span>
     
   
   </div>
@@ -617,10 +540,17 @@ contract SimpleStorage {
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Contract is not mined with non-existed account</h3>
-    <span class="time">00:00:01</span>
+    <h3 class="head borderBottom">Everyone in the network has the same state for the contract</h3>
+    <span class="time">00:00:00</span>
 
 	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
   
 
 	</div>
@@ -642,13 +572,19 @@ contract SimpleStorage {
   
     
   
+    <span></span>
+  
+
+  
+    
+  
     
   
   <div class='step'>
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -668,18 +604,12 @@ contract SimpleStorage {
   
   
     
-      <span>
-        Asynchronously deploy a simple smart contract with initial value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"20"</span>
+      <span class='parameter'>"contract32"</span>
     
   
     
       <span>
-         in 
+        &#39;s `get()` function execution in 
       </span>
     
   
@@ -689,22 +619,12 @@ contract SimpleStorage {
   
     
       <span>
-        &#39;s non-existed account and it&#39;s private for 
+         returns 
       </span>
     
   
     
-      <span class='parameter'>"Node7"</span>
-    
-  
-    
-      <span>
-        , named this contract as 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract17_error"</span>
+      <span class='parameter'>"32"</span>
     
   
   </div>
@@ -761,13 +681,637 @@ contract SimpleStorage {
   
   
     
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
       <span>
-        An error is returned for 
+        &#39;s `get()` function execution in 
       </span>
     
   
     
-      <span class='parameter'>"contract17_error"</span>
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"32"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node7"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"32"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node3"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"32"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">When there&#39;s an update, every node is updated</h3>
+    <span class="time">00:00:03</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Execute 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `set()` function with new value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet8"</span>
+    
+  
+    
+      <span>
+         in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node3"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node7"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node3"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
     
   
   </div>

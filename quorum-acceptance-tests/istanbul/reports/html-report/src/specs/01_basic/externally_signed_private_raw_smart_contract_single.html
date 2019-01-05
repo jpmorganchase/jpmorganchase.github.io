@@ -256,11 +256,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec">Single private smart contract</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec">Single private smart contract when signed externally</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">5</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">5</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -268,12 +268,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:14</span>
+        <span class="time">00:00:07</span>
       </div>
 
 	
@@ -282,6 +282,12 @@
       <strong>Tags:</strong>
       
         <span> basic</span>
+      
+        <span> raw</span>
+      
+        <span> externally-signed</span>
+      
+        <span> private</span>
       
     </div>
   
@@ -301,7 +307,7 @@
   <span><p>This is to verify that a private smart contract between 2 parties are not accessible by others.
 A simple smart contract is to store a int value and to provide <code>get()</code> and <code>set()</code> functions.</p>
 
-<pre><code>pragma solidity ^0.4.15;
+<pre><code>pragma solidity ^0.5.0;
 
 
 contract SimpleStorage {
@@ -332,22 +338,20 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Contract is mined</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:01</span>
 
 	
   
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> private</span>
-      
-        <span> mining</span>
+        <span> raw</span>
       
     </div>
   
@@ -371,10 +375,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -397,7 +401,17 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"42"</span>
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet1"</span>
     
   
     
@@ -412,7 +426,7 @@ contract SimpleStorage {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         and it&#39;s private for 
       </span>
     
   
@@ -422,17 +436,31 @@ contract SimpleStorage {
   
     
       <span>
-        , named this contract as 
+        , name this contract as 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
 
   
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
+        </h4>
+        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
     
     
   
@@ -481,7 +509,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -504,7 +532,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
@@ -544,7 +572,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -577,7 +605,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
@@ -617,7 +645,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -650,7 +678,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
@@ -693,22 +721,20 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Storage Root storing private smart contracts must be the same</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:01</span>
 
 	
   
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> private</span>
-      
-        <span> storage</span>
+        <span> raw</span>
       
     </div>
   
@@ -732,10 +758,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -758,7 +784,17 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"42"</span>
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet1"</span>
     
   
     
@@ -773,7 +809,7 @@ contract SimpleStorage {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         and it&#39;s private for 
       </span>
     
   
@@ -783,17 +819,31 @@ contract SimpleStorage {
   
     
       <span>
-        , named this contract as 
+        , name this contract as 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
 
   
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
+        </h4>
+        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
     
     
   
@@ -842,7 +892,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -859,7 +909,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -925,7 +975,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -942,7 +992,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1011,22 +1061,20 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Transaction payload is secured</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:01</span>
 
 	
   
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> private</span>
-      
-        <span> transaction</span>
+        <span> raw</span>
       
     </div>
   
@@ -1050,10 +1098,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -1076,7 +1124,17 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"42"</span>
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet1"</span>
     
   
     
@@ -1091,7 +1149,7 @@ contract SimpleStorage {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         and it&#39;s private for 
       </span>
     
   
@@ -1101,17 +1159,31 @@ contract SimpleStorage {
   
     
       <span>
-        , named this contract as 
+        , name this contract as 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
 
   
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
+        </h4>
+        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
     
     
   
@@ -1160,7 +1232,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1177,7 +1249,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1227,7 +1299,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1244,7 +1316,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1294,7 +1366,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1311,7 +1383,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1364,20 +1436,20 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Privacy is enforced between parties</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:01</span>
 
 	
   
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> private</span>
+        <span> raw</span>
       
     </div>
   
@@ -1401,10 +1473,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -1427,7 +1499,17 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"42"</span>
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet1"</span>
     
   
     
@@ -1442,7 +1524,7 @@ contract SimpleStorage {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         and it&#39;s private for 
       </span>
     
   
@@ -1452,17 +1534,31 @@ contract SimpleStorage {
   
     
       <span>
-        , named this contract as 
+        , name this contract as 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
 
   
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
+        </h4>
+        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
     
     
   
@@ -1511,7 +1607,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1528,7 +1624,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1548,7 +1644,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"42"</span>
+      <span class='parameter'>"23"</span>
     
   
   </div>
@@ -1588,7 +1684,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1605,7 +1701,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1625,7 +1721,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"42"</span>
+      <span class='parameter'>"23"</span>
     
   
   </div>
@@ -1665,7 +1761,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1682,7 +1778,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1745,20 +1841,20 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">When there&#39;s an update, privacy is still enforced</h3>
-    <span class="time">00:00:04</span>
+    <span class="time">00:00:01</span>
 
 	
   
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> private</span>
+        <span> raw</span>
       
     </div>
   
@@ -1782,10 +1878,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -1808,7 +1904,17 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"42"</span>
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet1"</span>
     
   
     
@@ -1823,7 +1929,7 @@ contract SimpleStorage {
   
     
       <span>
-        &#39;s default account and it&#39;s private for 
+         and it&#39;s private for 
       </span>
     
   
@@ -1833,17 +1939,31 @@ contract SimpleStorage {
   
     
       <span>
-        , named this contract as 
+        , name this contract as 
       </span>
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
   </div>
 
   
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
+        </h4>
+        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
     
     
   
@@ -1889,10 +2009,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1915,7 +2035,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -1926,6 +2046,16 @@ contract SimpleStorage {
   
     
       <span class='parameter'>"5"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet8"</span>
     
   
     
@@ -1985,7 +2115,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2002,7 +2132,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -2062,7 +2192,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2079,7 +2209,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
@@ -2139,7 +2269,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2156,7 +2286,7 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
