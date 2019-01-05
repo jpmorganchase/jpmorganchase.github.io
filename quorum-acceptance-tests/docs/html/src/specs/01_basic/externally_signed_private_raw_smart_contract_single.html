@@ -1,0 +1,61 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Single private smart contract when signed externally</h1>
+<p>Tags: basic, raw, externally-signed, private</p>
+<p>This is to verify that a private smart contract between 2 parties are not accessible by others.
+A simple smart contract is to store a int value and to provide <code>get()</code> and <code>set()</code> functions.</p>
+<pre><code>pragma solidity ^0.5.0;
+
+contract SimpleStorage {
+    uint private storedData;
+
+    constructor(uint initVal) public {
+        storedData = initVal;
+    }
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public constant returns (uint retVal) {
+        return storedData;
+    }
+}
+</code></pre>
+<ul>
+<li>Deploy a simple smart contract with initial value &quot;23&quot; signed by external wallet &quot;Wallet1&quot; in &quot;Node1&quot; and it's private for &quot;Node7&quot;, name this contract as &quot;contract31&quot;</li>
+</ul>
+<h2>Contract is mined</h2>
+<p>Tags: raw</p>
+<ul>
+<li>Transaction Hash is returned for &quot;contract31&quot;</li>
+<li>Transaction Receipt is present in &quot;Node1&quot; for &quot;contract31&quot;</li>
+<li>Transaction Receipt is present in &quot;Node7&quot; for &quot;contract31&quot;</li>
+</ul>
+<h2>Storage Root storing private smart contracts must be the same</h2>
+<p>Tags: raw</p>
+<ul>
+<li>&quot;contract31&quot; stored in &quot;Node1&quot; and &quot;Node7&quot; must have the same storage root</li>
+<li>&quot;contract31&quot; stored in &quot;Node1&quot; and &quot;Node3&quot; must not have the same storage root</li>
+</ul>
+<h2>Transaction payload is secured</h2>
+<p>Tags: raw</p>
+<ul>
+<li>&quot;contract31&quot;'s payload is retrievable from &quot;Node1&quot;</li>
+<li>&quot;contract31&quot;'s payload is retrievable from &quot;Node7&quot;</li>
+<li>&quot;contract31&quot;'s payload is not retrievable from &quot;Node3&quot;</li>
+</ul>
+<h2>Privacy is enforced between parties</h2>
+<p>Tags: raw</p>
+<ul>
+<li>&quot;contract31&quot;'s <code>get()</code> function execution in &quot;Node1&quot; returns &quot;23&quot;</li>
+<li>&quot;contract31&quot;'s <code>get()</code> function execution in &quot;Node7&quot; returns &quot;23&quot;</li>
+<li>&quot;contract31&quot;'s <code>get()</code> function execution in &quot;Node3&quot; returns &quot;0&quot;</li>
+</ul>
+<h2>When there's an update, privacy is still enforced</h2>
+<p>Tags: raw</p>
+<ul>
+<li>Execute &quot;contract31&quot;'s <code>set()</code> function with new value &quot;5&quot; signed by external wallet &quot;Wallet8&quot; in &quot;Node1&quot; and it's private for &quot;Node7&quot;</li>
+<li>&quot;contract31&quot;'s <code>get()</code> function execution in &quot;Node1&quot; returns &quot;5&quot;</li>
+<li>&quot;contract31&quot;'s <code>get()</code> function execution in &quot;Node7&quot; returns &quot;5&quot;</li>
+<li>&quot;contract31&quot;'s <code>get()</code> function execution in &quot;Node3&quot; returns &quot;0&quot;</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./estimate_gas.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./externally_signed_public_raw_smart_contract_single.html">></a></li></center></article>
