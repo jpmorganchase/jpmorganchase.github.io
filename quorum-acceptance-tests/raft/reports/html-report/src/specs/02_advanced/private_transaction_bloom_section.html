@@ -30,28 +30,28 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,13,1" data-total="15">
+        <svg id="pie-chart" data-results="0,13,2" data-total="15">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/15</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/15</title></path>
           <path class="status passed" />
           <path class="shadow passed" data-status="passed"><title>Passed: 13/15</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/15</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 2/15</title></path>
         </svg>
       </div>
     </div>
     <div class="report_test-results">
       <div class="report_test-result specs">
           <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">15</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
           <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">13</span></div>
-          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">2</span></div>
       </div>
       <div class="report_test-result scenarios">
           <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">38</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
           <div class="pass scenario-stats" data-status="passed"><span class="value">36</span></div>
-          <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">2</span></div>
       </div>
     </div>
     <div class="report_details">
@@ -72,11 +72,11 @@
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:10:17</span>
+          <span>00:01:21</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jan 8, 2019 at 4:48pm</span>
+          <span>Jan 8, 2019 at 6:45pm</span>
         </li>
       </ul>
       
@@ -111,11 +111,11 @@
         <ul id="scenarios" class="spec-list">
         
           <a href="private_transaction_bloom_section.html">
-            
-              <li class='failed spec-name'>
+             
+              <li class='skipped spec-name'>
             
               <span id="scenarioName" class="scenarioname">Private smart contract with event in the next bloom bit section</span>
-              <span id="time" class="time">00:08:58</span>
+              <span id="time" class="time">00:00:00</span>
             </li>
           </a>
           
@@ -128,21 +128,30 @@
             </li>
           </a>
           
-          <a href="../01_basic/private_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:01</span>
-            </li>
-          </a>
-          
           <a href="../01_basic/private_smart_contract_multiple.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
               <span id="time" class="time">00:00:18</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/value_transfer_public_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/externally_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract when signed externally</span>
+              <span id="time" class="time">00:00:14</span>
             </li>
           </a>
           
@@ -155,12 +164,12 @@
             </li>
           </a>
           
-          <a href="../01_basic/value_transfer_private_transactions.html">
+          <a href="../01_basic/externally_signed_public_raw_smart_contract_single.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
-              <span id="time" class="time">00:00:00</span>
+              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:03</span>
             </li>
           </a>
           
@@ -169,7 +178,25 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:11</span>
+              <span id="time" class="time">00:00:10</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/private_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:03</span>
+            </li>
+          </a>
+          
+          <a href="../01_basic/estimate_gas.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:04</span>
             </li>
           </a>
           
@@ -191,21 +218,21 @@
             </li>
           </a>
           
-          <a href="../01_basic/externally_signed_public_raw_smart_contract_single.html">
+          <a href="../01_basic/smart_contract_dual_state.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:03</span>
+              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
-          <a href="../01_basic/value_transfer_public_transactions.html">
+          <a href="../01_basic/value_transfer_private_transactions.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:01</span>
+              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
+              <span id="time" class="time">00:00:00</span>
             </li>
           </a>
           
@@ -215,33 +242,6 @@
             
               <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
               <span id="time" class="time">00:00:04</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/estimate_gas.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
-              <span id="time" class="time">00:00:03</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/externally_signed_private_raw_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract when signed externally</span>
-              <span id="time" class="time">00:00:13</span>
-            </li>
-          </a>
-          
-          <a href="../01_basic/smart_contract_dual_state.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
-              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -259,9 +259,9 @@
         <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/private_transaction_bloom_section.spec">Private smart contract with event in the next bloom bit section</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
-            <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
+            <li class="skip"><span class="value">1</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
       </div>
@@ -273,7 +273,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:08:58</span>
+        <span class="time">00:00:00</span>
       </div>
 
 	
@@ -330,13 +330,12 @@ contract ClientReceipt {
       
         
 	
-  <div class='scenario-container failed'>
-    
+  <div class='scenario-container skipped'>
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">FIXME: Log events are **only** captured in participated parties when executing the contract</h3>
-    <span class="time">00:08:58</span>
+    <h3 class="head borderBottom">Log events are **only** captured in participated parties when executing the contract</h3>
+    <span class="time">00:00:00</span>
 
 	
   
@@ -359,6 +358,69 @@ contract ClientReceipt {
 
 	
 
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+  <div class='step-info skipped'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Note: this spec requires a revisit due to high block number setup
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+        
+  <div class="message-container">
+    <h4 class="skipReason">Skipped Reason: Step implementation not found</h4>
+  </div>
+
+    
+  
+
+  
+
+    </div>
   
   
     
@@ -384,7 +446,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -467,7 +529,7 @@ contract ClientReceipt {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -527,10 +589,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -606,10 +668,10 @@ contract ClientReceipt {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:08:56</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -644,20 +706,6 @@ contract ClientReceipt {
   </div>
 
   
-    
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: org.web3j.protocol.exceptions.TransactionException: Transaction receipt was not generated after 60 seconds for transaction: 0x5675ac32cdd108ff4ac5df9d2c780a206375a31b3f97508a8da7b763e595d35f</pre>
-        </h4>
-        <pre class="stacktrace">rx.exceptions.Exceptions.propagate(Exceptions.java:57)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PublicSmartContract.waitForBlockHeightBySendingPublicTransaction(PublicSmartContract.java:132)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
     
     
   
