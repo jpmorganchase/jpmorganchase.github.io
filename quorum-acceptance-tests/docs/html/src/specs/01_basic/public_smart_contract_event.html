@@ -1,7 +1,7 @@
 <article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Public smart contract with event</h1>
-<p>Tags: basic</p>
+<p>Tags: basic, public</p>
 <p>A smart contract, <code>ClientReceipt</code>, logs all the deposits that have been performed.</p>
-<pre><code>pragma solidity ^0.4.0;
+<pre><code>pragma solidity ^0.5.0;
 
 contract ClientReceipt {
     event Deposit(
@@ -16,6 +16,7 @@ contract ClientReceipt {
 }
 </code></pre>
 <h2>Log events in total are captured when executing the contract</h2>
+<p>Tags: log-events</p>
 <ul>
 <li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node1&quot;, named this contract as &quot;contract12&quot;</li>
 <li>&quot;contract12&quot; is mined</li>
