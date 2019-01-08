@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="2,12,1" data-total="15">
+        <svg id="pie-chart" data-results="0,14,1" data-total="15">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 2/15</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/15</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 12/15</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 14/15</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/15</title></path>
         </svg>
@@ -43,14 +43,14 @@
     <div class="report_test-results">
       <div class="report_test-result specs">
           <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">15</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">2</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">12</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">14</span></div>
           <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
       </div>
       <div class="report_test-result scenarios">
           <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">39</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">6</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">32</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">38</span></div>
           <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
       </div>
     </div>
@@ -68,15 +68,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>80%</span>
+          <span>93%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:20:07</span>
+          <span>00:20:29</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jan 7, 2019 at 4:00pm</span>
+          <span>Jan 8, 2019 at 4:05pm</span>
         </li>
       </ul>
       
@@ -110,24 +110,6 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="smart_contract_dual_state.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
-              <span id="time" class="time">00:00:49</span>
-            </li>
-          </a>
-          
-          <a href="externally_signed_private_raw_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract when signed externally</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
           <a href="private_smart_contract_state_manipulation.html">
              
               <li class='skipped spec-name'>
@@ -137,21 +119,12 @@
             </li>
           </a>
           
-          <a href="private_smart_contract_async.html">
+          <a href="estimate_gas.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
-              <span id="time" class="time">00:00:38</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_spam.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
-              <span id="time" class="time">00:00:08</span>
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -164,42 +137,6 @@
             </li>
           </a>
           
-          <a href="value_transfer_public_transactions.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="istanbul_fault_tolerance.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Istanbul fault tolerance and recoverability</span>
-              <span id="time" class="time">00:00:13</span>
-            </li>
-          </a>
-          
-          <a href="../02_advanced/transactions_for_block_height.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:16:45</span>
-            </li>
-          </a>
-          
-          <a href="externally_signed_public_raw_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
           <a href="public_smart_contract_event.html">
              
               <li class='passed spec-name'>
@@ -209,12 +146,12 @@
             </li>
           </a>
           
-          <a href="value_transfer_private_transactions.html">
+          <a href="smart_contract_dual_state.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
-              <span id="time" class="time">00:00:00</span>
+              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
+              <span id="time" class="time">00:00:54</span>
             </li>
           </a>
           
@@ -227,21 +164,84 @@
             </li>
           </a>
           
+          <a href="value_transfer_private_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_public_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:05</span>
+            </li>
+          </a>
+          
+          <a href="../02_advanced/transactions_for_block_height.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:16:46</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_public_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_spam.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:08</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract when signed externally</span>
+              <span id="time" class="time">00:00:23</span>
+            </li>
+          </a>
+          
+          <a href="istanbul_fault_tolerance.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Istanbul fault tolerance and recoverability</span>
+              <span id="time" class="time">00:00:13</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_async.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:38</span>
+            </li>
+          </a>
+          
           <a href="private_smart_contract_multiple.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
               <span id="time" class="time">00:00:18</span>
-            </li>
-          </a>
-          
-          <a href="estimate_gas.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
-              <span id="time" class="time">00:00:06</span>
             </li>
           </a>
           
@@ -259,8 +259,8 @@
         <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec">Single private smart contract when signed externally</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">5</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">5</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -273,7 +273,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:07</span>
+        <span class="time">00:00:23</span>
       </div>
 
 	
@@ -338,13 +338,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Contract is mined</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:04</span>
 
 	
   
@@ -375,10 +375,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:04</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -448,20 +448,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -509,7 +495,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -572,7 +558,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -645,7 +631,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -721,13 +707,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Storage Root storing private smart contracts must be the same</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -758,10 +744,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -831,20 +817,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -892,7 +864,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -975,7 +947,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1061,13 +1033,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Transaction payload is secured</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -1098,10 +1070,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1171,20 +1143,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -1232,7 +1190,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1299,7 +1257,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1366,7 +1324,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1436,13 +1394,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Privacy is enforced between parties</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:04</span>
 
 	
   
@@ -1473,10 +1431,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1546,20 +1504,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -1607,7 +1551,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1684,7 +1628,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1761,7 +1705,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1841,13 +1785,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">When there&#39;s an update, privacy is still enforced</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:07</span>
 
 	
   
@@ -1878,10 +1822,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1951,20 +1895,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.lang.IllegalArgumentException: unexpected url: null/storeraw</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -2009,10 +1939,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -2115,7 +2045,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -2192,7 +2122,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -2269,7 +2199,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
