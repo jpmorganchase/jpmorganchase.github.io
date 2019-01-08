@@ -18,7 +18,10 @@ contract ClientReceipt {
     }
 }
 </code></pre>
-<h2>FIXME: Log events are <strong>only</strong> captured in participated parties when executing the contract</h2>
+<ul>
+<li>Note: this spec requires a revisit due to high block number setup</li>
+</ul>
+<h2>Log events are <strong>only</strong> captured in participated parties when executing the contract</h2>
 <p>Tags: raft, pr570</p>
 <ul>
 <li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node1&quot; and it's private for &quot;Node7&quot;, named this contract as &quot;contract17&quot;</li>
