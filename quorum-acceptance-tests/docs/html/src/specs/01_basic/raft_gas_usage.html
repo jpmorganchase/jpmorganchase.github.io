@@ -1,0 +1,88 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Gas usage for private contracts on participant and non-participant nodes</h1>
+<p>Tags: basic-raft, gas, private</p>
+<p>Private contracts with insufficient gas should be handled correctly in all scenarios.
+In particular, we need to test the following type of scenario:</p>
+<ul>
+<li>Private txn is published with marginal gas</li>
+<li>Minter is NOT a participant to the transaction and accepts the transaction as it cannot calculate full gas requirement</li>
+<li>Block is minted containing the private txn</li>
+<li>Block is validated by a node that IS party to the transaction and which calculates the gas usage as higher than that supplied</li>
+<li>Block is therefore rejected by the validator
+Note that intrinsic gas for the simple contract is between 25,224 and 25,352, required gas is approx 97,800</li>
+</ul>
+<h2>Private contract with gas below intrinsic gas should be rejected (and not remain pending).</h2>
+<ul>
+<li>
+<p>Get number of nodes and store as &quot;nodecount&quot;</p>
+</li>
+<li>
+<p>Private transaction where minter is a participant and gas value is &quot;25100&quot;, name this contract as &quot;contract1&quot;</p>
+</li>
+<li>
+<p>Contract &quot;contract1&quot; had exception with message &quot;intrinsic gas too low&quot;</p>
+</li>
+<li>
+<p>No transactions are pending on node for &quot;contract1&quot;</p>
+</li>
+<li>
+<p>Private transaction where minter is not a participant and gas value is &quot;25100&quot;, name this contract as &quot;contract2&quot;</p>
+</li>
+<li>
+<p>Contract &quot;contract2&quot; had exception with message &quot;intrinsic gas too low&quot;</p>
+</li>
+<li>
+<p>No transactions are pending on node for &quot;contract2&quot;</p>
+</li>
+<li>
+<p>Check &quot;nodecount&quot; nodes are still running</p>
+</li>
+</ul>
+<h2>Private contract with gas between intrinsic gas and required gas should be rejected (and not remain pending).</h2>
+<ul>
+<li>
+<p>Get number of nodes and store as &quot;nodecount&quot;</p>
+</li>
+<li>
+<p>Private transaction where minter is a participant and gas value is &quot;26000&quot;, name this contract as &quot;contract3&quot;</p>
+</li>
+<li>
+<p>Contract &quot;contract3&quot; had exception with message &quot;not-enough gas&quot;</p>
+</li>
+<li>
+<p>No transactions are pending on node for &quot;contract3&quot;</p>
+</li>
+<li>
+<p>Private transaction where minter is not a participant and gas value is &quot;26000&quot;, name this contract as &quot;contract4&quot;</p>
+</li>
+<li>
+<p>Contract &quot;contract4&quot; had exception with message &quot;not-enough gas&quot;</p>
+</li>
+<li>
+<p>No transactions are pending on node for &quot;contract4&quot;</p>
+</li>
+<li>
+<p>Check &quot;nodecount&quot; nodes are still running</p>
+</li>
+</ul>
+<h2>Private contract with sufficient gas should be accepted.</h2>
+<ul>
+<li>
+<p>Private transaction where minter is a participant and gas value is &quot;98000&quot;, name this contract as &quot;contract5&quot;</p>
+</li>
+<li>
+<p>Contract &quot;contract5&quot; creation succeeded</p>
+</li>
+<li>
+<p>No transactions are pending on node for &quot;contract5&quot;</p>
+</li>
+<li>
+<p>Private transaction where minter is not a participant and gas value is &quot;98000&quot;, name this contract as &quot;contract6&quot;</p>
+</li>
+<li>
+<p>Contract &quot;contract6&quot; creation succeeded</p>
+</li>
+<li>
+<p>No transactions are pending on node for &quot;contract6&quot;</p>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./public_smart_contract_event.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./smart_contract_dual_state.html">></a></li></center></article>
