@@ -19,48 +19,55 @@ contract ClientReceipt {
 <h2>Log events in total are <strong>only</strong> captured in participated parties when executing the contract</h2>
 <p>Tags: event, log</p>
 <ul>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node1&quot; and it's private for &quot;Node7&quot;, named this contract as &quot;contract17&quot;</li>
+<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node1&quot; and it's private for &quot;Node4&quot;, named this contract as &quot;contract17&quot;</li>
 <li>&quot;contract17&quot; is mined</li>
-<li>Execute &quot;contract17&quot;'s <code>deposit()</code> function &quot;10&quot; times with arbitrary id and value from &quot;Node1&quot;. And it's private for &quot;Node7&quot;</li>
+<li>Execute &quot;contract17&quot;'s <code>deposit()</code> function &quot;10&quot; times with arbitrary id and value from &quot;Node1&quot;. And it's private for &quot;Node4&quot;</li>
 <li>&quot;Node1&quot; has received &quot;10&quot; transactions which contain &quot;10&quot; log events in total</li>
-<li>&quot;Node7&quot; has received &quot;10&quot; transactions which contain &quot;10&quot; log events in total</li>
+<li>&quot;Node4&quot; has received &quot;10&quot; transactions which contain &quot;10&quot; log events in total</li>
 <li>&quot;Node2&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
 <li>&quot;Node3&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
-<li>&quot;Node4&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
-<li>&quot;Node5&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
-<li>&quot;Node6&quot; has received &quot;10&quot; transactions which contain &quot;0&quot; log events in total</li>
 </ul>
 <h2>Log events in the state are <strong>only</strong> captured in participated parties when executing the contract</h2>
 <p>Tags: event, log</p>
 <ul>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;contract12&quot;</li>
-<li>&quot;contract12&quot; is mined</li>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node2&quot; and it's private for &quot;Node3&quot;, named this contract as &quot;contract23&quot;</li>
-<li>&quot;contract23&quot; is mined</li>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node3&quot; and it's private for &quot;Node4&quot;, named this contract as &quot;contract34&quot;</li>
-<li>&quot;contract34&quot; is mined</li>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node4&quot; and it's private for &quot;Node5&quot;, named this contract as &quot;contract45&quot;</li>
-<li>&quot;contract45&quot; is mined</li>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node5&quot; and it's private for &quot;Node6&quot;, named this contract as &quot;contract56&quot;</li>
-<li>&quot;contract56&quot; is mined</li>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node6&quot; and it's private for &quot;Node7&quot;, named this contract as &quot;contract67&quot;</li>
-<li>&quot;contract67&quot; is mined</li>
-<li>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node7&quot; and it's private for &quot;Node1&quot;, named this contract as &quot;contract71&quot;</li>
-<li>&quot;contract71&quot; is mined</li>
-<li>Execute &quot;contract12,contract23,contract34,contract45,contract56,contract67,contract71&quot;'s <code>deposit()</code> function &quot;10&quot; times with arbitrary id and value between original parties</li>
-<li>&quot;Node1&quot; has received transactions from &quot;contract12&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node2&quot; has received transactions from &quot;contract12&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node2&quot; has received transactions from &quot;contract23&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node3&quot; has received transactions from &quot;contract23&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node3&quot; has received transactions from &quot;contract34&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node4&quot; has received transactions from &quot;contract34&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node4&quot; has received transactions from &quot;contract45&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node5&quot; has received transactions from &quot;contract45&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node5&quot; has received transactions from &quot;contract56&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node6&quot; has received transactions from &quot;contract56&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node6&quot; has received transactions from &quot;contract67&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node7&quot; has received transactions from &quot;contract67&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node7&quot; has received transactions from &quot;contract71&quot; which contain &quot;10&quot; log events in state</li>
-<li>&quot;Node1&quot; has received transactions from &quot;contract71&quot; which contain &quot;10&quot; log events in state</li>
+<li>
+<p>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node1&quot; and it's private for &quot;Node2&quot;, named this contract as &quot;contract12&quot;</p>
+</li>
+<li>
+<p>&quot;contract12&quot; is mined</p>
+</li>
+<li>
+<p>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node2&quot; and it's private for &quot;Node3&quot;, named this contract as &quot;contract23&quot;</p>
+</li>
+<li>
+<p>&quot;contract23&quot; is mined</p>
+</li>
+<li>
+<p>Deploy <code>ClientReceipt</code> smart contract from a default account in &quot;Node3&quot; and it's private for &quot;Node4&quot;, named this contract as &quot;contract34&quot;</p>
+</li>
+<li>
+<p>&quot;contract34&quot; is mined</p>
+</li>
+<li>
+<p>Execute &quot;contract12,contract23,contract34&quot;'s <code>deposit()</code> function &quot;10&quot; times with arbitrary id and value between original parties</p>
+</li>
+<li>
+<p>&quot;Node1&quot; has received transactions from &quot;contract12&quot; which contain &quot;10&quot; log events in state</p>
+</li>
+<li>
+<p>&quot;Node2&quot; has received transactions from &quot;contract12&quot; which contain &quot;10&quot; log events in state</p>
+</li>
+<li>
+<p>&quot;Node2&quot; has received transactions from &quot;contract23&quot; which contain &quot;10&quot; log events in state</p>
+</li>
+<li>
+<p>&quot;Node3&quot; has received transactions from &quot;contract23&quot; which contain &quot;10&quot; log events in state</p>
+</li>
+<li>
+<p>&quot;Node3&quot; has received transactions from &quot;contract34&quot; which contain &quot;10&quot; log events in state</p>
+</li>
+<li>
+<p>&quot;Node4&quot; has received transactions from &quot;contract34&quot; which contain &quot;10&quot; log events in state</p>
+</li>
 </ul>
 <ul id="navigation"><center><li class="nav"><a href="./private_smart_contract_async.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./private_smart_contract_multiple.html">></a></li></center></article>

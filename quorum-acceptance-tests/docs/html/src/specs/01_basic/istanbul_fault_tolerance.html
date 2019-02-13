@@ -1,11 +1,11 @@
 <article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Istanbul fault tolerance and recoverability</h1>
 <p>Tags: basic-istanbul</p>
 <p><a href="https://github.com/ethereum/EIPs/issues/650" rel="nofollow">Istanbul consensus</a> can tolerate at most of F faulty nodes in a N validator nodes network, where N = 3F + 1.</p>
-<p>This test is to validate the above feature. Assume that our network has 7 nodes which are all validators.</p>
+<p>This test is to validate the above feature. Assume that our network has 4 nodes which are all validators, then it will stop 2 validators. If network has 7 nodes it will stop 3 validators.</p>
 <h2>Modify number of validators from less than 2F + 1 to more than 2F + 1</h2>
 <ul>
 <li>The consensus should work at the beginning</li>
-<li>Among &quot;7&quot; validators, stop &quot;3&quot; validators so there are less than 2F + 1 validators in the network</li>
+<li>Among all validators, stop some validators so there are less than 2F + 1 validators in the network</li>
 <li>The consensus should stop</li>
 <li>Resume the stopped validators</li>
 <li>The consensus should work after resuming</li>

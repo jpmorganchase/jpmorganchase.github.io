@@ -14,18 +14,14 @@ Setting <code>--gcmode=archive</code> would retain all historical data.</p>
 <p>Tags: add, start, stop, network-setup</p>
 <p>This scenario is run against each row of data in the table above</p>
 <ul>
-<li>Start a &lt;networkType&gt; Quorum Network, named it &lt;id&gt;, with &quot;4&quot; nodes with &lt;gcmode&gt; <code>gcmode</code> using &lt;consensus&gt; consensus</li>
-<li>Blocks are synced when adding new node &quot;Node5&quot; with &lt;gcmode&gt; <code>gcmode</code> to network &lt;id&gt;</li>
-<li>&quot;Node5&quot; is able to seal new blocks</li>
-<li>Blocks are synced when adding new node &quot;Node6&quot; with &lt;gcmode&gt; <code>gcmode</code> to network &lt;id&gt;</li>
-<li>&quot;Node6&quot; is able to seal new blocks</li>
-<li>Blocks are synced when adding new node &quot;Node7&quot; with &lt;gcmode&gt; <code>gcmode</code> to network &lt;id&gt;</li>
-<li>&quot;Node7&quot; is able to seal new blocks</li>
-<li>Verify privacy between &quot;Node1&quot; and &quot;Node7&quot; excluding &quot;Node4&quot; when using a simple smart contract</li>
+<li>Start a &lt;networkType&gt; Quorum Network, named it &lt;id&gt;, with &quot;3&quot; nodes with &lt;gcmode&gt; <code>gcmode</code> using &lt;consensus&gt; consensus</li>
+<li>Blocks are synced when adding new node &quot;Node4&quot; with &lt;gcmode&gt; <code>gcmode</code> to network &lt;id&gt;</li>
+<li>&quot;Node4&quot; is able to seal new blocks</li>
+<li>Verify privacy between &quot;Node1&quot; and &quot;Node4&quot; excluding &quot;Node3&quot; when using a simple smart contract</li>
 <li>Stop all nodes in the network &lt;id&gt;</li>
 <li>Start all nodes in the network &lt;id&gt;</li>
 <li>Verify block heights in all nodes are the same in the network &lt;id&gt;</li>
-<li>Verify privacy between &quot;Node1&quot; and &quot;Node7&quot; excluding &quot;Node4&quot; when using a simple smart contract</li>
+<li>Verify privacy between &quot;Node1&quot; and &quot;Node4&quot; excluding &quot;Node3&quot; when using a simple smart contract</li>
 </ul>
 <hr />
 <p>Clean up the network is done via execution hook which is setup for <code>network-cleanup-required</code> tag</p>
