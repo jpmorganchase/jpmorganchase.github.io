@@ -1,0 +1,27 @@
+---
+---
+@import 'base';
+
+header.page-header {
+    background-color: #000;
+    background-image: url('/assets/images/background.png');
+    background-size: cover;
+    height: 225px;
+    width: 100%;
+    z-index:-1;
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 2rem 3rem;
+}
+
+.page-header h1 {
+    color:white;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+    color: #ea761f !important;
+}
+
