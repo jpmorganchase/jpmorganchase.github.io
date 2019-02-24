@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: page
+title: OSS Projects at J.P. Morgan
+permalink: /projects
 ---
-
-## Our Projects
 {% assign orderedRepos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
 {% for repository in orderedRepos %}
 
