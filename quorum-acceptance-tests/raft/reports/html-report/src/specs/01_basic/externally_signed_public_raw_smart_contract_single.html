@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="7,7,2" data-total="16">
+        <svg id="pie-chart" data-results="0,14,2" data-total="16">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 7/16</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/16</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 7/16</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 14/16</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 2/16</title></path>
         </svg>
@@ -43,14 +43,14 @@
     <div class="report_test-results">
       <div class="report_test-result specs">
           <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">16</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">7</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">7</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">14</span></div>
           <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">2</span></div>
       </div>
       <div class="report_test-result scenarios">
           <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">41</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">15</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">24</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">39</span></div>
           <div class="skip scenario-stats" data-status="skipped"><span class="value">2</span></div>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>default,travis-build-173.1</span>
+          <span>default,travis-build-174.1</span>
         </li>
         
         <li>
@@ -68,15 +68,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>43%</span>
+          <span>87%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:55</span>
+          <span>00:01:09</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Mar 6, 2019 at 6:14pm</span>
+          <span>Mar 6, 2019 at 9:28pm</span>
         </li>
       </ul>
       
@@ -110,66 +110,12 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="private_smart_contract_event.html">
+          <a href="private_smart_contract_state_manipulation.html">
+             
+              <li class='skipped spec-name'>
             
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:03</span>
-            </li>
-          </a>
-          
-          <a href="externally_signed_private_raw_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:13</span>
-            </li>
-          </a>
-          
-          <a href="public_smart_contract_event.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="scenarioName" class="scenarioname">State manipulation in private smart contract</span>
               <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="smart_contract_dual_state.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="externally_signed_public_raw_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:03</span>
-            </li>
-          </a>
-          
-          <a href="estimate_gas.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
-              <span id="time" class="time">00:00:03</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:01</span>
             </li>
           </a>
           
@@ -182,57 +128,12 @@
             </li>
           </a>
           
-          <a href="private_smart_contract_state_manipulation.html">
-             
-              <li class='skipped spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">State manipulation in private smart contract</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="value_transfer_public_transactions.html">
+          <a href="externally_signed_public_raw_smart_contract_single.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_spam.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="../02_advanced/transactions_for_block_height.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:00:04</span>
-            </li>
-          </a>
-          
-          <a href="value_transfer_private_transactions.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="raft_gas_usage.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Gas usage for private contracts on participant and non-participant nodes</span>
-              <span id="time" class="time">00:00:04</span>
+              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:03</span>
             </li>
           </a>
           
@@ -245,12 +146,111 @@
             </li>
           </a>
           
+          <a href="private_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_public_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="estimate_gas.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:03</span>
+            </li>
+          </a>
+          
           <a href="private_smart_contract_multiple.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
+              <span id="time" class="time">00:00:08</span>
+            </li>
+          </a>
+          
+          <a href="public_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="time" class="time">00:00:03</span>
+            </li>
+          </a>
+          
+          <a href="raft_gas_usage.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Gas usage for private contracts on participant and non-participant nodes</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="../02_advanced/transactions_for_block_height.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:13</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_spam.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:08</span>
+            </li>
+          </a>
+          
+          <a href="smart_contract_dual_state.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
               <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_private_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
+              <span id="time" class="time">00:00:00</span>
             </li>
           </a>
           
@@ -268,8 +268,8 @@
         <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec">Public raw smart contract when signed externally</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">2</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">3</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -342,853 +342,6 @@ contract SimpleStorage {
   
 
   
-
-      
-        
-	
-  <div class='scenario-container failed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Everyone in the network has the same state for the contract</h3>
-    <span class="time">00:00:00</span>
-
-	
-  
-    <div class="tags scenario_tags contentSection">
-      <strong>Tags:</strong>
-      
-        <span> raw</span>
-      
-    </div>
-  
-
-	</div>
-  
-  
-
-  
-  
-
-	
-
-  
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info failed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"32"</span>
-    
-  
-  </div>
-
-  
-    
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>org.junit.ComparisonFailure: expected:&lt;[32]&gt; but was:&lt;[0]&gt;</pre>
-        </h4>
-        <pre class="stacktrace">java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>com.quorum.gauge.PrivateSmartContract.verifyPrivacyWithParticipatedNodes(PrivateSmartContract.java:122)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:92)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:98)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:81)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node2"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"32"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node4"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"32"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node3"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"32"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-	
-	</div>
-
-      
-        
-	
-  <div class='scenario-container failed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">When there&#39;s an update, every node is updated</h3>
-    <span class="time">00:00:01</span>
-
-	
-  
-    <div class="tags scenario_tags contentSection">
-      <strong>Tags:</strong>
-      
-        <span> raw</span>
-      
-    </div>
-  
-
-	</div>
-  
-  
-
-  
-  
-
-	
-
-  
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class='step-info failed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Execute 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `set()` function with new value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"5"</span>
-    
-  
-    
-      <span>
-         signed by external wallet 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Wallet8"</span>
-    
-  
-    
-      <span>
-         in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node3"</span>
-    
-  
-  </div>
-
-  
-    
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: org.web3j.protocol.exceptions.TransactionException: Transaction has failed with status: 0x0. Gas used: 4700000. (not-enough gas?)</pre>
-        </h4>
-        <pre class="stacktrace">rx.exceptions.Exceptions.propagate(Exceptions.java:57)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PublicRawSmartContract.updateNewValue(PublicRawSmartContract.java:49)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:92)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:98)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:81)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"5"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node2"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"5"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node4"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"5"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span class='parameter'>"contract32"</span>
-    
-  
-    
-      <span>
-        &#39;s `get()` function execution in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node3"</span>
-    
-  
-    
-      <span>
-         returns 
-      </span>
-    
-  
-    
-      <span class='parameter'>"5"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-	
-	</div>
 
       
         
@@ -1349,6 +502,825 @@ contract SimpleStorage {
       <span>
          is mined
       </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Everyone in the network has the same state for the contract</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"32"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"32"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"32"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node3"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"32"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">When there&#39;s an update, every node is updated</h3>
+    <span class="time">00:00:01</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:01</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Execute 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `set()` function with new value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+    
+      <span>
+         signed by external wallet 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Wallet8"</span>
+    
+  
+    
+      <span>
+         in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node3"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node2"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract32"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node3"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
     
   
   </div>
