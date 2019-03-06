@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="8,6,1" data-total="15">
+        <svg id="pie-chart" data-results="0,14,1" data-total="15">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 8/15</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/15</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 6/15</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 14/15</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/15</title></path>
         </svg>
@@ -43,14 +43,14 @@
     <div class="report_test-results">
       <div class="report_test-result specs">
           <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">15</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">8</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">6</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">14</span></div>
           <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
       </div>
       <div class="report_test-result scenarios">
           <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">39</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">16</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">22</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">38</span></div>
           <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>default,travis-build-173.2</span>
+          <span>default,travis-build-174.2</span>
         </li>
         
         <li>
@@ -68,15 +68,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>40%</span>
+          <span>93%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:05:08</span>
+          <span>00:08:28</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Mar 6, 2019 at 6:16pm</span>
+          <span>Mar 6, 2019 at 9:31pm</span>
         </li>
       </ul>
       
@@ -110,83 +110,47 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="externally_signed_private_raw_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:25</span>
-            </li>
-          </a>
-          
-          <a href="public_smart_contract_event.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
-              <span id="time" class="time">00:00:04</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_event.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:13</span>
-            </li>
-          </a>
-          
-          <a href="estimate_gas.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="smart_contract_dual_state.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
-              <span id="time" class="time">00:00:09</span>
-            </li>
-          </a>
-          
-          <a href="externally_signed_public_raw_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_single.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:13</span>
-            </li>
-          </a>
-          
-          <a href="../02_advanced/transactions_for_block_height.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:02:49</span>
-            </li>
-          </a>
-          
           <a href="private_smart_contract_state_manipulation.html">
              
               <li class='skipped spec-name'>
             
               <span id="scenarioName" class="scenarioname">State manipulation in private smart contract</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:24</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:14</span>
+            </li>
+          </a>
+          
+          <a href="smart_contract_dual_state.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
+              <span id="time" class="time">00:00:53</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_private_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
               <span id="time" class="time">00:00:00</span>
             </li>
           </a>
@@ -200,12 +164,30 @@
             </li>
           </a>
           
-          <a href="value_transfer_private_transactions.html">
+          <a href="private_smart_contract_single.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
-              <span id="time" class="time">00:00:00</span>
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:14</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_async.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:38</span>
+            </li>
+          </a>
+          
+          <a href="public_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -218,21 +200,12 @@
             </li>
           </a>
           
-          <a href="private_smart_contract_spam.html">
+          <a href="estimate_gas.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_async.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
-              <span id="time" class="time">00:00:23</span>
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -242,6 +215,33 @@
             
               <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
               <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_spam.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:08</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_public_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="../02_advanced/transactions_for_block_height.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:05:08</span>
             </li>
           </a>
           
@@ -421,7 +421,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Transaction Hash: 0x1ce2b054fa77e9f7d2caa654c73755e7fb451e3e7c56aa9de275dbe7c5b0428d</p>
+        <div class="step-message"><p>Transaction Hash: 0x3b94bf16067dc08ccf4fc145f341303883c468b165781de4bf3589516f045b95</p>
  </div>
       </div>
     </div>
