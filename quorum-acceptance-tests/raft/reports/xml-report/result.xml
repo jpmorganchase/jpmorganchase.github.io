@@ -1,90 +1,33 @@
 <testsuites>
-	<testsuite id="1" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.522" timestamp="2019-04-05T16:44:39" name="Value transfer in private transactions" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="1" tests="7" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec" time="3.868" timestamp="2019-04-06T16:44:55" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.223"></testcase>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.299"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="2" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="1.118" timestamp="2019-04-05T16:44:39" name="Value transfer in public transactions" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="0.551"></testcase>
-		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="0.567"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="3" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="2.455" timestamp="2019-04-05T16:44:39" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="1.377"></testcase>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.078"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="4" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="6.742" timestamp="2019-04-05T16:44:39" name="Private smart contract with event" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="3.150"></testcase>
-		<testcase classname="Private smart contract with event" name="Log events in the state are **only** captured in participated parties when executing the contract" time="3.592"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="5" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec" time="6.977" timestamp="2019-04-05T16:44:39" name="Dual state implementation when peforming function calls from one smart contract to another" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all public smart contracts: public -&gt; public -&gt; public" time="1.162"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all private smart contracts: private -&gt; private -&gt; private" time="1.295"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public" time="1.296"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private" time="3.224"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="6" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="0.849" timestamp="2019-04-05T16:44:39" name="Public smart contract with event" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="0.849"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="7" tests="3" failures="3" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/raft_gas_usage.spec" time="0.446" timestamp="2019-04-05T16:44:39" name="Gas usage for private contracts on participant and non-participant nodes" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Gas usage for private contracts on participant and non-participant nodes" name="Private contract with gas below intrinsic gas should be rejected (and not remain pending)." time="0.216">
-			<failure message="Private transaction where minter is a participant and gas value is &#34;25100&#34;, name this contract as &#34;contract1&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;" type="Private transaction where minter is a participant and gas value is &#34;25100&#34;, name this contract as &#34;contract1&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;">rx.exceptions.Exceptions.propagate(Exceptions.java:57)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.services.RaftService.getLeader(RaftService.java:87)&#xA;com.quorum.gauge.RaftGasUsage.sendPrivateTransactionWithParticipantMinter(RaftGasUsage.java:61)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
-		</testcase>
-		<testcase classname="Gas usage for private contracts on participant and non-participant nodes" name="Private contract with gas between intrinsic gas and required gas should be rejected (and not remain pending)." time="0.128">
-			<failure message="Private transaction where minter is a participant and gas value is &#34;60352&#34;, name this contract as &#34;contract3&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;" type="Private transaction where minter is a participant and gas value is &#34;60352&#34;, name this contract as &#34;contract3&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;">rx.exceptions.Exceptions.propagate(Exceptions.java:57)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.services.RaftService.getLeader(RaftService.java:87)&#xA;com.quorum.gauge.RaftGasUsage.sendPrivateTransactionWithParticipantMinter(RaftGasUsage.java:61)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
-		</testcase>
-		<testcase classname="Gas usage for private contracts on participant and non-participant nodes" name="Private contract with sufficient gas should be accepted." time="0.102">
-			<failure message="Private transaction where minter is a participant and gas value is &#34;120000&#34;, name this contract as &#34;contract5&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;" type="Private transaction where minter is a participant and gas value is &#34;120000&#34;, name this contract as &#34;contract5&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;">rx.exceptions.Exceptions.propagate(Exceptions.java:57)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.services.RaftService.getLeader(RaftService.java:87)&#xA;com.quorum.gauge.RaftGasUsage.sendPrivateTransactionWithParticipantMinter(RaftGasUsage.java:61)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
-		</testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="8" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/private_transaction_bloom_section.spec" time="0.000" timestamp="2019-04-05T16:44:39" name="Private smart contract with event in the next bloom bit section" errors="0" skipped="1" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Private smart contract with event in the next bloom bit section" name="Log events are **only** captured in participated parties when executing the contract" time="0.000">
-			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/private_transaction_bloom_section.spec:28 Step implementation not found =&gt; &#39;Note: this spec requires a revisit due to high block number setup&#39;"></skipped>
-		</testcase>
-		<system-out></system-out>
-		<system-err>Validation failed, 1 Scenarios were skipped.</system-err>
-	</testsuite>
-	<testsuite id="9" tests="7" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec" time="3.898" timestamp="2019-04-05T16:44:39" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
-		<properties></properties>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required for public transaction" time="0.531"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy public smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="0.172"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required for public transaction" time="0.541"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy public smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="0.167"></testcase>
 		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create public smart contract" time="0.141"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a public smart contract" time="0.151"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy private smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="2.473"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create private smart contract" time="0.140"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a private smart contract" time="0.290"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a public smart contract" time="0.149"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy private smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="2.435"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create private smart contract" time="0.138"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a private smart contract" time="0.297"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="10" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec" time="3.715" timestamp="2019-04-05T16:44:39" name="Public raw smart contract when signed externally" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="2" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" time="13.553" timestamp="2019-04-06T16:44:55" name="Private raw smart contract when signed externally" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
-		<testcase classname="Public raw smart contract when signed externally" name="Contract is deployed and mined" time="1.583"></testcase>
-		<testcase classname="Public raw smart contract when signed externally" name="Everyone in the network has the same state for the contract" time="0.304"></testcase>
-		<testcase classname="Public raw smart contract when signed externally" name="When there&#39;s an update, every node is updated" time="1.828"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="Contract is mined" time="4.457"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="Storage Root storing private smart contracts must be the same" time="1.824"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="Transaction payload is secured" time="1.979"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="Privacy is enforced between parties" time="1.883"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="When there&#39;s an update, privacy is still enforced" time="3.410"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="11" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2019-04-05T16:44:39" name="State manipulation in private smart contract" errors="0" skipped="1" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="3" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="8.226" timestamp="2019-04-06T16:44:55" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="8.226"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="4" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2019-04-06T16:44:55" name="State manipulation in private smart contract" errors="0" skipped="1" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
 		<testcase classname="State manipulation in private smart contract" name="Private state is maintained" time="0.000">
 			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec:27 Step implementation not found =&gt; &#39;Note: this step is not implemented indicating that the spec execution is temporarily skipped&#39;"></skipped>
@@ -92,41 +35,98 @@
 		<system-out></system-out>
 		<system-err>Validation failed, 1 Scenarios were skipped.</system-err>
 	</testsuite>
-	<testsuite id="12" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="8.298" timestamp="2019-04-05T16:44:39" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="5" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="2.957" timestamp="2019-04-06T16:44:55" name="Public smart contract with event" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
-		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="8.298"></testcase>
+		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="2.957"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="13" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="4.439" timestamp="2019-04-05T16:44:39" name="Transactions for different block heights" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="6" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="1.116" timestamp="2019-04-06T16:44:55" name="Value transfer in public transactions" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
-		<testcase classname="Transactions for different block heights" name="Private smart contracts for Raft consensus" time="4.439"></testcase>
+		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="0.546"></testcase>
+		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="0.570"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="14" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" time="13.586" timestamp="2019-04-05T16:44:39" name="Private raw smart contract when signed externally" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="7" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec" time="3.634" timestamp="2019-04-06T16:44:55" name="Public raw smart contract when signed externally" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
-		<testcase classname="Private raw smart contract when signed externally" name="Contract is mined" time="4.467"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Storage Root storing private smart contracts must be the same" time="1.713"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Transaction payload is secured" time="1.948"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Privacy is enforced between parties" time="1.941"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="When there&#39;s an update, privacy is still enforced" time="3.517"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="Contract is deployed and mined" time="1.534"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="Everyone in the network has the same state for the contract" time="0.304"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="When there&#39;s an update, every node is updated" time="1.796"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="15" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="7.793" timestamp="2019-04-05T16:44:39" name="Multiple private smart contracts" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="8" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="2.382" timestamp="2019-04-06T16:44:55" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
-		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="7.793"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="1.311"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.071"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="16" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="1.850" timestamp="2019-04-05T16:44:39" name="Single private smart contract" errors="0" hostname="travis-job-c0565e35-a14a-4c8e-af6e-1cc46ebd5c30">
+	<testsuite id="9" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="8.618" timestamp="2019-04-06T16:44:55" name="Private smart contract with event" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
 		<properties></properties>
-		<testcase classname="Single private smart contract" name="Contract is mined" time="0.324"></testcase>
-		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="0.212"></testcase>
-		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="0.436"></testcase>
-		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="0.378"></testcase>
-		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="0.500"></testcase>
+		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="3.123"></testcase>
+		<testcase classname="Private smart contract with event" name="Log events in the state are **only** captured in participated parties when executing the contract" time="5.495"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="10" tests="3" failures="3" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/raft_gas_usage.spec" time="0.493" timestamp="2019-04-06T16:44:55" name="Gas usage for private contracts on participant and non-participant nodes" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Gas usage for private contracts on participant and non-participant nodes" name="Private contract with gas below intrinsic gas should be rejected (and not remain pending)." time="0.258">
+			<failure message="Private transaction where minter is a participant and gas value is &#34;25100&#34;, name this contract as &#34;contract1&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;" type="Private transaction where minter is a participant and gas value is &#34;25100&#34;, name this contract as &#34;contract1&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;">rx.exceptions.Exceptions.propagate(Exceptions.java:57)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.services.RaftService.getLeader(RaftService.java:87)&#xA;com.quorum.gauge.RaftGasUsage.sendPrivateTransactionWithParticipantMinter(RaftGasUsage.java:61)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
+		</testcase>
+		<testcase classname="Gas usage for private contracts on participant and non-participant nodes" name="Private contract with gas between intrinsic gas and required gas should be rejected (and not remain pending)." time="0.132">
+			<failure message="Private transaction where minter is a participant and gas value is &#34;60352&#34;, name this contract as &#34;contract3&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;" type="Private transaction where minter is a participant and gas value is &#34;60352&#34;, name this contract as &#34;contract3&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;">rx.exceptions.Exceptions.propagate(Exceptions.java:57)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.services.RaftService.getLeader(RaftService.java:87)&#xA;com.quorum.gauge.RaftGasUsage.sendPrivateTransactionWithParticipantMinter(RaftGasUsage.java:61)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
+		</testcase>
+		<testcase classname="Gas usage for private contracts on participant and non-participant nodes" name="Private contract with sufficient gas should be accepted." time="0.103">
+			<failure message="Private transaction where minter is a participant and gas value is &#34;120000&#34;, name this contract as &#34;contract5&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;" type="Private transaction where minter is a participant and gas value is &#34;120000&#34;, name this contract as &#34;contract5&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.lang.String` out of START_OBJECT token&#xA; at [Source: (okio.RealBufferedSource$1); line: 1, column: 710] (through reference chain: com.quorum.gauge.ext.NodeInfo[&#34;result&#34;]-&gt;java.util.LinkedHashMap[&#34;ports&#34;])&#39;">rx.exceptions.Exceptions.propagate(Exceptions.java:57)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:463)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.services.RaftService.getLeader(RaftService.java:87)&#xA;com.quorum.gauge.RaftGasUsage.sendPrivateTransactionWithParticipantMinter(RaftGasUsage.java:61)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
+		</testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="11" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec" time="4.875" timestamp="2019-04-06T16:44:55" name="Dual state implementation when peforming function calls from one smart contract to another" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all public smart contracts: public -&gt; public -&gt; public" time="1.170"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all private smart contracts: private -&gt; private -&gt; private" time="1.270"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public" time="1.231"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private" time="1.204"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="12" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="7.835" timestamp="2019-04-06T16:44:55" name="Multiple private smart contracts" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="7.835"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="13" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="1.895" timestamp="2019-04-06T16:44:55" name="Single private smart contract" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Single private smart contract" name="Contract is mined" time="0.345"></testcase>
+		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="0.188"></testcase>
+		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="0.440"></testcase>
+		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="0.383"></testcase>
+		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="0.539"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="14" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.469" timestamp="2019-04-06T16:44:55" name="Value transfer in private transactions" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.225"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.244"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="15" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/private_transaction_bloom_section.spec" time="0.000" timestamp="2019-04-06T16:44:55" name="Private smart contract with event in the next bloom bit section" errors="0" skipped="1" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Private smart contract with event in the next bloom bit section" name="Log events are **only** captured in participated parties when executing the contract" time="0.000">
+			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/private_transaction_bloom_section.spec:28 Step implementation not found =&gt; &#39;Note: this spec requires a revisit due to high block number setup&#39;"></skipped>
+		</testcase>
+		<system-out></system-out>
+		<system-err>Validation failed, 1 Scenarios were skipped.</system-err>
+	</testsuite>
+	<testsuite id="16" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="4.650" timestamp="2019-04-06T16:44:55" name="Transactions for different block heights" errors="0" hostname="travis-job-b616b648-7f9e-4a57-9d7b-82892cf1153e">
+		<properties></properties>
+		<testcase classname="Transactions for different block heights" name="Private smart contracts for Raft consensus" time="4.650"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
