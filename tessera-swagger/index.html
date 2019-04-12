@@ -44,7 +44,7 @@
             spec: /*intellij-swagger-spec-start*/{
                 "swagger" : "2.0",
                 "info" : {
-                    "version" : "0.8-SNAPSHOT",
+                    "version" : "0.9",
                     "title" : "Tessera rest"
                 },
                 "host" : "localhost:8080",
@@ -82,6 +82,25 @@
                             "operationId" : "getKeyPairs",
                             "consumes" : [ "application/json" ],
                             "produces" : [ "application/json" ],
+                            "responses" : {
+                                "default" : {
+                                    "description" : "successful operation"
+                                }
+                            }
+                        }
+                    },
+                    "/config/keypairs/{publicKey}" : {
+                        "get" : {
+                            "tags" : ["Admin APIs"],
+                            "operationId" : "getKeyPair",
+                            "consumes" : [ "application/json" ],
+                            "produces" : [ "application/json" ],
+                            "parameters" : [ {
+                                "name" : "publicKey",
+                                "in" : "path",
+                                "required" : true,
+                                "type" : "string"
+                            } ],
                             "responses" : {
                                 "default" : {
                                     "description" : "successful operation"
