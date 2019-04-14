@@ -1,70 +1,95 @@
 <testsuites>
-	<testsuite id="1" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="38.865" timestamp="2019-04-13T18:39:32" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="1" tests="5" failures="5" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" time="8.947" timestamp="2019-04-14T16:56:35" name="Private raw smart contract when signed externally" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="37.760"></testcase>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.105"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="2" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec" time="53.757" timestamp="2019-04-13T18:39:32" name="Dual state implementation when peforming function calls from one smart contract to another" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
-		<properties></properties>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all public smart contracts: public -&gt; public -&gt; public" time="13.439"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all private smart contracts: private -&gt; private -&gt; private" time="13.474"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public" time="13.454"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private" time="13.390"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="3" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="8.560" timestamp="2019-04-13T18:39:32" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
-		<properties></properties>
-		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="8.560"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="4" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.515" timestamp="2019-04-13T18:39:32" name="Value transfer in private transactions" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
-		<properties></properties>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.224"></testcase>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.291"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="5" tests="5" failures="5" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" time="8.312" timestamp="2019-04-13T18:39:32" name="Private raw smart contract when signed externally" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
-		<properties></properties>
-		<testcase classname="Private raw smart contract when signed externally" name="Contract is mined" time="2.081">
+		<testcase classname="Private raw smart contract when signed externally" name="Contract is mined" time="2.302">
 			<failure message="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;" type="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;">org.web3j.tx.Contract.deploy(Contract.java:375)&#xA;org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)&#xA;org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)&#xA;org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.Observable.subscribe(Observable.java:10423)&#xA;rx.Observable.subscribe(Observable.java:10390)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
 		</testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Storage Root storing private smart contracts must be the same" time="1.640">
+		<testcase classname="Private raw smart contract when signed externally" name="Storage Root storing private smart contracts must be the same" time="1.650">
 			<failure message="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;" type="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;">org.web3j.tx.Contract.deploy(Contract.java:375)&#xA;org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)&#xA;org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)&#xA;org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.Observable.subscribe(Observable.java:10423)&#xA;rx.Observable.subscribe(Observable.java:10390)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
 		</testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Transaction payload is secured" time="1.534">
+		<testcase classname="Private raw smart contract when signed externally" name="Transaction payload is secured" time="1.668">
 			<failure message="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;" type="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;">org.web3j.tx.Contract.deploy(Contract.java:375)&#xA;org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)&#xA;org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)&#xA;org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.Observable.subscribe(Observable.java:10423)&#xA;rx.Observable.subscribe(Observable.java:10390)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
 		</testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Privacy is enforced between parties" time="1.533">
+		<testcase classname="Private raw smart contract when signed externally" name="Privacy is enforced between parties" time="1.721">
 			<failure message="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;" type="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;">org.web3j.tx.Contract.deploy(Contract.java:375)&#xA;org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)&#xA;org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)&#xA;org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.Observable.subscribe(Observable.java:10423)&#xA;rx.Observable.subscribe(Observable.java:10390)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
 		</testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="When there&#39;s an update, privacy is still enforced" time="1.524">
+		<testcase classname="Private raw smart contract when signed externally" name="When there&#39;s an update, privacy is still enforced" time="1.606">
 			<failure message="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;" type="Deploy a simple smart contract with initial value &#34;23&#34; signed by external wallet &#34;Wallet1&#34; in &#34;Node1&#34; and it&#39;s private for &#34;Node4&#34;, name this contract as &#34;contract31&#34;&#xA;Step Execution Failure: &#39;java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server&#39;">org.web3j.tx.Contract.deploy(Contract.java:375)&#xA;org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)&#xA;org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)&#xA;org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)&#xA;rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)&#xA;rx.Observable.subscribe(Observable.java:10423)&#xA;rx.Observable.subscribe(Observable.java:10390)&#xA;rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)&#xA;rx.observables.BlockingObservable.first(BlockingObservable.java:166)&#xA;com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xA;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xA;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xA;java.base/java.lang.reflect.Method.invoke(Method.java:566)&#xA;com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)&#xA;com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)&#xA;com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)&#xA;com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)&#xA;com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)&#xA;com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)&#xA;com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)&#xA;com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)&#xA;com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)&#xA;java.base/java.lang.Thread.run(Thread.java:834)&#xA;</failure>
 		</testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="6" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="14.046" timestamp="2019-04-13T18:39:32" name="Single private smart contract" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="2" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="8.685" timestamp="2019-04-14T16:56:35" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
-		<testcase classname="Single private smart contract" name="Contract is mined" time="2.361"></testcase>
-		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.225"></testcase>
-		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.484"></testcase>
-		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.415"></testcase>
-		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.561"></testcase>
+		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="8.685"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="7" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="7.963" timestamp="2019-04-13T18:39:32" name="Multiple private smart contracts" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="3" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec" time="53.798" timestamp="2019-04-14T16:56:35" name="Dual state implementation when peforming function calls from one smart contract to another" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
-		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="7.963"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all public smart contracts: public -&gt; public -&gt; public" time="13.456"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all private smart contracts: private -&gt; private -&gt; private" time="13.470"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public" time="13.439"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private" time="13.433"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="8" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2019-04-13T18:39:32" name="State manipulation in private smart contract" errors="0" skipped="1" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="4" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="5.209" timestamp="2019-04-14T16:56:35" name="Value transfer in public transactions" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
+		<properties></properties>
+		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.589"></testcase>
+		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.620"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="5" tests="7" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec" time="8.066" timestamp="2019-04-14T16:56:35" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
+		<properties></properties>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required for public transaction" time="0.593"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy public smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="2.216"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create public smart contract" time="0.144"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a public smart contract" time="0.167"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy private smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="2.444"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create private smart contract" time="0.142"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a private smart contract" time="2.360"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="6" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="13.646" timestamp="2019-04-14T16:56:35" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
+		<properties></properties>
+		<testcase classname="Istanbul fault tolerance and recoverability" name="Modify number of validators from less than 2F + 1 to more than 2F + 1" time="13.646"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="7" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="14.186" timestamp="2019-04-14T16:56:35" name="Single private smart contract" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
+		<properties></properties>
+		<testcase classname="Single private smart contract" name="Contract is mined" time="2.374"></testcase>
+		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.263"></testcase>
+		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.512"></testcase>
+		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.439"></testcase>
+		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.598"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="8" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="308.075" timestamp="2019-04-14T16:56:35" name="Transactions for different block heights" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
+		<properties></properties>
+		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="152.966"></testcase>
+		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="155.109"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="9" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="14.806" timestamp="2019-04-14T16:56:35" name="Private smart contract with event" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
+		<properties></properties>
+		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="5.204"></testcase>
+		<testcase classname="Private smart contract with event" name="Log events in the state are **only** captured in participated parties when executing the contract" time="9.602"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="10" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="8.081" timestamp="2019-04-14T16:56:35" name="Multiple private smart contracts" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
+		<properties></properties>
+		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="8.081"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="11" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2019-04-14T16:56:35" name="State manipulation in private smart contract" errors="0" skipped="1" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
 		<testcase classname="State manipulation in private smart contract" name="Private state is maintained" time="0.000">
 			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec:27 Step implementation not found =&gt; &#39;Note: this step is not implemented indicating that the spec execution is temporarily skipped&#39;"></skipped>
@@ -72,56 +97,31 @@
 		<system-out></system-out>
 		<system-err>Validation failed, 1 Scenarios were skipped.</system-err>
 	</testsuite>
-	<testsuite id="9" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="4.938" timestamp="2019-04-13T18:39:32" name="Public smart contract with event" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="12" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="4.981" timestamp="2019-04-14T16:56:35" name="Public smart contract with event" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
-		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="4.938"></testcase>
+		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="4.981"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="10" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="13.578" timestamp="2019-04-13T18:39:32" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="13" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec" time="8.068" timestamp="2019-04-14T16:56:35" name="Public raw smart contract when signed externally" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
-		<testcase classname="Istanbul fault tolerance and recoverability" name="Modify number of validators from less than 2F + 1 to more than 2F + 1" time="13.578"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="Contract is deployed and mined" time="3.738"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="Everyone in the network has the same state for the contract" time="0.380"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="When there&#39;s an update, every node is updated" time="3.950"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="11" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="14.769" timestamp="2019-04-13T18:39:32" name="Private smart contract with event" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="14" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="38.819" timestamp="2019-04-14T16:56:35" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
-		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="5.142"></testcase>
-		<testcase classname="Private smart contract with event" name="Log events in the state are **only** captured in participated parties when executing the contract" time="9.627"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="37.750"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.069"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="12" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="5.059" timestamp="2019-04-13T18:39:32" name="Value transfer in public transactions" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
+	<testsuite id="15" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.530" timestamp="2019-04-14T16:56:35" name="Value transfer in private transactions" errors="0" hostname="travis-job-fc4a4ff4-0103-44ca-a15c-3f1fbd430088">
 		<properties></properties>
-		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.565"></testcase>
-		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.494"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="13" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="308.240" timestamp="2019-04-13T18:39:32" name="Transactions for different block heights" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
-		<properties></properties>
-		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="152.997"></testcase>
-		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="155.243"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="14" tests="7" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec" time="8.165" timestamp="2019-04-13T18:39:32" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
-		<properties></properties>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required for public transaction" time="0.676"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy public smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="2.216"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create public smart contract" time="0.143"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a public smart contract" time="0.154"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Deploy private smart contract, this is used for estimating the calls (we also need it so we can use the binary data in the estimateGas() acceptance tests below)" time="2.469"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create private smart contract" time="0.146"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a private smart contract" time="2.361"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="15" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec" time="7.921" timestamp="2019-04-13T18:39:32" name="Public raw smart contract when signed externally" errors="0" hostname="travis-job-4c9c2894-014d-444b-b176-8a27f8c3be54">
-		<properties></properties>
-		<testcase classname="Public raw smart contract when signed externally" name="Contract is deployed and mined" time="3.685"></testcase>
-		<testcase classname="Public raw smart contract when signed externally" name="Everyone in the network has the same state for the contract" time="0.377"></testcase>
-		<testcase classname="Public raw smart contract when signed externally" name="When there&#39;s an update, every node is updated" time="3.859"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.230"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.300"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
