@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,13,2" data-total="16">
+        <svg id="pie-chart" data-results="0,14,2" data-total="16">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/16</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/16</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 13/16</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 14/16</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 2/16</title></path>
         </svg>
@@ -43,14 +43,14 @@
     <div class="report_test-results">
       <div class="report_test-result specs">
           <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">16</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">13</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">14</span></div>
           <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">2</span></div>
       </div>
       <div class="report_test-result scenarios">
           <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">41</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">5</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">34</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">39</span></div>
           <div class="skip scenario-stats" data-status="skipped"><span class="value">2</span></div>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>default,travis-build-217.1</span>
+          <span>default,travis-build-218.1</span>
         </li>
         
         <li>
@@ -68,15 +68,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>81%</span>
+          <span>87%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:01:01</span>
+          <span>00:01:13</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Apr 14, 2019 at 4:46pm</span>
+          <span>Apr 15, 2019 at 4:46pm</span>
         </li>
       </ul>
       
@@ -110,12 +110,12 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="externally_signed_private_raw_smart_contract_single.html">
+          <a href="../02_advanced/private_transaction_bloom_section.html">
+             
+              <li class='skipped spec-name'>
             
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:08</span>
+              <span id="scenarioName" class="scenarioname">Private smart contract with event in the next bloom bit section</span>
+              <span id="time" class="time">00:00:00</span>
             </li>
           </a>
           
@@ -128,47 +128,11 @@
             </li>
           </a>
           
-          <a href="../02_advanced/private_transaction_bloom_section.html">
-             
-              <li class='skipped spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private smart contract with event in the next bloom bit section</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="estimate_gas.html">
+          <a href="public_smart_contract_event.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
-              <span id="time" class="time">00:00:03</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_multiple.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_event.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_async.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
               <span id="time" class="time">00:00:02</span>
             </li>
           </a>
@@ -179,42 +143,6 @@
             
               <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
               <span id="time" class="time">00:00:04</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_spam.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="public_smart_contract_event.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
-              <span id="time" class="time">00:00:02</span>
-            </li>
-          </a>
-          
-          <a href="value_transfer_private_transactions.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="value_transfer_public_transactions.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:01</span>
             </li>
           </a>
           
@@ -236,12 +164,39 @@
             </li>
           </a>
           
-          <a href="raft_gas_usage.html">
+          <a href="value_transfer_private_transactions.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Gas usage for private contracts on participant and non-participant nodes</span>
-              <span id="time" class="time">00:00:01</span>
+              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="estimate_gas.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:05</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_spam.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:08</span>
             </li>
           </a>
           
@@ -250,6 +205,51 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_public_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:17</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_multiple.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_async.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="raft_gas_usage.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Gas usage for private contracts on participant and non-participant nodes</span>
               <span id="time" class="time">00:00:04</span>
             </li>
           </a>
@@ -268,8 +268,8 @@
         <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec">Private raw smart contract when signed externally</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">5</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">5</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -282,7 +282,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:08</span>
+        <span class="time">00:00:17</span>
       </div>
 
 	
@@ -347,13 +347,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Contract is mined</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:04</span>
 
 	
   
@@ -384,10 +384,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:04</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -457,20 +457,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -518,7 +504,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -581,7 +567,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -654,7 +640,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -730,7 +716,7 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
@@ -770,7 +756,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -840,20 +826,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -901,7 +873,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -984,7 +956,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1070,7 +1042,7 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
@@ -1110,7 +1082,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1180,20 +1152,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -1241,7 +1199,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1308,7 +1266,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1375,7 +1333,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1445,13 +1403,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Privacy is enforced between parties</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -1482,10 +1440,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1555,20 +1513,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -1616,7 +1560,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1693,7 +1637,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1770,7 +1714,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1850,13 +1794,13 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">When there&#39;s an update, privacy is still enforced</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:05</span>
 
 	
   
@@ -1890,7 +1834,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -1960,20 +1904,6 @@ contract SimpleStorage {
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.RuntimeException: java.net.SocketException: Malformed reply from SOCKS server</pre>
-        </h4>
-        <pre class="stacktrace">org.web3j.tx.Contract.deploy(Contract.java:375)<br/>org.web3j.tx.Contract.lambda$deployRemoteCall$6(Contract.java:404)<br/>org.web3j.protocol.core.RemoteCall.send(RemoteCall.java:30)<br/>org.web3j.protocol.core.RemoteCall.lambda$observable$0(RemoteCall.java:51)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)<br/>rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)<br/>rx.Observable.subscribe(Observable.java:10423)<br/>rx.Observable.subscribe(Observable.java:10390)<br/>rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443)<br/>rx.observables.BlockingObservable.first(BlockingObservable.java:166)<br/>com.quorum.gauge.PrivateRawSmartContract.setupContract(PrivateRawSmartContract.java:43)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
 
@@ -2018,10 +1948,10 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -2124,7 +2054,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -2201,7 +2131,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -2278,7 +2208,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
