@@ -1,12 +1,28 @@
 @import 'jekyll-theme-cayman';
 
+body {
+    min-width: 320px;
+}
 h1.project-name {
     font-size: 4rem;
 }
 
+@media screen and (max-width: 600px) {
+    h1.project-name {
+        font-size: 2rem;
+    }
+}
+
+
 h2.project-tagline {
     font-size: 1.5rem;
     opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    h2.project-tagline {
+        font-size: 1rem;
+    }
 }
 
 .btn {
