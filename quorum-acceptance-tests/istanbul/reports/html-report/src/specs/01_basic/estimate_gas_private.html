@@ -265,24 +265,24 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec">State manipulation in private smart contract</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas_private.spec">Estimate gas required for transactions and contracts</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
-            <li class="skip"><span class="value">1</span><span class="txt">Skipped</span></li>
+            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
+            <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
       </div>
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas_private.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:00</span>
+        <span class="time">00:00:07</span>
       </div>
 
 	
@@ -291,6 +291,10 @@
       <strong>Tags:</strong>
       
         <span> basic</span>
+      
+        <span> estimategas</span>
+      
+        <span> private</span>
       
     </div>
   
@@ -307,32 +311,7 @@
     <div class="content">
     
   
-  <span><p>A simple smart contract is to store a int value and to provide <code>get()</code> and <code>set()</code> functions.</p>
-
-<pre><code>pragma solidity ^0.4.15;
-
-
-contract SimpleStorage {
-    uint private storedData;
-
-
-    constructor(uint initVal) public {
-        storedData = initVal;
-    }
-
-
-    function set(uint x) public {
-        storedData = x;
-    }
-
-
-    function get() public constant returns (uint retVal) {
-        return storedData;
-    }
-}
-</code></pre>
-
-<p>Non-participated party from original transaction is trying to modify the private state of the participated party.</p>
+  <span><p>EstimateGas api call should return valid ‘close’ estimate of required gas.</p>
 </span>
   
   
@@ -342,23 +321,15 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container skipped'>
+  <div class='scenario-container passed'>
+    
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Private state is maintained</h3>
-    <span class="time">00:00:00</span>
+    <h3 class="head borderBottom">Estimate gas required to create private smart contract</h3>
+    <span class="time">00:00:02</span>
 
 	
-  
-    <div class="tags scenario_tags contentSection">
-      <strong>Tags:</strong>
-      
-        <span> private</span>
-      
-        <span> state</span>
-      
-    </div>
   
 
 	</div>
@@ -379,74 +350,11 @@ contract SimpleStorage {
   <div class='step'>
   
   
-  <div class='step-info skipped'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Note: this step is not implemented indicating that the spec execution is temporarily skipped
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-        
-  <div class="message-container">
-    <h4 class="skipReason">Skipped Reason: Step implementation not found</h4>
-  </div>
-
-    
-  
-
-  
-
-    </div>
-  
-    <div class='context-step'>
-      
-  
-    
-  
-  <div class='step'>
-  
-  
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -469,7 +377,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"100"</span>
+      <span class='parameter'>"0"</span>
     
   
     
@@ -499,7 +407,7 @@ contract SimpleStorage {
     
   
     
-      <span class='parameter'>"contract17"</span>
+      <span class='parameter'>"privateContract1"</span>
     
   
   </div>
@@ -538,12 +446,6 @@ contract SimpleStorage {
   
     
   
-    <span></span>
-  
-
-  
-    
-  
     
   
   <div class='step'>
@@ -553,7 +455,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -571,42 +473,22 @@ contract SimpleStorage {
   
     
       <span>
-        Execute 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract17"</span>
-    
-  
-    
-      <span>
-        &#39;s `set()` function with new value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"0"</span>
-    
-  
-    
-      <span>
-         in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node3"</span>
-    
-  
-    
-      <span>
-         and it&#39;s private for 
+        Estimate gas for deploying `SimpleContract` private smart contract from a default account in 
       </span>
     
   
     
       <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
     
   
   </div>
@@ -646,7 +528,7 @@ contract SimpleStorage {
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -663,12 +545,133 @@ contract SimpleStorage {
   
   
     
-      <span class='parameter'>"contract17"</span>
+      <span>
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"115586"</span>
     
   
     
       <span>
-        &#39;s `get()` function execution in 
+         is returned within 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Estimate gas required to call a private smart contract</h3>
+    <span class="time">00:00:04</span>
+
+	
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"0"</span>
+    
+  
+    
+      <span>
+         in 
       </span>
     
   
@@ -678,12 +681,281 @@ contract SimpleStorage {
   
     
       <span>
-         returns 
+        &#39;s default account and it&#39;s private for 
       </span>
     
   
     
-      <span class='parameter'>"100"</span>
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , named this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"privateContract1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for calling the `SimpleContract` private smart contract from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"41639"</span>
+    
+  
+    
+      <span>
+         is returned within 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Update contract 
+      </span>
+    
+  
+    
+      <span class='parameter'>"privateContract1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"99"</span>
+    
+  
+    
+      <span>
+        , from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         to 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         using estimated gas
+      </span>
     
   
   </div>
