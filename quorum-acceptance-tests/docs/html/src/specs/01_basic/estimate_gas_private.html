@@ -1,0 +1,18 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../../style.css"><h1>Estimate gas required for transactions and contracts</h1>
+<p>Tags: basic, estimategas, private</p>
+<ul>
+<li>Deploy a simple smart contract with initial value &quot;0&quot; in &quot;Node1&quot;'s default account and it's private for &quot;Node4&quot;, named this contract as &quot;privateContract1&quot;</li>
+</ul>
+<p>EstimateGas api call should return valid 'close' estimate of required gas.</p>
+<h2>Estimate gas required to create private smart contract</h2>
+<ul>
+<li>Estimate gas for deploying <code>SimpleContract</code> private smart contract from a default account in &quot;Node1&quot; and private for &quot;Node4&quot;</li>
+<li>Gas estimate &quot;115586&quot; is returned within &quot;10&quot; percent</li>
+</ul>
+<h2>Estimate gas required to call a private smart contract</h2>
+<ul>
+<li>Estimate gas for calling the <code>SimpleContract</code> private smart contract from a default account in &quot;Node1&quot; and private for &quot;Node4&quot;</li>
+<li>Gas estimate &quot;41639&quot; is returned within &quot;10&quot; percent</li>
+<li>Update contract &quot;privateContract1&quot; with value &quot;99&quot;, from &quot;Node1&quot; to &quot;Node4&quot; using estimated gas</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./estimate_gas.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./externally_signed_private_raw_smart_contract_single.html">></a></li></center></article>
