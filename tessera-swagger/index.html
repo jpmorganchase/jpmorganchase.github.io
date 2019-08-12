@@ -194,6 +194,20 @@
                             }
                         }
                     },
+                    "/partyinfo/validate" : {
+                        "post" : {
+                            "tags" : ["Peer-to-peer APIs"],
+                            "summary" : "Validate the party that tries to send partyinfo",
+                            "operationId" : "validate",
+                            "consumes" : [ "application/octet-stream" ],
+                            "produces" : [ "text/plain" ],
+                            "responses" : {
+                                "default" : {
+                                    "description" : "successful operation"
+                                }
+                            }
+                        }
+                    },
                     "/push" : {
                         "post" : {
                             "tags" : ["Peer-to-peer APIs"],
