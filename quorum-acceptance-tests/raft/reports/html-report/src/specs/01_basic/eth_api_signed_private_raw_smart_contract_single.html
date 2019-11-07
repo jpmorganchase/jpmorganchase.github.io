@@ -292,11 +292,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/raft_gas_usage.spec">Gas usage for private contracts on participant and non-participant nodes</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/eth_api_signed_private_raw_smart_contract_single.spec">Private raw smart contract when signed using the eth_signTransaction API</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">3</span><span class="txt">Passed</span></li>
+            <li class="pass"><span class="value">4</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -304,12 +304,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/raft_gas_usage.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/eth_api_signed_private_raw_smart_contract_single.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:02</span>
+        <span class="time">00:00:06</span>
       </div>
 
 	
@@ -317,9 +317,11 @@
     <div class="tags scenario_tags contentSection">
       <strong>Tags:</strong>
       
-        <span> basic-raft</span>
+        <span> basic</span>
       
-        <span> gas</span>
+        <span> raw</span>
+      
+        <span> eth-api-signed</span>
       
         <span> private</span>
       
@@ -338,14 +340,31 @@
     <div class="content">
     
   
-  <span><p>Private contracts with insufficient gas should be handled correctly in all scenarios.
-In particular, we need to test the following type of scenario:
-- Private txn is published with marginal gas
-- Minter is NOT a participant to the transaction and accepts the transaction as it cannot calculate full gas requirement
-- Block is minted containing the private txn
-- Block is validated by a node that IS party to the transaction and which calculates the gas usage as higher than that supplied
-- Block is therefore rejected by the validator
-Note that intrinsic gas for the simple contract is approx 57352 and total required gas is approx 115,586</p>
+  <span><p>This is to verify that a private smart contract between 2 parties are not accessible by others.
+A simple smart contract is to store a int value and to provide <code>get()</code> and <code>set()</code> functions.</p>
+
+<pre><code>pragma solidity ^0.5.0;
+
+
+contract SimpleStorage {
+    uint private storedData;
+
+
+    constructor(uint initVal) public {
+        storedData = initVal;
+    }
+
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+
+    function get() public constant returns (uint retVal) {
+        return storedData;
+    }
+}
+</code></pre>
 </span>
   
   
@@ -360,10 +379,17 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Private contract with gas below intrinsic gas should be rejected (and not remain pending).</h3>
-    <span class="time">00:00:00</span>
+    <h3 class="head borderBottom">Storage Root storing private smart contracts must be the same</h3>
+    <span class="time">00:00:03</span>
 
 	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
   
 
 	</div>
@@ -376,6 +402,352 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
 	
 
   
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed with 
+      </span>
+    
+  
+    
+      <span class='parameter'>"eth_signTransaction"</span>
+    
+  
+    
+      <span>
+         using 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , name this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    <span></span>
+  
+
   
     
   
@@ -411,13 +783,33 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
       <span>
-        Get number of nodes and store as 
+         stored in 
       </span>
     
   
     
-      <span class='parameter'>"nodecount"</span>
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         must have the same storage root
+      </span>
     
   
   </div>
@@ -474,436 +866,32 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
       <span>
-        Private transaction where minter is a participant and gas value is 
+         stored in 
       </span>
     
   
     
-      <span class='parameter'>"25100"</span>
+      <span class='parameter'>"Node1"</span>
     
   
     
       <span>
-        , name this contract as 
+         and 
       </span>
     
   
     
-      <span class='parameter'>"contract1"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Contract 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract1"</span>
+      <span class='parameter'>"Node3"</span>
     
   
     
       <span>
-         had exception with message 
-      </span>
-    
-  
-    
-      <span class='parameter'>"intrinsic gas too low"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        No transactions are pending on node for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract1"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Private transaction where minter is not a participant and gas value is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"25100"</span>
-    
-  
-    
-      <span>
-        , name this contract as 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract2"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Contract 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract2"</span>
-    
-  
-    
-      <span>
-         had exception with message 
-      </span>
-    
-  
-    
-      <span class='parameter'>"intrinsic gas too low"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        No transactions are pending on node for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract2"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Check 
-      </span>
-    
-  
-    
-      <span class='parameter'>"nodecount"</span>
-    
-  
-    
-      <span>
-         nodes are still running
+         must not have the same storage root
       </span>
     
   
@@ -952,10 +940,17 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Private contract with gas between intrinsic gas and required gas should be rejected (and not remain pending).</h3>
+    <h3 class="head borderBottom">Transaction payload is secured</h3>
     <span class="time">00:00:00</span>
 
 	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
   
 
 	</div>
@@ -968,6 +963,352 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
 	
 
   
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed with 
+      </span>
+    
+  
+    
+      <span class='parameter'>"eth_signTransaction"</span>
+    
+  
+    
+      <span>
+         using 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , name this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    <span></span>
+  
+
   
     
   
@@ -1003,13 +1344,17 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
       <span>
-        Get number of nodes and store as 
+        &#39;s payload is retrievable from 
       </span>
     
   
     
-      <span class='parameter'>"nodecount"</span>
+      <span class='parameter'>"Node1"</span>
     
   
   </div>
@@ -1066,23 +1411,17 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
-      <span>
-        Private transaction where minter is a participant and gas value is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"60352"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
       <span>
-        , name this contract as 
+        &#39;s payload is retrievable from 
       </span>
     
   
     
-      <span class='parameter'>"contract3"</span>
+      <span class='parameter'>"Node4"</span>
     
   
   </div>
@@ -1139,364 +1478,17 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
-      <span>
-        Contract 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract3"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
       <span>
-         had exception with message 
+        &#39;s payload is not retrievable from 
       </span>
     
   
     
-      <span class='parameter'>"not-enough gas"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        No transactions are pending on node for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract3"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Private transaction where minter is not a participant and gas value is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"60352"</span>
-    
-  
-    
-      <span>
-        , name this contract as 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract4"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Contract 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract4"</span>
-    
-  
-    
-      <span>
-         had exception with message 
-      </span>
-    
-  
-    
-      <span class='parameter'>"not-enough gas"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        No transactions are pending on node for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract4"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Check 
-      </span>
-    
-  
-    
-      <span class='parameter'>"nodecount"</span>
-    
-  
-    
-      <span>
-         nodes are still running
-      </span>
+      <span class='parameter'>"Node3"</span>
     
   
   </div>
@@ -1544,10 +1536,17 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Private contract with sufficient gas should be accepted.</h3>
+    <h3 class="head borderBottom">Privacy is enforced between parties</h3>
     <span class="time">00:00:00</span>
 
 	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
   
 
 	</div>
@@ -1560,6 +1559,978 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
 	
 
   
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed with 
+      </span>
+    
+  
+    
+      <span class='parameter'>"eth_signTransaction"</span>
+    
+  
+    
+      <span>
+         using 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , name this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+        &#39;s `get()` function execution in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node3"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"0"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">When there&#39;s an update, privacy is still enforced</h3>
+    <span class="time">00:00:01</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> raw</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed with 
+      </span>
+    
+  
+    
+      <span class='parameter'>"eth_signTransaction"</span>
+    
+  
+    
+      <span>
+         using 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , name this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    <span></span>
+  
+
   
     
   
@@ -1596,22 +2567,52 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
     
       <span>
-        Private transaction where minter is a participant and gas value is 
+        Execute 
       </span>
     
   
     
-      <span class='parameter'>"120000"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
       <span>
-        , name this contract as 
+        &#39;s `set()` function with new value 
       </span>
     
   
     
-      <span class='parameter'>"contract5"</span>
+      <span class='parameter'>"5"</span>
+    
+  
+    
+      <span>
+         signed with 
+      </span>
+    
+  
+    
+      <span class='parameter'>"eth_signTransaction"</span>
+    
+  
+    
+      <span>
+         using 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
     
   
   </div>
@@ -1668,19 +2669,27 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
-      <span>
-        Contract 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract5"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
       <span>
-         creation succeeded
+        &#39;s `get()` function execution in 
       </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
     
   
   </div>
@@ -1737,13 +2746,27 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
       <span>
-        No transactions are pending on node for 
+        &#39;s `get()` function execution in 
       </span>
     
   
     
-      <span class='parameter'>"contract5"</span>
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         returns 
+      </span>
+    
+  
+    
+      <span class='parameter'>"5"</span>
     
   
   </div>
@@ -1800,155 +2823,27 @@ Note that intrinsic gas for the simple contract is approx 57352 and total requir
   
   
     
-      <span>
-        Private transaction where minter is not a participant and gas value is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"120000"</span>
+      <span class='parameter'>"contract31"</span>
     
   
     
       <span>
-        , name this contract as 
+        &#39;s `get()` function execution in 
       </span>
     
   
     
-      <span class='parameter'>"contract6"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Contract 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract6"</span>
+      <span class='parameter'>"Node3"</span>
     
   
     
       <span>
-         creation succeeded
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        No transactions are pending on node for 
+         returns 
       </span>
     
   
     
-      <span class='parameter'>"contract6"</span>
+      <span class='parameter'>"0"</span>
     
   
   </div>
