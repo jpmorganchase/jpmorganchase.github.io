@@ -283,10 +283,10 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec">Private raw smart contract when signed externally</h3>
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/eth_api_signed_private_raw_smart_contract_single.spec">Private raw smart contract when signed using the eth_signTransaction API</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">4</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
@@ -295,12 +295,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" readonly/>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/eth_api_signed_private_raw_smart_contract_single.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:24</span>
+        <span class="time">00:00:18</span>
       </div>
 
 	
@@ -312,7 +312,7 @@
       
         <span> raw</span>
       
-        <span> externally-signed</span>
+        <span> eth-api-signed</span>
       
         <span> private</span>
       
@@ -365,409 +365,6 @@ contract SimpleStorage {
       
         
 	
-  <div class='scenario-container failed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Contract is mined</h3>
-    <span class="time">00:00:04</span>
-
-	
-  
-    <div class="tags scenario_tags contentSection">
-      <strong>Tags:</strong>
-      
-        <span> raw</span>
-      
-    </div>
-  
-
-	</div>
-  
-  
-
-  
-  
-
-	
-
-  
-    <div class='context-step'>
-      
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:04</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Deploy a simple smart contract with initial value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"23"</span>
-    
-  
-    
-      <span>
-         signed by external wallet 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Wallet1"</span>
-    
-  
-    
-      <span>
-         in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-    
-      <span>
-         and it&#39;s private for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node4"</span>
-    
-  
-    
-      <span>
-        , name this contract as 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract31"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-    </div>
-  
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Transaction Hash is returned for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract31"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info failed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Transaction Receipt is present in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-    
-      <span>
-         for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract31"</span>
-    
-  
-    
-      <span>
-         from 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-  </div>
-
-  
-    
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>org.junit.ComparisonFailure: expected:&lt;&#34;0x[19f37d87bba2e7322cce6e297d40bed5f606e6b2]&#34;&gt; but was:&lt;&#34;0x[ed9d02e382b34818e88b88a309c7fe71e65f419d]&#34;&gt;</pre>
-        </h4>
-        <pre class="stacktrace">java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>com.quorum.gauge.PrivateSmartContract.verifyTransactionReceipt(PrivateSmartContract.java:97)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:76)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:69)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:51)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:48)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:83)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:124)<br/>com.thoughtworks.gauge.GaugeRuntime.lambda$connectSynchronously$1(GaugeRuntime.java:106)<br/>java.base/java.lang.Thread.run(Thread.java:834)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Transaction Receipt is present in 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node4"</span>
-    
-  
-    
-      <span>
-         for 
-      </span>
-    
-  
-    
-      <span class='parameter'>"contract31"</span>
-    
-  
-    
-      <span>
-         from 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Node1"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-	
-	</div>
-
-      
-        
-	
   <div class='scenario-container passed'>
     
 
@@ -805,7 +402,7 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:03</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -836,17 +433,17 @@ contract SimpleStorage {
   
     
       <span>
-         signed by external wallet 
+         signed with 
       </span>
     
   
     
-      <span class='parameter'>"Wallet1"</span>
+      <span class='parameter'>"eth_signTransaction"</span>
     
   
     
       <span>
-         in 
+         using 
       </span>
     
   
@@ -856,7 +453,7 @@ contract SimpleStorage {
   
     
       <span>
-         and it&#39;s private for 
+        &#39;s default account and it&#39;s private for 
       </span>
     
   
@@ -872,6 +469,241 @@ contract SimpleStorage {
   
     
       <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
     
   
   </div>
@@ -1100,7 +932,7 @@ contract SimpleStorage {
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Transaction payload is secured</h3>
-    <span class="time">00:00:04</span>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -1121,6 +953,176 @@ contract SimpleStorage {
 
 	
 
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed with 
+      </span>
+    
+  
+    
+      <span class='parameter'>"eth_signTransaction"</span>
+    
+  
+    
+      <span>
+         using 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , name this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
   
     <div class='context-step'>
       
@@ -1152,27 +1154,7 @@ contract SimpleStorage {
   
     
       <span>
-        Deploy a simple smart contract with initial value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"23"</span>
-    
-  
-    
-      <span>
-         signed by external wallet 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Wallet1"</span>
-    
-  
-    
-      <span>
-         in 
+        Transaction Receipt is present in 
       </span>
     
   
@@ -1182,7 +1164,82 @@ contract SimpleStorage {
   
     
       <span>
-         and it&#39;s private for 
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
       </span>
     
   
@@ -1192,12 +1249,22 @@ contract SimpleStorage {
   
     
       <span>
-        , name this contract as 
+         for eth_signTransaction signed 
       </span>
     
   
     
       <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
     
   
   </div>
@@ -1461,7 +1528,7 @@ contract SimpleStorage {
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Privacy is enforced between parties</h3>
-    <span class="time">00:00:04</span>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -1482,6 +1549,176 @@ contract SimpleStorage {
 
 	
 
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"23"</span>
+    
+  
+    
+      <span>
+         signed with 
+      </span>
+    
+  
+    
+      <span class='parameter'>"eth_signTransaction"</span>
+    
+  
+    
+      <span>
+         using 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , name this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
   
     <div class='context-step'>
       
@@ -1513,27 +1750,7 @@ contract SimpleStorage {
   
     
       <span>
-        Deploy a simple smart contract with initial value 
-      </span>
-    
-  
-    
-      <span class='parameter'>"23"</span>
-    
-  
-    
-      <span>
-         signed by external wallet 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Wallet1"</span>
-    
-  
-    
-      <span>
-         in 
+        Transaction Receipt is present in 
       </span>
     
   
@@ -1543,7 +1760,82 @@ contract SimpleStorage {
   
     
       <span>
-         and it&#39;s private for 
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
       </span>
     
   
@@ -1553,12 +1845,22 @@ contract SimpleStorage {
   
     
       <span>
-        , name this contract as 
+         for eth_signTransaction signed 
       </span>
     
   
     
       <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
     
   
   </div>
@@ -1883,7 +2185,7 @@ contract SimpleStorage {
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:03</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -1914,17 +2216,17 @@ contract SimpleStorage {
   
     
       <span>
-         signed by external wallet 
+         signed with 
       </span>
     
   
     
-      <span class='parameter'>"Wallet1"</span>
+      <span class='parameter'>"eth_signTransaction"</span>
     
   
     
       <span>
-         in 
+         using 
       </span>
     
   
@@ -1934,7 +2236,7 @@ contract SimpleStorage {
   
     
       <span>
-         and it&#39;s private for 
+        &#39;s default account and it&#39;s private for 
       </span>
     
   
@@ -1950,6 +2252,241 @@ contract SimpleStorage {
   
     
       <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Hash is returned for API signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Transaction Receipt is present in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         for eth_signTransaction signed 
+      </span>
+    
+  
+    
+      <span class='parameter'>"contract31"</span>
+    
+  
+    
+      <span>
+         from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
     
   
   </div>
@@ -2041,17 +2578,17 @@ contract SimpleStorage {
   
     
       <span>
-         signed by external wallet 
+         signed with 
       </span>
     
   
     
-      <span class='parameter'>"Wallet8"</span>
+      <span class='parameter'>"eth_signTransaction"</span>
     
   
     
       <span>
-         in 
+         using 
       </span>
     
   
@@ -2061,7 +2598,7 @@ contract SimpleStorage {
   
     
       <span>
-         and it&#39;s private for 
+        &#39;s default account and it&#39;s private for 
       </span>
     
   
