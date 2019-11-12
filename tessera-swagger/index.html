@@ -245,6 +245,36 @@
                             }
                         }
                     },
+                    "/partyinfo/keys" : {
+                        "get" : {
+                            "tags" : ["Third party APIs"],
+                            "summary" : "Fetch network/peer public keys",
+                            "description" : "",
+                            "operationId" : "getPartyInfoKeys",
+                            "produces" : [ "application/json" ],
+                            "responses" : {
+                                "200" : {
+                                    "description" : "Peer/Network public keys",
+                                    "schema" : {
+                                        "type" : "object",
+                                        "properties" : {
+                                            "keys" : {
+                                                "type" : "array",
+                                                "items" : {
+                                                    "type" : "object",
+                                                    "properties" : {
+                                                        "key" : {
+                                                            "type" : "string"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
                     "/storeraw" : {
                         "post" : {
                             "tags" : ["Third party APIs"],
