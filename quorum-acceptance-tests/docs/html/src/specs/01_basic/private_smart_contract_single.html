@@ -21,41 +21,41 @@ contract SimpleStorage {
 }
 </code></pre>
 <ul>
-<li>Deploy a simple smart contract with initial value &quot;42&quot; in &quot;Node1&quot;'s default account and it's private for &quot;Node7&quot;, named this contract as &quot;contract17&quot;</li>
+<li>Deploy a simple smart contract with initial value &quot;42&quot; in &quot;Node1&quot;'s default account and it's private for &quot;Node4&quot;, named this contract as &quot;contract17&quot;</li>
 </ul>
 <h2>Contract is mined</h2>
 <p>Tags: private, mining</p>
 <ul>
 <li>Transaction Hash is returned for &quot;contract17&quot;</li>
-<li>Transaction Receipt is present in &quot;Node1&quot; for &quot;contract17&quot;</li>
-<li>Transaction Receipt is present in &quot;Node7&quot; for &quot;contract17&quot;</li>
+<li>Transaction Receipt is present in &quot;Node1&quot; for &quot;contract17&quot; from &quot;Node1&quot;'s default account</li>
+<li>Transaction Receipt is present in &quot;Node4&quot; for &quot;contract17&quot; from &quot;Node1&quot;'s default account</li>
 </ul>
 <h2>Storage Root storing private smart contracts must be the same</h2>
 <p>Tags: private, storage</p>
 <ul>
-<li>&quot;contract17&quot; stored in &quot;Node1&quot; and &quot;Node7&quot; must have the same storage root</li>
+<li>&quot;contract17&quot; stored in &quot;Node1&quot; and &quot;Node4&quot; must have the same storage root</li>
 <li>&quot;contract17&quot; stored in &quot;Node1&quot; and &quot;Node3&quot; must not have the same storage root</li>
 </ul>
 <h2>Transaction payload is secured</h2>
 <p>Tags: private, transaction</p>
 <ul>
 <li>&quot;contract17&quot;'s payload is retrievable from &quot;Node1&quot;</li>
-<li>&quot;contract17&quot;'s payload is retrievable from &quot;Node7&quot;</li>
+<li>&quot;contract17&quot;'s payload is retrievable from &quot;Node4&quot;</li>
 <li>&quot;contract17&quot;'s payload is not retrievable from &quot;Node3&quot;</li>
 </ul>
 <h2>Privacy is enforced between parties</h2>
 <p>Tags: private</p>
 <ul>
 <li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node1&quot; returns &quot;42&quot;</li>
-<li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node7&quot; returns &quot;42&quot;</li>
+<li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node4&quot; returns &quot;42&quot;</li>
 <li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node3&quot; returns &quot;0&quot;</li>
 </ul>
 <h2>When there's an update, privacy is still enforced</h2>
 <p>Tags: private</p>
 <ul>
-<li>Execute &quot;contract17&quot;'s <code>set()</code> function with new value &quot;5&quot; in &quot;Node1&quot; and it's private for &quot;Node7&quot;</li>
+<li>Execute &quot;contract17&quot;'s <code>set()</code> function with new value &quot;5&quot; in &quot;Node1&quot; and it's private for &quot;Node4&quot;</li>
 <li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node1&quot; returns &quot;5&quot;</li>
-<li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node7&quot; returns &quot;5&quot;</li>
+<li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node4&quot; returns &quot;5&quot;</li>
 <li>&quot;contract17&quot;'s <code>get()</code> function execution in &quot;Node3&quot; returns &quot;0&quot;</li>
 </ul>
 <ul id="navigation"><center><li class="nav"><a href="./private_smart_contract_multiple.html"><</a></li><li class="nav"><a href="../../../index.html">=</a></li><li class="nav"><a href="./private_smart_contract_spam.html">></a></li></center></article>

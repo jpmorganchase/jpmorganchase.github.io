@@ -1,0 +1,39 @@
+@import 'jekyll-theme-cayman';
+
+body {
+    min-width: 320px;
+}
+h1.project-name {
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+    h1.project-name {
+        font-size: 2rem;
+    }
+}
+
+
+h2.project-tagline {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    h2.project-tagline {
+        font-size: 1rem;
+    }
+}
+
+.btn {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(155, 155, 155, 0.6);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn:hover {
+    color: rgba(155, 155, 155, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(155, 155, 155, 1);
+}

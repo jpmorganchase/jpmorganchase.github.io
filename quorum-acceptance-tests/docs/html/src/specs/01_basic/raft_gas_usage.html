@@ -8,7 +8,7 @@ In particular, we need to test the following type of scenario:</p>
 <li>Block is minted containing the private txn</li>
 <li>Block is validated by a node that IS party to the transaction and which calculates the gas usage as higher than that supplied</li>
 <li>Block is therefore rejected by the validator
-Note that intrinsic gas for the simple contract is between 25,224 and 25,352, required gas is approx 97,800</li>
+Note that intrinsic gas for the simple contract is approx 57352 and total required gas is approx 115,586</li>
 </ul>
 <h2>Private contract with gas below intrinsic gas should be rejected (and not remain pending).</h2>
 <ul>
@@ -43,7 +43,7 @@ Note that intrinsic gas for the simple contract is between 25,224 and 25,352, re
 <p>Get number of nodes and store as &quot;nodecount&quot;</p>
 </li>
 <li>
-<p>Private transaction where minter is a participant and gas value is &quot;26000&quot;, name this contract as &quot;contract3&quot;</p>
+<p>Private transaction where minter is a participant and gas value is &quot;60352&quot;, name this contract as &quot;contract3&quot;</p>
 </li>
 <li>
 <p>Contract &quot;contract3&quot; had exception with message &quot;not-enough gas&quot;</p>
@@ -52,7 +52,7 @@ Note that intrinsic gas for the simple contract is between 25,224 and 25,352, re
 <p>No transactions are pending on node for &quot;contract3&quot;</p>
 </li>
 <li>
-<p>Private transaction where minter is not a participant and gas value is &quot;26000&quot;, name this contract as &quot;contract4&quot;</p>
+<p>Private transaction where minter is not a participant and gas value is &quot;60352&quot;, name this contract as &quot;contract4&quot;</p>
 </li>
 <li>
 <p>Contract &quot;contract4&quot; had exception with message &quot;not-enough gas&quot;</p>
@@ -67,7 +67,7 @@ Note that intrinsic gas for the simple contract is between 25,224 and 25,352, re
 <h2>Private contract with sufficient gas should be accepted.</h2>
 <ul>
 <li>
-<p>Private transaction where minter is a participant and gas value is &quot;98000&quot;, name this contract as &quot;contract5&quot;</p>
+<p>Private transaction where minter is a participant and gas value is &quot;120000&quot;, name this contract as &quot;contract5&quot;</p>
 </li>
 <li>
 <p>Contract &quot;contract5&quot; creation succeeded</p>
@@ -76,7 +76,7 @@ Note that intrinsic gas for the simple contract is between 25,224 and 25,352, re
 <p>No transactions are pending on node for &quot;contract5&quot;</p>
 </li>
 <li>
-<p>Private transaction where minter is not a participant and gas value is &quot;98000&quot;, name this contract as &quot;contract6&quot;</p>
+<p>Private transaction where minter is not a participant and gas value is &quot;120000&quot;, name this contract as &quot;contract6&quot;</p>
 </li>
 <li>
 <p>Contract &quot;contract6&quot; creation succeeded</p>

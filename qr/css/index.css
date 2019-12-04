@@ -1,0 +1,7 @@
+html, body, #root {
+  height: 100%;
+}
+
+.popover .arrow {
+  display: none !important;
+}

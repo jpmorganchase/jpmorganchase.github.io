@@ -1,0 +1,1063 @@
+
+	
+	
+  <!doctype html>
+  <html><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta charset="utf-8" />
+    <title>Gauge Test Results</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../../css/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css" />
+  </head>
+  <body>
+  <header class="top">
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="../../.."><img src="../../../images/gaugeLogo.png" alt="Report logo"></a>
+        </div>
+        <h2 class="project">Project: quorum-acceptance-tests</h2>
+      </div>
+    </div>
+  </header>
+  <main class="main-container">
+  <div class="container">
+
+	
+  <div class="report-overview">
+    <div class="report_chart">
+      <div class="chart">
+        <svg id="pie-chart" data-results="0,17,2" data-total="19">
+          <path class="status failed" />
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/19</title></path>
+          <path class="status passed" />
+          <path class="shadow passed" data-status="passed"><title>Passed: 17/19</title></path>
+          <path class="status skipped" />
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 2/19</title></path>
+        </svg>
+      </div>
+    </div>
+    <div class="report_test-results">
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">19</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">17</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">2</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">47</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">45</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">2</span></div>
+      </div>
+    </div>
+    <div class="report_details">
+      <ul>
+        <li>
+          <label>Environment </label>
+          <span>default,travis-build-453.1</span>
+        </li>
+        
+        <li>
+          <label>Tags </label>
+          <span>basic || basic-raft || (advanced && raft)</span>
+        </li>
+        
+        <li>
+          <label>Success Rate </label>
+          <span>89%</span>
+        </li>
+        <li>
+          <label>Total Time </label>
+          <span>00:01:19</span>
+        </li>
+        <li>
+          <label>Generated On </label>
+          <span>Dec 3, 2019 at 6:42pm</span>
+        </li>
+      </ul>
+      
+  
+
+      
+  
+
+    </div>
+  </div>
+
+
+	
+
+	
+
+	
+		<div class="specifications">
+		
+  
+    <aside class="sidebar">
+      <h3 class="title">Specifications</h3>
+      <div class="searchbar">
+        <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
+        <i class="fa fa-search"></i>
+      </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
+      <div id="listOfSpecifications">
+        <ul id="scenarios" class="spec-list">
+        
+          <a href="../02_advanced/private_transaction_bloom_section.html">
+             
+              <li class='skipped spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event in the next bloom bit section</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_state_manipulation.html">
+             
+              <li class='skipped spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">State manipulation in private smart contract</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="estimate_gas.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="personal_api_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed using the personal_signTransaction API</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_public_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:03</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_async.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private smart contract with event</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_spam.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="smart_contract_dual_state.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Dual state implementation when peforming function calls from one smart contract to another</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_private_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in private transactions</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="value_transfer_public_transactions.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="estimate_gas_private.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:03</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_multiple.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="public_smart_contract_event.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public smart contract with event</span>
+              <span id="time" class="time">00:00:02</span>
+            </li>
+          </a>
+          
+          <a href="../02_advanced/transactions_for_block_height.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:13</span>
+            </li>
+          </a>
+          
+          <a href="eth_api_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed using the eth_signTransaction API</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="raft_gas_usage.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Gas usage for private contracts on participant and non-participant nodes</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+        </ul>
+      </div>
+    </aside>
+  
+
+		
+  
+	
+  <div id="specificationContainer" class="details">
+    <header class="curr-spec">
+      <div class="spec-head-wrapper">
+        <h3 class="spec-head" title="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas_private.spec">Estimate gas required for transactions and contracts</h3>
+        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
+          <ul>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
+            <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="spec-meta">
+        <div class="spec-filename">
+          <label for="specFileName">File Path</label>
+          <input id="specFileName" value="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas_private.spec" readonly/>
+          <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
+              <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
+          </button>
+        </div>
+        <span class="time">00:00:03</span>
+      </div>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> basic</span>
+      
+        <span> estimategas</span>
+      
+        <span> private</span>
+      
+    </div>
+  
+
+	</header>
+	<div id="specItemsContainer">
+	
+    
+  
+
+    
+    
+
+    <div class="content">
+    
+  
+  <span><p>EstimateGas api call should return valid ‘close’ estimate of required gas.</p>
+</span>
+  
+  
+
+  
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Estimate gas required to create private smart contract</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"0"</span>
+    
+  
+    
+      <span>
+         in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , named this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"privateContract1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for deploying `SimpleContract` private smart contract from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"115586"</span>
+    
+  
+    
+      <span>
+         is returned within 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Estimate gas required to call a private smart contract</h3>
+    <span class="time">00:00:02</span>
+
+	
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Deploy a simple smart contract with initial value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"0"</span>
+    
+  
+    
+      <span>
+         in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+        &#39;s default account and it&#39;s private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+        , named this contract as 
+      </span>
+    
+  
+    
+      <span class='parameter'>"privateContract1"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Estimate gas for calling the `SimpleContract` private smart contract from a default account in 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         and private for 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Gas estimate 
+      </span>
+    
+  
+    
+      <span class='parameter'>"41639"</span>
+    
+  
+    
+      <span>
+         is returned within 
+      </span>
+    
+  
+    
+      <span class='parameter'>"10"</span>
+    
+  
+    
+      <span>
+         percent
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Update contract 
+      </span>
+    
+  
+    
+      <span class='parameter'>"privateContract1"</span>
+    
+  
+    
+      <span>
+         with value 
+      </span>
+    
+  
+    
+      <span class='parameter'>"99"</span>
+    
+  
+    
+      <span>
+        , from 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node1"</span>
+    
+  
+    
+      <span>
+         to 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Node4"</span>
+    
+  
+    
+      <span>
+         using estimated gas
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+
+    </div>
+    </div>
+
+    
+  
+
+    
+    
+    </div>
+  
+
+		</div>
+	
+
+ 	</div>
+	</main>
+	
+  <footer class="footer">
+    <div class="container">
+      <p>Generated by Gauge HTML Report</p>
+    </div>
+  </footer>
+
+	
+    <script type="text/javascript">
+      var loadingImage = "../../../images/loading.gif";
+      var closeButton = "../../../images/close.gif";
+    </script>
+    <script src="../../../js/lightbox.js"></script>
+    <script src="../../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="../../../js/auto-complete.min.js" type="text/javascript"></script>
+    <script src="../../../js/clipboard.min.js" type="text/javascript"></script>
+    <script src="../../../js/search_index.js" type="text/javascript"></script>
+    <script src="../../../js/main.js" type="text/javascript"></script>
+    </body>
+  </html>
+

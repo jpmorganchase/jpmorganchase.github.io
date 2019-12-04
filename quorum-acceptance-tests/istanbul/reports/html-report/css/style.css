@@ -161,6 +161,7 @@ header.top .project {
 
 .report_test-results {
     width: 100%;
+    position: relative;
 }
 
 .report_test-results ul {
@@ -775,9 +776,6 @@ input[type='text']:focus {
     background-color: #fff;
 }
 
-footer {
-    margin-top: 1px;
-}
 
 footer .container {
     background: transparent;
@@ -798,6 +796,7 @@ footer p {
 
 .exception-container .exception {
     flex-grow: 1;
+    min-width: 60%;
 }
 
 .stacktrace {
@@ -1036,6 +1035,7 @@ footer p {
 
     .specifications {
         flex-direction: row;
+        min-height: 70vh;
     }
 
     .specifications .title {
@@ -1072,17 +1072,20 @@ footer p {
         margin-top: 10px;
         margin-left: 10px;
     }
-
     .scenario-container .screenshot {
-        width: 16.66%;
+        margin: 15px;
+        width: 15%;
+    }
+
+    .scenario-container .screenshot img {
+        max-width: 100%;
+    }
+    .exception-container .screenshot {
+        width: auto;
     }
 
     .exception-container {
         flex-direction: row;
-    }
-
-    .exception-container img {
-        max-width: 100%;
     }
 
     .error-message {
@@ -1340,7 +1343,7 @@ svg#pie-chart {
     border: 1.5px solid #ddd;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .report_test-results .report_test-result:nth-child(1) {
@@ -1369,13 +1372,16 @@ svg#pie-chart {
 
 .report_test-result .total-specs{
     text-transform: uppercase;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: 16px;
+    /* position: relative; */
 }
 
 .report_test-result .total-scenarios .txt{
     font-weight: 400;
-    font-size: 1.2rem;
-    text-transform: capitalize;
+    /* font-size: 1.2rem; */
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .report_test-result .spec-filter, .report_test-result .scenario-stats {
@@ -1431,7 +1437,7 @@ svg#pie-chart {
 
 .report_test-result.specs .spec-filter::before {
     position: absolute;
-    top: 90px;
+    top: -30px;
     font-size: 18px;
 }   
 
@@ -1441,8 +1447,8 @@ svg#pie-chart {
     border-right: 12px solid transparent;
     border-top: 12px solid #d9d9d9;
     position: absolute;
-    top: 191px;
-    left: 28.23%;
+    top: 72px;
+    left: 10%;
 }
 
 .report_test-results::after{
@@ -1451,8 +1457,8 @@ svg#pie-chart {
     border-right: 11px solid transparent;
     border-top: 11px solid #f0f0f0;
     position: absolute;
-    top: 190px;
-    left: 28.3%;
+    top: 72px;
+    left: 10%;
 }
 .specs-sorting{
     display: flex;
@@ -1504,22 +1510,5 @@ svg#pie-chart {
 @media screen and (max-width: 1024px){
     .report_test-results {
         margin-top: 20px;
-    }
-
-    .report_test-result.specs .spec-filter::before {
-        top: 110px !important;
-    }
-
-    .report_test-results::before{
-        top: 185px;
-        left: 2%;
-    }
-    
-    .report_test-results::after{
-        top: 184px;
-        left: 2.15%;
-    }
-    .specs-sorting .sort.sort-specs-name{
-        flex:2.7;
     }
 }
