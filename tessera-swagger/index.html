@@ -44,7 +44,7 @@
             spec: /*intellij-swagger-spec-start*/{
                 "swagger" : "2.0",
                 "info" : {
-                    "version" : "0.9",
+                    "version" : "0.11-SNAPSHOT",
                     "title" : "Tessera rest"
                 },
                 "host" : "localhost:8080",
@@ -72,38 +72,6 @@
                             "responses" : {
                                 "200" : {
                                     "description" : "Returns JSON or HTML OpenAPI document"
-                                }
-                            }
-                        }
-                    },
-                    "/config/keypairs" : {
-                        "get" : {
-                            "tags" : ["Admin APIs"],
-                            "operationId" : "getKeyPairs",
-                            "consumes" : [ "application/json" ],
-                            "produces" : [ "application/json" ],
-                            "responses" : {
-                                "default" : {
-                                    "description" : "successful operation"
-                                }
-                            }
-                        }
-                    },
-                    "/config/keypairs/{publicKey}" : {
-                        "get" : {
-                            "tags" : ["Admin APIs"],
-                            "operationId" : "getKeyPair",
-                            "consumes" : [ "application/json" ],
-                            "produces" : [ "application/json" ],
-                            "parameters" : [ {
-                                "name" : "publicKey",
-                                "in" : "path",
-                                "required" : true,
-                                "type" : "string"
-                            } ],
-                            "responses" : {
-                                "default" : {
-                                    "description" : "successful operation"
                                 }
                             }
                         }
@@ -274,6 +242,37 @@
                             "responses" : {
                                 "200" : {
                                     "description" : "Peer/Network public keys",
+                                    "schema" : {
+                                        "type" : "object",
+                                        "properties" : {
+                                            "keys" : {
+                                                "type" : "array",
+                                                "items" : {
+                                                    "type" : "object",
+                                                    "properties" : {
+                                                        "key" : {
+                                                            "type" : "string"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "/keys" : {
+                        "get" : {
+                            "tags" : ["Third party APIs"],
+                            "summary" : "Fetch local public keys managed by the enclave",
+                            "description" : "",
+                            "operationId" : "getPublicKeys",
+                            "consumes" : [ "application/json" ],
+                            "produces" : [ "application/json" ],
+                            "responses" : {
+                                "200" : {
+                                    "description" : "Managed public keys",
                                     "schema" : {
                                         "type" : "object",
                                         "properties" : {
