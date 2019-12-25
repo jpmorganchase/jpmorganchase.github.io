@@ -1,44 +1,120 @@
 <testsuites>
-	<testsuite id="1" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="4.587" timestamp="2019-12-24T19:02:55" name="Value transfer in public transactions" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="1" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec" time="6.774" timestamp="2019-12-25T19:02:23" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
-		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.291"></testcase>
-		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.296"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required for public transaction" time="2.451"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create public smart contract" time="2.159"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a public smart contract" time="2.164"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="2" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/eth_api_signed_private_raw_smart_contract_single.spec" time="17.145" timestamp="2019-12-24T19:02:55" name="Private raw smart contract when signed using the eth_signTransaction API" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="2" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="13.333" timestamp="2019-12-25T19:02:23" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
-		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="Storage Root storing private smart contracts must be the same" time="3.563"></testcase>
-		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="Transaction payload is secured" time="3.461"></testcase>
-		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="Privacy is enforced between parties" time="3.441"></testcase>
-		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="When there&#39;s an update, privacy is still enforced" time="6.680"></testcase>
+		<testcase classname="Istanbul fault tolerance and recoverability" name="Modify number of validators from less than 2F + 1 to more than 2F + 1" time="13.333"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="3" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="5.232" timestamp="2019-12-24T19:02:55" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="3" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/personal_api_signed_private_raw_smart_contract_single.spec" time="39.851" timestamp="2019-12-25T19:02:23" name="Private raw smart contract when signed using the personal_signTransaction API" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="4.227"></testcase>
-		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="1.005"></testcase>
+		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="Storage Root storing private smart contracts must be the same" time="22.518"></testcase>
+		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="Transaction payload is secured" time="4.364"></testcase>
+		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="Privacy is enforced between parties" time="4.348"></testcase>
+		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="When there&#39;s an update, privacy is still enforced" time="8.621"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="4" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="13.049" timestamp="2019-12-24T19:02:55" name="Single private smart contract" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="4" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="7.565" timestamp="2019-12-25T19:02:23" name="Multiple private smart contracts" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
-		<testcase classname="Single private smart contract" name="Contract is mined" time="2.207"></testcase>
-		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.112"></testcase>
-		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.234"></testcase>
-		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.208"></testcase>
-		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.288"></testcase>
+		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="7.565"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="5" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="8.453" timestamp="2019-12-24T19:02:55" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="5" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="4.586" timestamp="2019-12-25T19:02:23" name="Public smart contract with event" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
-		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="8.453"></testcase>
+		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="4.586"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="6" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2019-12-24T19:02:55" name="State manipulation in private smart contract" errors="0" skipped="1" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="6" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/eth_api_signed_private_raw_smart_contract_single.spec" time="17.097" timestamp="2019-12-25T19:02:23" name="Private raw smart contract when signed using the eth_signTransaction API" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="Storage Root storing private smart contracts must be the same" time="3.549"></testcase>
+		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="Transaction payload is secured" time="3.447"></testcase>
+		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="Privacy is enforced between parties" time="3.434"></testcase>
+		<testcase classname="Private raw smart contract when signed using the eth_signTransaction API" name="When there&#39;s an update, privacy is still enforced" time="6.667"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="7" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" time="23.677" timestamp="2019-12-25T19:02:23" name="Private raw smart contract when signed externally" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Private raw smart contract when signed externally" name="Contract is mined" time="6.484"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="Storage Root storing private smart contracts must be the same" time="3.441"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="Transaction payload is secured" time="3.481"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="Privacy is enforced between parties" time="3.474"></testcase>
+		<testcase classname="Private raw smart contract when signed externally" name="When there&#39;s an update, privacy is still enforced" time="6.797"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="8" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_async.spec" time="5.238" timestamp="2019-12-25T19:02:23" name="Sending private smart contract asynchronously" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is successfully mined with valid account" time="4.243"></testcase>
+		<testcase classname="Sending private smart contract asynchronously" name="Contract is not mined with non-existed account" time="0.995"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="9" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_single.spec" time="13.031" timestamp="2019-12-25T19:02:23" name="Single private smart contract" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Single private smart contract" name="Contract is mined" time="2.203"></testcase>
+		<testcase classname="Single private smart contract" name="Storage Root storing private smart contracts must be the same" time="2.113"></testcase>
+		<testcase classname="Single private smart contract" name="Transaction payload is secured" time="2.227"></testcase>
+		<testcase classname="Single private smart contract" name="Privacy is enforced between parties" time="2.205"></testcase>
+		<testcase classname="Single private smart contract" name="When there&#39;s an update, privacy is still enforced" time="4.283"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="10" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_spam.spec" time="8.413" timestamp="2019-12-25T19:02:23" name="Multiple private smart contracts between nodes" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Multiple private smart contracts between nodes" name="Send transactions from one node to others" time="8.413"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="11" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec" time="50.822" timestamp="2019-12-25T19:02:23" name="Dual state implementation when peforming function calls from one smart contract to another" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all public smart contracts: public -&gt; public -&gt; public" time="12.683"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all private smart contracts: private -&gt; private -&gt; private" time="12.747"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public" time="12.719"></testcase>
+		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private" time="12.673"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="12" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas_private.spec" time="6.720" timestamp="2019-12-25T19:02:23" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create private smart contract" time="2.422"></testcase>
+		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a private smart contract" time="4.298"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="13" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec" time="6.853" timestamp="2019-12-25T19:02:23" name="Public raw smart contract when signed externally" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Public raw smart contract when signed externally" name="Contract is deployed and mined" time="3.301"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="Everyone in the network has the same state for the contract" time="0.145"></testcase>
+		<testcase classname="Public raw smart contract when signed externally" name="When there&#39;s an update, every node is updated" time="3.407"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="14" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="14.202" timestamp="2019-12-25T19:02:23" name="Private smart contract with event" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="4.735"></testcase>
+		<testcase classname="Private smart contract with event" name="Log events in the state are **only** captured in participated parties when executing the contract" time="9.467"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="15" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_public_transactions.spec" time="4.572" timestamp="2019-12-25T19:02:23" name="Value transfer in public transactions" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
+		<properties></properties>
+		<testcase classname="Value transfer in public transactions" name="Successful public transaction submission" time="2.283"></testcase>
+		<testcase classname="Value transfer in public transactions" name="Successful signed public transaction submission" time="2.289"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="16" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec" time="0.000" timestamp="2019-12-25T19:02:23" name="State manipulation in private smart contract" errors="0" skipped="1" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
 		<testcase classname="State manipulation in private smart contract" name="Private state is maintained" time="0.000">
 			<skipped message="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_state_manipulation.spec:27 Step implementation not found =&gt; &#39;Note: this step is not implemented indicating that the spec execution is temporarily skipped&#39;"></skipped>
@@ -46,93 +122,17 @@
 		<system-out></system-out>
 		<system-err>Validation failed, 1 Scenarios were skipped.</system-err>
 	</testsuite>
-	<testsuite id="7" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/public_smart_contract_event.spec" time="4.622" timestamp="2019-12-24T19:02:55" name="Public smart contract with event" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="17" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.220" timestamp="2019-12-25T19:02:23" name="Value transfer in private transactions" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
-		<testcase classname="Public smart contract with event" name="Log events in total are captured when executing the contract" time="4.622"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.091"></testcase>
+		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.129"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="8" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/smart_contract_dual_state.spec" time="50.894" timestamp="2019-12-24T19:02:55" name="Dual state implementation when peforming function calls from one smart contract to another" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
+	<testsuite id="18" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="307.680" timestamp="2019-12-25T19:02:23" name="Transactions for different block heights" errors="0" hostname="travis-job-fd5f7f2e-170c-42b2-a7ac-ed99ad2bcdf0">
 		<properties></properties>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all public smart contracts: public -&gt; public -&gt; public" time="12.698"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls between all private smart contracts: private -&gt; private -&gt; private" time="12.787"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a private smart contract to public smart contracts: private -&gt; public -&gt; public" time="12.718"></testcase>
-		<testcase classname="Dual state implementation when peforming function calls from one smart contract to another" name="Function calls from a public smart contract to private smart contracts: public -&gt; private -&gt; private" time="12.691"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="9" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/02_advanced/transactions_for_block_height.spec" time="310.783" timestamp="2019-12-24T19:02:55" name="Transactions for different block heights" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="154.488"></testcase>
-		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="156.295"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="10" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_public_raw_smart_contract_single.spec" time="6.864" timestamp="2019-12-24T19:02:55" name="Public raw smart contract when signed externally" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Public raw smart contract when signed externally" name="Contract is deployed and mined" time="3.304"></testcase>
-		<testcase classname="Public raw smart contract when signed externally" name="Everyone in the network has the same state for the contract" time="0.148"></testcase>
-		<testcase classname="Public raw smart contract when signed externally" name="When there&#39;s an update, every node is updated" time="3.412"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="11" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/istanbul_fault_tolerance.spec" time="13.306" timestamp="2019-12-24T19:02:55" name="Istanbul fault tolerance and recoverability" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Istanbul fault tolerance and recoverability" name="Modify number of validators from less than 2F + 1 to more than 2F + 1" time="13.306"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="12" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas_private.spec" time="6.736" timestamp="2019-12-24T19:02:55" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create private smart contract" time="2.446"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a private smart contract" time="4.290"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="13" tests="4" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/personal_api_signed_private_raw_smart_contract_single.spec" time="55.058" timestamp="2019-12-24T19:02:55" name="Private raw smart contract when signed using the personal_signTransaction API" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="Storage Root storing private smart contracts must be the same" time="37.577"></testcase>
-		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="Transaction payload is secured" time="4.421"></testcase>
-		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="Privacy is enforced between parties" time="4.426"></testcase>
-		<testcase classname="Private raw smart contract when signed using the personal_signTransaction API" name="When there&#39;s an update, privacy is still enforced" time="8.634"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="14" tests="1" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_multiple.spec" time="7.705" timestamp="2019-12-24T19:02:55" name="Multiple private smart contracts" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Multiple private smart contracts" name="Contracts are mined" time="7.705"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="15" tests="3" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/estimate_gas.spec" time="6.784" timestamp="2019-12-24T19:02:55" name="Estimate gas required for transactions and contracts" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required for public transaction" time="2.464"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to create public smart contract" time="2.159"></testcase>
-		<testcase classname="Estimate gas required for transactions and contracts" name="Estimate gas required to call a public smart contract" time="2.161"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="16" tests="5" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/externally_signed_private_raw_smart_contract_single.spec" time="23.590" timestamp="2019-12-24T19:02:55" name="Private raw smart contract when signed externally" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Private raw smart contract when signed externally" name="Contract is mined" time="6.500"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Storage Root storing private smart contracts must be the same" time="3.376"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Transaction payload is secured" time="3.480"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="Privacy is enforced between parties" time="3.451"></testcase>
-		<testcase classname="Private raw smart contract when signed externally" name="When there&#39;s an update, privacy is still enforced" time="6.783"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="17" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/private_smart_contract_event.spec" time="14.360" timestamp="2019-12-24T19:02:55" name="Private smart contract with event" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Private smart contract with event" name="Log events in total are **only** captured in participated parties when executing the contract" time="4.780"></testcase>
-		<testcase classname="Private smart contract with event" name="Log events in the state are **only** captured in participated parties when executing the contract" time="9.580"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="18" tests="2" failures="0" package="/home/travis/build/jpmorganchase/quorum-acceptance-tests/src/specs/01_basic/value_transfer_private_transactions.spec" time="0.225" timestamp="2019-12-24T19:02:55" name="Value transfer in private transactions" errors="0" hostname="travis-job-1759cd2c-9fa7-4118-829c-624cf8f9e2b5">
-		<properties></properties>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful private transaction submission" time="0.089"></testcase>
-		<testcase classname="Value transfer in private transactions" name="Unsuccessful signed private transaction submission" time="0.136"></testcase>
+		<testcase classname="Transactions for different block heights" name="Private smart contracts for Istanbul consensus" time="151.417"></testcase>
+		<testcase classname="Transactions for different block heights" name="Public smart contracts for Istanbul consensus" time="156.263"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
