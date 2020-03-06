@@ -28,62 +28,70 @@
 
 	
   <div class="report-overview">
-    <div class="report_chart">
-      <div class="chart">
-        <svg id="pie-chart" data-results="0,17,1" data-total="18">
-          <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/18</title></path>
-          <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 17/18</title></path>
-          <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/18</title></path>
-        </svg>
-      </div>
+   
+  <div class="report_chart">
+    <div class="chart">
+      <svg id="pie-chart" data-results="0,17,1" data-total="18">
+        <path class="status failed" />
+        <path class="shadow failed" data-status="failed"><title>Failed: 0/18</title></path>
+        <path class="status passed" />
+        <path class="shadow passed" data-status="passed"><title>Passed: 17/18</title></path>
+        <path class="status skipped" />
+        <path class="shadow skipped" data-status="skipped"><title>Skipped: 1/18</title></path>
+      </svg>
     </div>
-    <div class="report_test-results">
-      <div class="report_test-result specs">
-          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">18</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">17</span></div>
-          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
-      </div>
-      <div class="report_test-result scenarios">
-          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">45</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">44</span></div>
-          <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
-      </div>
+  </div>
+
+   
+  <div class="report_test-results">
+    <div class="report_test-result specs">
+        <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">18</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">17</span></div>
+        <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">1</span></div>
     </div>
+    <div class="report_test-result scenarios">
+        <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">45</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">44</span></div>
+        <div class="skip scenario-stats" data-status="skipped"><span class="value">1</span></div>
+    </div>
+  </div>
+
     <div class="report_details">
-      <ul>
-        <li>
-          <label>Environment </label>
-          <span>default,travis-build-546.2</span>
-        </li>
-        
-        <li>
-          <label>Tags </label>
-          <span>basic || basic-istanbul || (advanced && istanbul)</span>
-        </li>
-        
-        <li>
-          <label>Success Rate </label>
-          <span>94%</span>
-        </li>
-        <li>
-          <label>Total Time </label>
-          <span>00:09:08</span>
-        </li>
-        <li>
-          <label>Generated On </label>
-          <span>Mar 4, 2020 at 7:30pm</span>
-        </li>
-      </ul>
+      
+  <ul>
+    <li>
+      <label>Environment </label>
+      <span>travis-build-548.2</span>
+    </li>
+    
+    <li>
+      <label>Tags </label>
+      <span>basic || basic-istanbul || (advanced && istanbul)</span>
+    </li>
+    
+    <li>
+      <label>Success Rate </label>
+      <span>94%</span>
+    </li>
+    <li>
+      <label>Total Time </label>
+      <span>00:09:40</span>
+    </li>
+    <li>
+      <label>Generated On </label>
+      <span>Mar 6, 2020 at 7:31pm</span>
+    </li>
+  </ul>
+
       
   
 
       
   
+  
+
 
     </div>
   </div>
@@ -128,24 +136,6 @@
             </li>
           </a>
           
-          <a href="private_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
-              <span id="time" class="time">00:00:14</span>
-            </li>
-          </a>
-          
-          <a href="private_smart_contract_spam.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
-              <span id="time" class="time">00:00:09</span>
-            </li>
-          </a>
-          
           <a href="smart_contract_dual_state.html">
              
               <li class='passed spec-name'>
@@ -155,21 +145,12 @@
             </li>
           </a>
           
-          <a href="../02_advanced/transactions_for_block_height.html">
+          <a href="value_transfer_public_transactions.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
-              <span id="time" class="time">00:05:09</span>
-            </li>
-          </a>
-          
-          <a href="estimate_gas_private.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
-              <span id="time" class="time">00:00:07</span>
+              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -182,15 +163,6 @@
             </li>
           </a>
           
-          <a href="externally_signed_public_raw_smart_contract_single.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
           <a href="private_smart_contract_event.html">
              
               <li class='passed spec-name'>
@@ -200,12 +172,21 @@
             </li>
           </a>
           
-          <a href="externally_signed_private_raw_smart_contract_single.html">
+          <a href="estimate_gas_private.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
-              <span id="time" class="time">00:00:24</span>
+              <span id="scenarioName" class="scenarioname">Estimate gas required for transactions and contracts</span>
+              <span id="time" class="time">00:00:07</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_public_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Public raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:07</span>
             </li>
           </a>
           
@@ -223,16 +204,34 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Private raw smart contract when signed using the personal_signTransaction API</span>
-              <span id="time" class="time">00:00:41</span>
+              <span id="time" class="time">00:00:56</span>
             </li>
           </a>
           
-          <a href="private_smart_contract_multiple.html">
+          <a href="private_smart_contract_spam.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
-              <span id="time" class="time">00:00:08</span>
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts between nodes</span>
+              <span id="time" class="time">00:00:09</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Single private smart contract</span>
+              <span id="time" class="time">00:00:14</span>
+            </li>
+          </a>
+          
+          <a href="externally_signed_private_raw_smart_contract_single.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Private raw smart contract when signed externally</span>
+              <span id="time" class="time">00:00:25</span>
             </li>
           </a>
           
@@ -242,6 +241,15 @@
             
               <span id="scenarioName" class="scenarioname">Sending private smart contract asynchronously</span>
               <span id="time" class="time">00:00:05</span>
+            </li>
+          </a>
+          
+          <a href="private_smart_contract_multiple.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Multiple private smart contracts</span>
+              <span id="time" class="time">00:00:08</span>
             </li>
           </a>
           
@@ -263,12 +271,12 @@
             </li>
           </a>
           
-          <a href="value_transfer_public_transactions.html">
+          <a href="../02_advanced/transactions_for_block_height.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Value transfer in public transactions</span>
-              <span id="time" class="time">00:00:05</span>
+              <span id="scenarioName" class="scenarioname">Transactions for different block heights</span>
+              <span id="time" class="time">00:05:09</span>
             </li>
           </a>
           
@@ -319,6 +327,7 @@
     
   
 
+    
     
     
 
@@ -380,6 +389,9 @@ contract ClientReceipt {
   
   
 
+  
+  
+
 	
 
   
@@ -419,6 +431,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -463,8 +479,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -505,6 +527,10 @@ contract ClientReceipt {
 
   
   
+
+
+  
+  
   
     
       <span class='parameter'>"contract17"</span>
@@ -526,8 +552,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -565,6 +597,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -619,8 +655,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -658,6 +700,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -702,8 +748,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -741,6 +793,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -785,8 +841,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -824,6 +886,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -868,8 +934,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -907,6 +979,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -951,8 +1027,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -964,6 +1046,9 @@ contract ClientReceipt {
     
   
 
+  
+
+  
   
 
   
@@ -1008,6 +1093,9 @@ contract ClientReceipt {
   
   
 
+  
+  
+
 	
 
   
@@ -1047,6 +1135,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1091,8 +1183,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1133,6 +1231,10 @@ contract ClientReceipt {
 
   
   
+
+
+  
+  
   
     
       <span class='parameter'>"contract12"</span>
@@ -1154,8 +1256,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1193,6 +1301,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1237,8 +1349,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1279,6 +1397,10 @@ contract ClientReceipt {
 
   
   
+
+
+  
+  
   
     
       <span class='parameter'>"contract23"</span>
@@ -1300,8 +1422,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1339,6 +1467,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1383,8 +1515,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1425,6 +1563,10 @@ contract ClientReceipt {
 
   
   
+
+
+  
+  
   
     
       <span class='parameter'>"contract34"</span>
@@ -1446,8 +1588,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1488,6 +1636,10 @@ contract ClientReceipt {
 
   
   
+
+
+  
+  
   
     
       <span>
@@ -1525,8 +1677,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1564,6 +1722,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1608,8 +1770,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1647,6 +1815,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1691,8 +1863,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1730,6 +1908,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1774,8 +1956,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1813,6 +2001,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1857,8 +2049,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1896,6 +2094,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -1940,8 +2142,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1979,6 +2187,10 @@ contract ClientReceipt {
 
   
   
+
+  
+  
+
 
   
   
@@ -2023,8 +2235,14 @@ contract ClientReceipt {
     
   
 
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2047,6 +2265,9 @@ contract ClientReceipt {
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -2058,6 +2279,7 @@ contract ClientReceipt {
     
   
 
+    
     
     
     </div>
