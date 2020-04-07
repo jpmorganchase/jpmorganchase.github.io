@@ -522,6 +522,44 @@
                             }
                         }
                     },
+                    "/transaction/{key}/isSender" : {
+                        "get" : {
+                            "summary" : "Determine if local enclave is the sender of transaction",
+                            "description" : "",
+                            "operationId" : "isSender",
+                            "parameters" : [ {
+                                "name" : "key",
+                                "in" : "path",
+                                "description" : "Encoded hash",
+                                "required" : true,
+                                "type" : "string"
+                            } ],
+                            "responses" : {
+                                "default" : {
+                                    "description" : "successful operation"
+                                }
+                            }
+                        }
+                    },
+                    "/transaction/{key}/participants" : {
+                        "get" : {
+                            "summary" : "Retrieve a list of participants for a transaction",
+                            "description" : "",
+                            "operationId" : "getParticipants",
+                            "parameters" : [ {
+                                "name" : "key",
+                                "in" : "path",
+                                "description" : "Encoded hash",
+                                "required" : true,
+                                "type" : "string"
+                            } ],
+                            "responses" : {
+                                "default" : {
+                                    "description" : "successful operation"
+                                }
+                            }
+                        }
+                    },
                     "/upcheck" : {
                         "get" : {
                             "summary" : "Check if local P2PRestApp Node is up",
