@@ -3,25 +3,25 @@
 @import 'base';
 
 header.page-header {
-    background-color: #000;
+    background-color:#301934;;
     background-image: url('/assets/images/background.png');
     background-size: cover;
     height: 225px;
     width: 100%;
     z-index:-1;
-    color: #fff;
+    color: #f9f5ec;
     text-align: center;
     display: block;
-    padding: 2rem 3rem;
+    padding: 3rem 4rem;
 }
 
 .page-header h1 {
-    color:white;
+    color: #f9f5ec;
 }
 
 .main-content h1,
 .main-content h2,
 .main-content h3 {
-    color: #ea761f !important;
+    color: #4B0082 !important;
 }
 
