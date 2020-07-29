@@ -55,9 +55,6 @@
                         "name" : "Provides access to OpenAPI schema documentation."
                     },
                     {
-                        "name" : "Admin APIs"
-                    },
-                    {
                         "name" : "Peer-to-peer APIs"
                     },
                     {
@@ -73,50 +70,6 @@
                             "responses" : {
                                 "200" : {
                                     "description" : "Returns JSON or HTML OpenAPI document"
-                                }
-                            }
-                        }
-                    },
-                    "/config/peers" : {
-                        "get" : {
-                            "tags" : ["Admin APIs"],
-                            "operationId" : "getPeers",
-                            "consumes" : [ "application/json" ],
-                            "produces" : [ "application/json" ],
-                            "responses" : {
-                                "default" : {
-                                    "description" : "successful operation"
-                                }
-                            }
-                        },
-                        "put" : {
-                            "tags" : ["Admin APIs"],
-                            "operationId" : "addPeer",
-                            "consumes" : [ "application/json" ],
-                            "produces" : [ "application/json" ],
-                            "responses" : {
-                                "default" : {
-                                    "description" : "successful operation"
-                                }
-                            }
-                        }
-                    },
-                    "/config/peers/{index}" : {
-                        "get" : {
-                            "tags" : ["Admin APIs"],
-                            "operationId" : "getPeer",
-                            "consumes" : [ "application/json" ],
-                            "produces" : [ "application/json" ],
-                            "parameters" : [ {
-                                "name" : "index",
-                                "in" : "path",
-                                "required" : true,
-                                "type" : "integer",
-                                "format" : "int32"
-                            } ],
-                            "responses" : {
-                                "default" : {
-                                    "description" : "successful operation"
                                 }
                             }
                         }
