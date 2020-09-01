@@ -4,22 +4,39 @@ layout: post
 
 <style type="text/css" media="screen">
   .container {
-    margin: 10px auto;
-    max-width: 600px;
+    margin: 0px auto;
+    max-width: 400px;
+    max-height: 400px;
     text-align: center;
+    align-content: center;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: #ea761f !important;
+  .animation {
+    display: block;
+    max-height: 400px;
+  }
+  .main-text {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    background-color: rgb(43, 7, 85);
+  }
+  p {
+    color: grey;
   }
 </style>
 
 <div class="container">
-  <h1>404</h1>
+  <lottie-player
+    src="./anim.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay
+    class="animation"
+  ></lottie-player>
 
-  <p><strong>Page not found</strong></p>
+  <p><strong class="main-text">Page not found</strong></p>
   <p>The requested page could not be found.</p>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </div>
