@@ -1,0 +1,13 @@
+# error redirect
+ErrorDocument 400 https://jpmorganchase.github.io/error/400.htm
+ErrorDocument 401 https://jpmorganchase.github.io/error/401.htm
+ErrorDocument 403 https://jpmorganchase.github.io/error/403.htm
+ErrorDocument 404 https://jpmorganchase.github.io/error/404.htm
+ErrorDocument 500 https://jpmorganchase.github.io/error/500.htm
+ErrorDocument 503 https://jpmorganchase.github.io/error/503.htm
+Options -Indexes
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+ 
