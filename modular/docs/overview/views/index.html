@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.68">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VTLK98CTJ"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-7VTLK98CTJ",{})</script><title data-react-helmet="true">Views Explained | Modular: Scaled Web Engineering</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Views Explained | Modular: Scaled Web Engineering"><meta data-react-helmet="true" name="description" content="User Interfaces are made of components. When you sketch a wireframe on a"><meta data-react-helmet="true" property="og:description" content="User Interfaces are made of components. When you sketch a wireframe on a"><meta data-react-helmet="true" property="og:url" content="https://jpmorganchase.github.io/modular/docs/overview/views"><link data-react-helmet="true" rel="shortcut icon" href="/modular/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://jpmorganchase.github.io/modular/docs/overview/views"><link rel="stylesheet" href="/modular/styles.2acfd0ff.css">
+<link rel="preload" href="/modular/styles.9d61604d.js" as="script">
+<link rel="preload" href="/modular/runtime~main.eb77a0ec.js" as="script">
+<link rel="preload" href="/modular/main.724427db.js" as="script">
+<link rel="preload" href="/modular/common.58c36791.js" as="script">
+<link rel="preload" href="/modular/27.36e5f9b4.js" as="script">
+<link rel="preload" href="/modular/28.28141d8f.js" as="script">
+<link rel="preload" href="/modular/935f2afb.5cdd1893.js" as="script">
+<link rel="preload" href="/modular/17896441.00ee790a.js" as="script">
+<link rel="preload" href="/modular/b1f69664.0606ea54.js" as="script">
+</head>
+<body>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
+<nav aria-label="Skip navigation links"><button type="button" tabindex="0" class="skipToContent_2AhQ">Skip to main content</button></nav><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand" href="/modular/"><img src="/modular/img/m-logo.svg" alt="Modular Logo" class="themedImage_2E_h themedImage--light_AouX navbar__logo"><img alt="Modular Logo" class="themedImage_2E_h themedImage--dark_1YPN navbar__logo"><strong class="navbar__title">modular</strong></a><a class="navbar__item navbar__link" href="/modular/docs/overview/introduction">Docs</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/jpmorganchase/modular" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub</a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand" href="/modular/"><img src="/modular/img/m-logo.svg" alt="Modular Logo" class="themedImage_2E_h themedImage--light_AouX navbar__logo"><img alt="Modular Logo" class="themedImage_2E_h themedImage--dark_1YPN navbar__logo"><strong class="navbar__title">modular</strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a href="https://github.com/jpmorganchase/modular" target="_blank" rel="noopener noreferrer" class="menu__link">GitHub</a></li><li class="menu__list-item"><a class="menu__link" href="/modular/docs/overview/introduction">Docs</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_2gpo"><div class="docSidebarContainer_3_JD" role="complementary"><div class="sidebar_2urC"><div class="menu menu--responsive thin-scrollbar menu_5FrY"><button aria-label="Open Menu" aria-haspopup="true" class="button button--secondary button--sm menu__button" type="button"><svg aria-label="Menu" class="sidebarMenuIcon_Dm3K" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 32 32" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><ul class="menu__list"><li class="menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#!">Overview</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/modular/docs/overview/introduction">Introduction</a></li></ul></li><li class="menu__list-item"><a class="menu__link menu__link--sublist menu__link--active" href="#!">Docs</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" tabindex="0" href="/modular/docs/overview/getting-started">Getting Started</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link menu__link--active active" tabindex="0" href="/modular/docs/overview/views">Views Explained</a></li></ul></li></ul></div></div></div><main class="docMainContainer_3EyW"><div class="container padding-vert--lg docItemWrapper_39qw"><div class="row"><div class="col docItemCol_2ASc"><div class="docItemContainer_3QWW"><article><header><h1 class="docTitle_1Lrw">Views Explained</h1></header><div class="markdown"><p>User Interfaces are made of components. When you sketch a wireframe on a
+whiteboard or graphics tool of choice, the rectangles that you draw define the
+visual and semantic boundaries of these components. They usually correspond to
+some equivalent in your UI framework (e.g - In
+<a href="https://reactjs.org/docs/components-and-props.html" target="_blank" rel="noopener noreferrer">React</a>, these are defined
+as classes that extend from React.Component, or regular functions that return
+JSX. In <a href="https://flutter.dev/docs/development/ui/widgets" target="_blank" rel="noopener noreferrer">Flutter</a>, these are
+classes that extend from different types of Views. In
+<a href="https://developer.android.com/jetpack#foundation-components" target="_blank" rel="noopener noreferrer">Jetpack Compose</a>,
+these are called Composable Functions). These are a neat unit of encapsulating
+state, behaviour and presentation. They also <em>compose</em> with each other to
+provide higher abstraction of UI, eventually forming the application itself.</p><p>Every application also has a concept of &#x27;primary&#x27; components. These are
+&#x27;top-level&#x27; components that are considered special, and most important when
+describing the high level architecture of an application.</p><p>For example, a site that operates as a blog will probably have these primary
+components - <code>&lt;Home/&gt;</code>, <code>&lt;Posts query={query}&gt;</code>, <code>&lt;Post id={id}/&gt;</code>,
+<code>&lt;Contact/&gt;</code>. These would associate with routes like <code>/</code>,
+<code>/posts?offset=20&amp;length=10</code>, <code>/post/:id/:slug</code>, <code>/contact</code>. Further, <code>&lt;Home/&gt;</code>
+may just be an alias for <code>&lt;Posts/&gt;</code> with a default query. It all depends on
+whoever&#x27;s implementing the site, of course. Each of these components would be
+composed of a number of secondary components (and could also be sharing these
+components among themselves).</p><p>An e-commerce site would have different primary component, <code>&lt;Home/&gt;</code>,
+<code>&lt;Search query={query}/&gt;</code>, <code>&lt;Details id={id}/&gt;</code>, <code>&lt;Checkout/&gt;</code>, <code>&lt;Payment/&gt;</code>,
+and <code>&lt;Profile id={id}/&gt;</code>. Like the above, it could also have routing patterns
+for each of these components, and could be composed by a number of secondary
+components.</p><p>For applications that behave like dashboards, we still have the concept of
+primary components; there will be a host/container component (let&#x27;s say we call
+it <code>&lt;App/&gt;</code>), but pages will be composed of a number of primary components
+(which could be charts, graphs, tables, lists; whatever developers and product
+managers feel is a window into a data slice relevant to a user). Routes are then
+used to show different user-generated dashboards composed of these primary
+components (the layouts for which are probably stored on a database somewhere),
+or for drilling down into a particular component to expose and interact with
+more data. As before, these primary components are composed of a number of
+secondary components, possibly sharing low level components amongst themselves.</p><p>In <code>modular</code>, these primary components are what we call &#x27;views&#x27;.</p><p>As these sites scale through time, we notice some patterns emerge in the
+development of views. They&#x27;ll usually start as single files, usually all under
+one main folder. As each page gains more functionality, they&#x27;ll become folders,
+with supporting components/models/functions split into files in that folder.
+They&#x27;ll also start getting more developers attached to each primary component;
+full teams and roadmaps that become part of a broader plan for the
+site/application. Each of these views will start managing their own specific
+dependencies, and they&#x27;ll decoupled from the main application in one of a number
+of ways (i.e. microfrontends, or as separate workspaces, or separate packages,
+or repositories that publish assets to a cdn, and so on.) Managing the growth of
+these components and associated development practices and architecture then
+becomes key to being able to iterate features safely, quickly, and reliably.</p><p><code>modular</code> suggests 3 strategies for managing the growth of these components.</p><p><strong>Strategy 0</strong>: Try to keep the codebase as small as possible, for as long as
+possible.</p><p>The best kind of scale is no scale at all. As such, it would introduce
+unnecessary complexity to a codebase if it takes on scaling strategies when only
+1 (or few) developers are working on it, only for a little time, and for very
+low stakes. In such a situation it would be a mistake to build a completely
+decomposed architecture of React components with a design system, split into
+multiple parts and files, when instead it could have been built with a plain
+html file and an accompanying css file. If this is your situation, you do not
+need <code>modular</code>, and you should invest your time and effort into something that
+has better returns. If you do need a javascript framework, try to keep it in one
+file. Split into multiple files only when it&#x27;s painful. Only when you&#x27;ve
+exhausted these basic scaling options, should you move on to the next option...</p><p><strong>Strategy 1</strong>: Move development of the view to a
+<a href="https://classic.yarnpkg.com/en/docs/workspaces/" target="_blank" rel="noopener noreferrer">workspace</a>.</p><p>If keeping each primary component in a sub-folder is causing growing pains in
+the codebase, move it to a workspace. Workspaces are a great option, because
+they provide some benefits of decoupling from the main application, without
+losing the benefits of colocating within the same repository. Of note:</p><ul><li><p>Teams will be able to declare and manage their own dependencies instead of it
+all being crammed into a central package.json</p></li><li><p>These components could (theoretically) be used in other applications, since
+they could be published from this workspace as a package (we try to avoid
+this. I should probably remove this point altogether.)</p></li><li><p>A sense of ownership for the team; they can define their own
+<a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners" target="_blank" rel="noopener noreferrer">CODEOWNERS</a>
+and code review flow, and most of their PRs and changes won&#x27;t affect the
+working of the rest of the application.</p></li><li><p>However, since they&#x27;re all under one typescript project, they still won&#x27;t
+break expectations (or if they do, the static type system will catch it and
+make you fix it to proceed with a commit/deploy)</p></li><li><p>Similarly, tests will run for the entire repository, and assuming there&#x27;s some
+form of integration/e2e coverage, it&#x27;ll be hard to break expectations despite
+working in this isolated manner.</p></li><li><p>It is relatively easy to make upgrades in this system; a core dependency can
+be updated, types and tests checked across the system, and changes committed
+in an atomic fashion. Something that would take weeks (if not months) in a
+distributed repo system will take a day or so (if not hours) in this
+centralised system.</p></li></ul><p>In a repository generated by <code>modular</code>, you can add a view by running
+<code>modular add &lt;name&gt;</code>, and choosing the option to create a View. This creates a
+new workspace with the view name, that can be imported from the application, or
+any of the other workspaces, but still will be included in the main build, and
+participates in the type/test infrastructure. Since they&#x27;re still regular React
+components, you can wrap them with
+<a href="https://reactjs.org/docs/code-splitting.html#reactlazy" target="_blank" rel="noopener noreferrer">React.lazy</a> and use
+them as regular components, but they won&#x27;t be included in the main bundle, and
+will load dynamically on demand. This is dope.</p><p>Now, with the dashboard usecase, there&#x27;s usually never explicit code that
+renders a specific view; &#x27;layouts&#x27; are loaded from a database/service. To make
+this system work well with <code>modular</code>, <code>modular</code> has a special module
+<code>modular-views.macro</code>; this module
+exports an object that maps every view (wrapped with <code>React.lazy</code>) to a string
+identifier (i.e. - the name of the view)</p><p>(question: do we want to use some other identifier? this seems sufficient for
+now, but something to keep an eye on.)</p><p>This gives a scalable local registry of all the views/primary component, and
+it&#x27;s never necessary to manually update this map since it&#x27;s defined based on the
+state of the filesystem. This then becomes our primary system of &#x27;dynamically&#x27;
+loading and rendering views onto a rendering surface; we leverage and build on
+regular javascript/React semantics instead of inventing something bespoke. This
+is the power of colocating code in the same repository and scaling
+infrastructure and tooling around it.</p><p>NB: It could be that someone has done a
+<a href="https://gist.github.com/threepointone/d62b4d92a1e92df5f2f4d2d91a0582cd" target="_blank" rel="noopener noreferrer">sparse checkout</a>
+of the repository and not included all the views in their local instance; no
+problem, the map excludes those views from the map, and when rendered you can
+use a generic placeholder component.</p><p>There are some cons to this system, and it&#x27;s important to note that we&#x27;re
+trading one set of problems for these. However, these problems are a better set
+of problems to have, have a lot of historical research and precedence and thus
+aren&#x27;t unique problems, and can be solved incrementally.</p><ul><li><p>Builds might become fairly big: In most cases, as long as you&#x27;re not building
+a systems with many (read: 100s or 1000s of views), the build for such a
+system shouldn&#x27;t be a problem. However, if you are building at that big a
+scale, you can expect the requirements for build infrastructure to increase
+proportionally. In that scenario, there are 3 &#x27;solutions&#x27;:</p><ul><li><p>Invest in having beefier hardware for doing builds (instead of a farm of
+weaker machines). This will give you some breathing space and time to fix
+root problems.</p></li><li><p>Invest in better tooling infrastructure; publicly available tools like
+webpack/parcel weren&#x27;t built to handle that kind of scale. Consider adopting
+guidelines from
+<a href="https://webpack.js.org/guides/build-performance/" target="_blank" rel="noopener noreferrer">webpack&#x27;s performance recommendations</a>.
+We are also aware that these tools are considering scale as a first class
+feature for newer versions, introducing features like module federation,
+persistent caching, incremental builds, and so on.</p></li><li><p>At this scale, it&#x27;s not sufficient to simply follow public guidance, it&#x27;ll
+probably be necessary to hire and invest in teams whose sole purpose is to
+solve these problems, much like big corps like facebook, google, etc do.
+<code>modular</code>is also working on providing these optimisations by default.</p></li></ul></li><li><p>Developer Workflow: Your teams may not be used to working in a single
+repository, and as such, may not have the tooling or guidance to do so. Some
+things that may make this better:</p><ul><li><p>setting up
+<a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners" target="_blank" rel="noopener noreferrer">CODEOWNERS</a>
+so every developer is not spammed with notifications about every PR, and
+only relevant people are targeted as reviewers.</p></li><li><p>Using a
+<a href="https://gist.github.com/threepointone/2c2fae0622681284410ec9edcc6acf9e" target="_blank" rel="noopener noreferrer">feature flag service</a>
+to simplify uat/deploy workflows</p></li><li><p>using
+<a href="https://gist.github.com/threepointone/d62b4d92a1e92df5f2f4d2d91a0582cd" target="_blank" rel="noopener noreferrer">sparse checkouts</a>
+to only work on the part of the codebase that&#x27;s relevant to a developer</p></li><li><p>using a configuration service / key management service for holding and
+managing private/public keys used by the system</p></li></ul></li><li><p>Fighting <a href="https://en.wikipedia.org/wiki/Conway%27s_law" target="_blank" rel="noopener noreferrer">Conway&#x27;s law</a> (There&#x27;s
+a whole spiel here about fighting company org structures that we&#x27;ll write
+about some day)</p></li></ul><p>We DO NOT recommend pulling your view into a another repository. There are
+serious costs associated with this (TODO, critical: enumerate all the problems
+with pulling into a separate repo / the multi repository architecture). However,
+you may be dealing with a legacy/preexisting system where views/primary
+components are defined and built in separate repositories, or some bespoke
+component registry/loading system. We present a couple of strategies to
+interface with those views:</p><p><strong>Strategy 2</strong>: Wrap with a React component that establishes an interface
+between your application and the component&#x27;s expectations.</p><p>The idea here is to write a component that takes props that define how to load
+and interface with a fully decoupled component. For example, you may have a
+registry of components that are defined by a urls that are to be used as an
+iframe src, and have a postmessage based api to communicate across the iframe
+boundary. The wrapper component would then look something like this -</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><div tabindex="0" class="prism-code language-jsx codeBlock_3iAC thin-scrollbar"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">function</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">IframeWrap</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token parameter punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token parameter"> src </span><span class="token parameter punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token keyword" style="font-style:italic">const</span><span class="token plain"> iframeChannel </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">useContext</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">IframeWrapContext</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token keyword" style="font-style:italic">const</span><span class="token plain"> ref </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">useRef</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token keyword" style="font-style:italic">null</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token function" style="color:rgb(130, 170, 255)">useEffect</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// setup communication to send/receive data on iframeChannel</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token keyword" style="font-style:italic">return</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(137, 221, 255)">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// cleanup listeners</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token keyword" style="font-style:italic">return</span><span class="token plain"> </span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag" style="color:rgb(255, 85, 114)">iframe</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">src</span><span class="token tag script language-javascript script-punctuation punctuation" style="color:rgb(199, 146, 234)">=</span><span class="token tag script language-javascript punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token tag script language-javascript" style="color:rgb(255, 85, 114)">src</span><span class="token tag script language-javascript punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">ref</span><span class="token tag script language-javascript script-punctuation punctuation" style="color:rgb(199, 146, 234)">=</span><span class="token tag script language-javascript punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token tag script language-javascript" style="color:rgb(255, 85, 114)">ref</span><span class="token tag script language-javascript punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">/&gt;</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// enhancement - wrap this with React.lazy which resolves on iframe onload (or some other signal)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button></div></div><p>And somewhere at the top of your hierachy, expose the <code>iframeChannel</code> context on
+a provider. It might look something like this:</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><div tabindex="0" class="prism-code language-jsx codeBlock_3iAC thin-scrollbar"><div class="codeBlockLines_b7E3" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">const</span><span class="token plain"> IframeWrapContext </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> React</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token function" style="color:rgb(130, 170, 255)">createContext</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token keyword" style="font-style:italic">null</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">function</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">App</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token keyword" style="font-style:italic">return</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;</span><span class="token tag class-name" style="color:rgb(255, 203, 107)">IframeWrapContext.Provider</span><span class="token tag" style="color:rgb(255, 85, 114)"> </span><span class="token tag attr-name" style="color:rgb(255, 203, 107)">value</span><span class="token tag script language-javascript script-punctuation punctuation" style="color:rgb(199, 146, 234)">=</span><span class="token tag script language-javascript punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token tag script language-javascript" style="color:rgb(255, 85, 114)">iframeChannel</span><span class="token tag script language-javascript punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">/* ... load layouts ... */</span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&lt;/</span><span class="token tag class-name" style="color:rgb(255, 203, 107)">IframeWrapContext.Provider</span><span class="token tag punctuation" style="color:rgb(199, 146, 234)">&gt;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button></div></div><p>Similarly, for other types of components, you would build similar wrappers that
+interface with the component and the host.</p><p>NB: It&#x27;s important to repeat and clarify: This is to be used <em>ONLY</em> for existing
+legacy views, and which can&#x27;t be transitioned to using the primary system (i.e.
+strategy 1). Do not use it for new views, you&#x27;ll still face all the problems
+prevalent with a multi-repository system.</p><p><strong>Strategy 3</strong>: Perhaps there&#x27;s a view (let&#x27;s call it <code>X</code>) that exists in a
+separate repository, but the team&#x27;s owners/developers are willing to <em>gradually</em>
+transition to adopting strategy 1. (if they can transition quickly, then they
+should simply copy their source over immediately and call it a day.) The
+assumption here, is that this package/view repository is setup up to export a
+React component, possibly using its own build system and development setup. We
+present the sequence of steps to take to gradually transition to strategy 1:</p><ul><li><p>Publish <code>X</code> to a package registry (like an internal npm instance).</p></li><li><p>In the repo generated by <code>modular</code>, add a workspace with <code>modular add &lt;name&gt;</code>,
+where <code>&lt;name&gt;</code> is similar to the target view <code>X</code> (let&#x27;s say <code>X-wrap</code>). In this
+view&#x27;s main file (probably index.js), import <code>X</code>.</p></li><li><p>Setup a system, either manual or automated, where updates to X are picked up,
+and updated in <code>X-wrap</code>&#x27;s package.json. Some options for doing this</p><ul><li><p>the team that updates X can send a PR to the main repo that updates the
+package version</p></li><li><p>On a periodic basis, the host repository could run something like
+<a href="https://www.npmjs.com/package/npm-check-updates" target="_blank" rel="noopener noreferrer">ncu</a> on every <code>*-wrap</code>
+workspace, updating to the latest version.</p></li><li><p>A bot could listen to the registry for version updates and automatically
+send a PR that updates the version number (and possibly commits it)</p></li></ul></li><li><p>Local development in this system is also relatively straightforward;
+developers will checkout the host repository on their local machines (either
+completely, or as a sparse checkout), and use
+<a href="https://docs.npmjs.com/cli/link" target="_blank" rel="noopener noreferrer">npm link</a> to point to their view repository.</p></li><li><p>Once the development-publish cycle is setup, then developers can take steps to
+remove any bespoke build/development assumptions, moving to the relatively
+vanilla assumptions that <code>modular</code> expects.</p></li><li><p>Once that is done, and assuming that this team would like to participate in
+all the benefits of a colocated repository system, the entire view&#x27;s source
+code can be moved into a new workspace <code>X</code> in the host&#x27;s repository, and the
+view can stop publishing to the registry.</p></li><li><p>Optionally (but recommended), <code>X-wrap</code> can be removed as a top level
+workspace, and layouts in the layout registry can rename all instances of
+<code>X-wrap</code> with <code>X</code>.</p></li></ul><p>This strategy achieves most of the niceties of strategy 1, but provides deeper
+decoupling abilities, at the cost of overhead of versioning and more complexity
+in managing upgrades of modules/interfaces. It should ideally be done as quickly
+as possible, moving to strategy 1 as soon as possible, or else one can expect
+time and effort to be spent managing upgrades to the system (from both upgrades
+to third party dependencies, or general changes to the type signatures of the
+system).</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/modular/docs/overview/getting-started"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Getting Started With Modular</div></a></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_ thin-scrollbar"></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="text--center"><div>Copyright © 2021 Modular Authors</div></div></div></footer></div>
+<script src="/modular/styles.9d61604d.js"></script>
+<script src="/modular/runtime~main.eb77a0ec.js"></script>
+<script src="/modular/main.724427db.js"></script>
+<script src="/modular/common.58c36791.js"></script>
+<script src="/modular/27.36e5f9b4.js"></script>
+<script src="/modular/28.28141d8f.js"></script>
+<script src="/modular/935f2afb.5cdd1893.js"></script>
+<script src="/modular/17896441.00ee790a.js"></script>
+<script src="/modular/b1f69664.0606ea54.js"></script>
+</body>
+</html>

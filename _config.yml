@@ -1,0 +1,12 @@
+page_title: J.P. Morgan | Open Source
+title: J.P. Morgan Open Source
+description: >-
+  This site brings all of the J.P. Morgan Open Source projects together and
+  provides links to their source code and documentation.
+show_downloads: false
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-octicons
+  
+sass:
+  sass_dir: _sass

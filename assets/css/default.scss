@@ -1,0 +1,21 @@
+---
+---
+@import 'base';
+
+header.page-header {
+    background-color: #000;
+    background-image: url('/assets/images/background.png');
+    background-size: cover;
+    height: 540px;
+    width: 100%;
+
+    z-index:-1;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.page-header img {
+    width:50%;
+
+}
