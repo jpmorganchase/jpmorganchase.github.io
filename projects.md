@@ -1,6 +1,6 @@
 ---
 layout: page
-title: OSS Projects at J.P. Morgan
+title: Open Source Projects at JP Morgan Chase
 permalink: /projects
 ---
 {% assign orderedRepos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
